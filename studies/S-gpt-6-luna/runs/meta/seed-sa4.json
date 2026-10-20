@@ -1,0 +1,30 @@
+{
+ "id": "seed-sa4",
+ "parent": "seed",
+ "depth": 1,
+ "k": 4,
+ "tag": "S:gpt-6-astra",
+ "suffix": "sa",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-astra",
+ "created": "2026-10-19 23:08:25",
+ "errors": [],
+ "changes": "Strengthened solver validation: require public tests, diagnose and retest failures, and submit the exact tested code to prevent regressions.",
+ "predicted_delta": 4.0,
+ "final": "CHANGES: Strengthened solver validation: require public tests, diagnose and retest failures, and submit the exact tested code to prevent regressions.\nPREDICTED_DELTA: +4 percentage points",
+ "trials": [],
+ "validations": 1,
+ "calls": 7,
+ "tin": 59860,
+ "tout": 1145,
+ "cached": 0,
+ "cost": 0.65585,
+ "secs": 44.2,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

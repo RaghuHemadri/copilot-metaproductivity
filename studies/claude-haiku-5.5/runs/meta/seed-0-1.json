@@ -1,0 +1,36 @@
+{
+ "id": "seed-0-1",
+ "parent": "seed-0",
+ "depth": 2,
+ "k": 1,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-haiku-5.5",
+ "created": "2026-10-20 01:15:53",
+ "errors": [],
+ "changes": "Added a hard rule at the top of `/agent/solver.md` forbidding `submit` until the solver has run the public examples, compared its fast solution against a brute force on random small inputs, and timed it at a large size. Most dev failures were submitted after 2\u20133 model calls with zero or one test run, so the existing verification steps were being skipped. I also added a short list of common mistakes to check (off-by-one, counting start states, constraints on intermediate states, double counting in cycles or components). One trial on lcb-3655 still failed: the solver ran the examples and timing but skipped the brute-force comparison, which is the check that would likely have caught the wrong answer. I did not add a skill or sub-agent and did not run further trials.",
+ "predicted_delta": 2.0,
+ "final": "The change is in place and validates, but the one trial I ran still failed, so I'm predicting a small gain rather than a large one.\n\nCHANGES: Added a hard rule at the top of `/agent/solver.md` forbidding `submit` until the solver has run the public examples, compared its fast solution against a brute force on random small inputs, and timed it at a large size. Most dev failures were submitted after 2\u20133 model calls with zero or one test run, so the existing verification steps were being skipped. I also added a short list of common mistakes to check (off-by-one, counting start states, constraints on intermediate states, double counting in cycles or components). One trial on lcb-3655 still failed: the solver ran the examples and timing but skipped the brute-force comparison, which is the check that would likely have caught the wrong answer. I did not add a skill or sub-agent and did not run further trials.\nPREDICTED_DELTA: +2",
+ "trials": [
+  {
+   "problem": "lcb-3655",
+   "passed": false,
+   "cost": 0.005666
+  }
+ ],
+ "validations": 1,
+ "calls": 5,
+ "tin": 46787,
+ "tout": 2040,
+ "cached": 0,
+ "cost": 0.011365,
+ "secs": 151.6,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

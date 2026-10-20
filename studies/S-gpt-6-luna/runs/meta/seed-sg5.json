@@ -1,0 +1,33 @@
+{
+ "id": "seed-sg5",
+ "parent": "seed",
+ "depth": 1,
+ "k": 5,
+ "tag": "S:gpt-6-sol",
+ "suffix": "sg",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-sol",
+ "created": "2026-10-19 23:08:08",
+ "errors": [],
+ "changes": "Strengthened the solver prompt to require testing the exact final code and debugging failed public examples before submission.",
+ "predicted_delta": 5.0,
+ "final": "CHANGES: Strengthened the solver prompt to require testing the exact final code and debugging failed public examples before submission.\nPREDICTED_DELTA: +5 percentage points",
+ "trials": [],
+ "validations": 1,
+ "calls": 8,
+ "tin": 62483,
+ "tout": 784,
+ "cached": 0,
+ "cost": 0.132806,
+ "secs": 26.9,
+ "stop_reason": null,
+ "error": null,
+ "warnings": [
+  "model.call_failure: \"429 Too Many Requests\"",
+  "model.call_failure: \"429 Too Many Requests\""
+ ]
+}

@@ -1,0 +1,30 @@
+{
+ "id": "seed-1",
+ "parent": "seed",
+ "depth": 1,
+ "k": 1,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-5.3-codex",
+ "created": "2026-10-19 21:06:58",
+ "errors": [],
+ "changes": "Rewrote /agent/solver.md to add a strict pre-submit verification protocol focused on the main failure mode (hidden-test TLE): explicit complexity/operation-count sanity checks, mandatory final run_tests, optional worst-case perf probe with run_python when risk is high, and a clear submit gate.",
+ "predicted_delta": 4.0,
+ "final": "CHANGES: Rewrote /agent/solver.md to add a strict pre-submit verification protocol focused on the main failure mode (hidden-test TLE): explicit complexity/operation-count sanity checks, mandatory final run_tests, optional worst-case perf probe with run_python when risk is high, and a clear submit gate.\nPREDICTED_DELTA: +4",
+ "trials": [],
+ "validations": 1,
+ "calls": 8,
+ "tin": 74005,
+ "tout": 1214,
+ "cached": 0,
+ "cost": 0.146505,
+ "secs": 23.0,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

@@ -1,0 +1,41 @@
+{
+ "id": "seed-sh7",
+ "parent": "seed",
+ "depth": 1,
+ "k": 7,
+ "tag": "S:gpt-6.1-sol",
+ "suffix": "sh",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6.1-sol",
+ "created": "2026-10-19 23:19:07",
+ "errors": [],
+ "changes": "Strengthened solver verification: require public tests, diagnose failures with small reference checks, and retest any edited code before submission. Both development trials passed.",
+ "predicted_delta": 5.0,
+ "final": "CHANGES: Strengthened solver verification: require public tests, diagnose failures with small reference checks, and retest any edited code before submission. Both development trials passed.\nPREDICTED_DELTA: +5 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-abc394-e",
+   "passed": true,
+   "cost": 0.002163
+  },
+  {
+   "problem": "lcb-3674",
+   "passed": true,
+   "cost": 0.002736
+  }
+ ],
+ "validations": 1,
+ "calls": 8,
+ "tin": 82096,
+ "tout": 1039,
+ "cached": 0,
+ "cost": 0.179481,
+ "secs": 685.9,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

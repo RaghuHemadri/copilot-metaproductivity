@@ -1,0 +1,36 @@
+{
+ "id": "seed-7",
+ "parent": "seed",
+ "depth": 1,
+ "k": 7,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-haiku-5.5",
+ "created": "2026-10-19 23:13:05",
+ "errors": [],
+ "changes": "Rewrote /agent/solver.md. The dev failures were mostly hidden-test wrong answers and time limits on programs that passed the public examples, and public tests were run on only about half the problems. The new prompt asks the agent to state the algorithm and check its complexity against the constraints before coding, use fast I/O, always run the public tests before submitting, and compare against a small brute-force checker on random inputs and edge cases before submitting. It also says to submit a best-effort answer rather than run out of calls.",
+ "predicted_delta": 3.0,
+ "final": "I rewrote `/agent/solver.md` to target the main failure modes. `validate()` passes, and one trial on a previously failing time-limit problem (lcb-arc193-d) passed on hidden tests. That is one data point, so the estimate below is a judgement call.\n\nCHANGES: Rewrote /agent/solver.md. The dev failures were mostly hidden-test wrong answers and time limits on programs that passed the public examples, and public tests were run on only about half the problems. The new prompt asks the agent to state the algorithm and check its complexity against the constraints before coding, use fast I/O, always run the public tests before submitting, and compare against a small brute-force checker on random inputs and edge cases before submitting. It also says to submit a best-effort answer rather than run out of calls.\nPREDICTED_DELTA: +3",
+ "trials": [
+  {
+   "problem": "lcb-arc193-d",
+   "passed": true,
+   "cost": 0.061986
+  }
+ ],
+ "validations": 1,
+ "calls": 4,
+ "tin": 25454,
+ "tout": 1495,
+ "cached": 0,
+ "cost": 0.065279,
+ "secs": 341.4,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

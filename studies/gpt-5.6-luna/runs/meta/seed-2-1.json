@@ -1,0 +1,36 @@
+{
+ "id": "seed-2-1",
+ "parent": "seed-2",
+ "depth": 2,
+ "k": 1,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-5.6-luna",
+ "created": "2026-10-19 23:39:53",
+ "errors": [],
+ "changes": "Strengthened solver submission gates so every validation must succeed, auxiliary test failures must be resolved, and generated tests must match the exact constraints and edge semantics.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Strengthened solver submission gates so every validation must succeed, auxiliary test failures must be resolved, and generated tests must match the exact constraints and edge semantics.\nPREDICTED_DELTA: +2 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-abc392-f",
+   "passed": false,
+   "cost": 0.007492
+  }
+ ],
+ "validations": 2,
+ "calls": 12,
+ "tin": 147259,
+ "tout": 2919,
+ "cached": 0,
+ "cost": 0.040447,
+ "secs": 225.7,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

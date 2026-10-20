@@ -1,0 +1,36 @@
+{
+ "id": "seed-0-3",
+ "parent": "seed-0",
+ "depth": 2,
+ "k": 3,
+ "tag": "e1",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-19 20:50:40",
+ "errors": [],
+ "changes": "Strengthened the solver\u2019s submission gate: test the exact final code, avoid guessed or incomplete fallbacks, and use remaining calls to verify difficult cases. Validation passed; a previously failing development problem passed a trial.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Strengthened the solver\u2019s submission gate: test the exact final code, avoid guessed or incomplete fallbacks, and use remaining calls to verify difficult cases. Validation passed; a previously failing development problem passed a trial.\nPREDICTED_DELTA: +2 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-3737",
+   "passed": true,
+   "cost": 0.001423
+  }
+ ],
+ "validations": 1,
+ "calls": 8,
+ "tin": 118544,
+ "tout": 2333,
+ "cached": 0,
+ "cost": 0.014444,
+ "secs": 313.3,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

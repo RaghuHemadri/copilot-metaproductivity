@@ -1,0 +1,34 @@
+{
+ "id": "seed-ss8",
+ "parent": "seed",
+ "depth": 1,
+ "k": 8,
+ "tag": "S:claude-sonnet-5.5",
+ "suffix": "ss",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-sonnet-5.5",
+ "created": "2026-10-19 23:08:03",
+ "errors": [],
+ "changes": "I rewrote solver.md. The agent used only 3.3 of its 16 model calls on average, and 19 of the 34 failures submitted code that fails the public examples. The new prompt requires passing the public examples before submitting. It also asks for a brute-force cross-check on small random inputs and a timing test at maximum constraints. It tells the agent to reconsider the algorithm instead of patching blindly after a failed example. I did not run any trials, so none of this is tested.",
+ "predicted_delta": 5.0,
+ "final": "CHANGES: I rewrote solver.md. The agent used only 3.3 of its 16 model calls on average, and 19 of the 34 failures submitted code that fails the public examples. The new prompt requires passing the public examples before submitting. It also asks for a brute-force cross-check on small random inputs and a timing test at maximum constraints. It tells the agent to reconsider the algorithm instead of patching blindly after a failed example. I did not run any trials, so none of this is tested.\nPREDICTED_DELTA: +5",
+ "trials": [],
+ "validations": 1,
+ "calls": 7,
+ "tin": 23863,
+ "tout": 902,
+ "cached": 0,
+ "cost": 0.056746,
+ "secs": 22.1,
+ "stop_reason": null,
+ "error": null,
+ "warnings": [
+  "model.call_failure: \"429 Too Many Requests\"",
+  "model.call_failure: \"429 Too Many Requests\"",
+  "model.call_failure: \"429 Too Many Requests\""
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "id": "seed-ss5",
+ "parent": "seed",
+ "depth": 1,
+ "k": 5,
+ "tag": "S:claude-sonnet-5.5",
+ "suffix": "ss",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-sonnet-5.5",
+ "created": "2026-10-19 23:08:00",
+ "errors": [],
+ "changes": "I rewrote `/agent/solver.md`. The old prompt let the agent stop after about 3 of its 16 model calls, and it often submitted code that failed the public examples or ran too slowly. The new prompt tells it to:\n- plan the algorithm and check its complexity before coding;\n- always run the public examples first;\n- debug by comparing against a brute force on small random inputs;\n- time the solution on a max-size input and check edge cases before submitting.\n\nI did not run any trials, so the effect is untested. `validate()` passes.",
+ "predicted_delta": 4.0,
+ "final": "CHANGES: I rewrote `/agent/solver.md`. The old prompt let the agent stop after about 3 of its 16 model calls, and it often submitted code that failed the public examples or ran too slowly. The new prompt tells it to:\n- plan the algorithm and check its complexity before coding;\n- always run the public examples first;\n- debug by comparing against a brute force on small random inputs;\n- time the solution on a max-size input and check edge cases before submitting.\n\nI did not run any trials, so the effect is untested. `validate()` passes.\n\nPREDICTED_DELTA: +4",
+ "trials": [],
+ "validations": 1,
+ "calls": 5,
+ "tin": 16549,
+ "tout": 959,
+ "cached": 0,
+ "cost": 0.042688,
+ "secs": 18.7,
+ "stop_reason": null,
+ "error": null,
+ "warnings": [
+  "model.call_failure: \"429 Too Many Requests\"",
+  "model.call_failure: \"429 Too Many Requests\""
+ ]
+}

@@ -1,0 +1,44 @@
+{
+ "id": "seed-sa9",
+ "parent": "seed",
+ "depth": 1,
+ "k": 9,
+ "tag": "S:gpt-6-astra",
+ "suffix": "sa",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-astra",
+ "created": "2026-10-19 23:34:03",
+ "errors": [],
+ "changes": "Added an exact-source testing and submission gate, with failure diagnosis and retesting before submission. Validation passed; both trial problems now pass.",
+ "predicted_delta": 6.0,
+ "final": "CHANGES: Added an exact-source testing and submission gate, with failure diagnosis and retesting before submission. Validation passed; both trial problems now pass.\nPREDICTED_DELTA: +6",
+ "trials": [
+  {
+   "problem": "lcb-abc394-e",
+   "passed": true,
+   "cost": 0.002574
+  },
+  {
+   "problem": "lcb-3733",
+   "passed": true,
+   "cost": 0.004603
+  }
+ ],
+ "validations": 1,
+ "calls": 11,
+ "tin": 115485,
+ "tout": 1167,
+ "cached": 0,
+ "cost": 1.220377,
+ "secs": 246.8,
+ "stop_reason": null,
+ "error": null,
+ "warnings": [
+  "model.call_failure: \"429 Too Many Requests\"",
+  "model.call_failure: \"429 Too Many Requests\""
+ ]
+}

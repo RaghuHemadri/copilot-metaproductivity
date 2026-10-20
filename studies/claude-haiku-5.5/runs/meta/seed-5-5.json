@@ -1,0 +1,36 @@
+{
+ "id": "seed-5-5",
+ "parent": "seed-5",
+ "depth": 2,
+ "k": 5,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-haiku-5.5",
+ "created": "2026-10-20 01:16:10",
+ "errors": [],
+ "changes": "Rewrote /agent/solver.md so the brute-force comparison (5a) and max-size timing (5b) are mandatory even when public samples pass. Added an explicit gate that run_python verification must follow run_tests before submit, and told the agent never to submit a known-incomplete solver (the ARC193-D failure was a small-N-only BFS that printed -1 for larger N). Also asked for checkers that validate objective values when multiple answers are valid. Validation passes. One trial (lcb-abc396-e) still failed: the agent still submitted right after run_tests, and the failure is a non-unique-output mismatch that prompt wording can't fix. I did not change the subagents or add a skill.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Rewrote /agent/solver.md so the brute-force comparison (5a) and max-size timing (5b) are mandatory even when public samples pass. Added an explicit gate that run_python verification must follow run_tests before submit, and told the agent never to submit a known-incomplete solver (the ARC193-D failure was a small-N-only BFS that printed -1 for larger N). Also asked for checkers that validate objective values when multiple answers are valid. Validation passes. One trial (lcb-abc396-e) still failed: the agent still submitted right after run_tests, and the failure is a non-unique-output mismatch that prompt wording can't fix. I did not change the subagents or add a skill.\nPREDICTED_DELTA: +2",
+ "trials": [
+  {
+   "problem": "lcb-abc396-e",
+   "passed": false,
+   "cost": 0.001937
+  }
+ ],
+ "validations": 2,
+ "calls": 6,
+ "tin": 71886,
+ "tout": 3904,
+ "cached": 0,
+ "cost": 0.011078,
+ "secs": 168.0,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

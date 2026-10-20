@@ -1,0 +1,30 @@
+{
+ "id": "seed-4",
+ "parent": "seed",
+ "depth": 1,
+ "k": 4,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-5.3-codex",
+ "created": "2026-10-19 21:07:01",
+ "errors": [],
+ "changes": "Updated /agent/solver.md with a focused \u201ccomplexity gate\u201d workflow: explicit operation-count check, rejection of borderline Python complexities, mandatory stress/timing check via run_python for risky solutions, and submit only if both correctness and worst-case performance are credible; this targets the dominant hidden-test TLE failures.",
+ "predicted_delta": 4.0,
+ "final": "CHANGES: Updated /agent/solver.md with a focused \u201ccomplexity gate\u201d workflow: explicit operation-count check, rejection of borderline Python complexities, mandatory stress/timing check via run_python for risky solutions, and submit only if both correctness and worst-case performance are credible; this targets the dominant hidden-test TLE failures.\nPREDICTED_DELTA: +4",
+ "trials": [],
+ "validations": 1,
+ "calls": 10,
+ "tin": 138877,
+ "tout": 1160,
+ "cached": 0,
+ "cost": 0.259275,
+ "secs": 25.9,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

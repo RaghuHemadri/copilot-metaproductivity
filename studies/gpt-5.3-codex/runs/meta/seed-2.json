@@ -1,0 +1,30 @@
+{
+ "id": "seed-2",
+ "parent": "seed",
+ "depth": 1,
+ "k": 2,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-5.3-codex",
+ "created": "2026-10-19 21:07:05",
+ "errors": [],
+ "changes": "Updated /agent/solver.md with a focused performance-first workflow: explicit pre-coding complexity/operation budgeting, anti-heuristic rule, hidden-test TLE avoidance guidance, and a strict pre-submit gate requiring both passing examples and no unresolved performance red flags. This targets the most common failure mode (hidden-test TLE).",
+ "predicted_delta": 4.0,
+ "final": "CHANGES: Updated /agent/solver.md with a focused performance-first workflow: explicit pre-coding complexity/operation budgeting, anti-heuristic rule, hidden-test TLE avoidance guidance, and a strict pre-submit gate requiring both passing examples and no unresolved performance red flags. This targets the most common failure mode (hidden-test TLE).\nPREDICTED_DELTA: +4",
+ "trials": [],
+ "validations": 1,
+ "calls": 11,
+ "tin": 94656,
+ "tout": 1546,
+ "cached": 0,
+ "cost": 0.187292,
+ "secs": 30.0,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

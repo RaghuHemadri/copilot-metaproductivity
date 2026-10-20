@@ -1,0 +1,30 @@
+{
+ "id": "seed-0",
+ "parent": "seed",
+ "depth": 1,
+ "k": 0,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-5.3-codex",
+ "created": "2026-10-19 21:06:56",
+ "errors": [],
+ "changes": "Updated /agent/solver.md with a stricter pre-submit workflow focused on the main failure mode (hidden TLE): explicit complexity headroom check, mandatory public-example pass before submit, and a quick worst-case performance sanity run on hard/large-constraint tasks to avoid submitting borderline solutions.",
+ "predicted_delta": 4.0,
+ "final": "CHANGES: Updated /agent/solver.md with a stricter pre-submit workflow focused on the main failure mode (hidden TLE): explicit complexity headroom check, mandatory public-example pass before submit, and a quick worst-case performance sanity run on hard/large-constraint tasks to avoid submitting borderline solutions.\nPREDICTED_DELTA: +4",
+ "trials": [],
+ "validations": 1,
+ "calls": 8,
+ "tin": 76910,
+ "tout": 991,
+ "cached": 0,
+ "cost": 0.148467,
+ "secs": 21.3,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

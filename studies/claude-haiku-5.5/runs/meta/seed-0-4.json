@@ -1,0 +1,36 @@
+{
+ "id": "seed-0-4",
+ "parent": "seed-0",
+ "depth": 2,
+ "k": 4,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-haiku-5.5",
+ "created": "2026-10-20 01:17:15",
+ "errors": [],
+ "changes": "In /agent/solver.md I added a hard submission gate (step 7) and a cost-definition check (step 8). The gate requires a passing run_tests on the public examples and a timing run under about 1 s at max size before submit, and says a timeout is not excused by explaining its cause. The failures showed that several runs submitted untested drafts (lcb-3655 had 0 test runs) and that the TLE runs were submitted after timed-out timing checks. The step-8 cost-definition check targets the wrong-answer cases where the cost model was misread. One trial on lcb-3655 still failed: the agent did run the public examples this time, but then submitted after a timeout without re-timing or brute-force checking, which is the behaviour the new wording now forbids. I did not re-trial after the final wording change, so its effect is unverified.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: In /agent/solver.md I added a hard submission gate (step 7) and a cost-definition check (step 8). The gate requires a passing run_tests on the public examples and a timing run under about 1 s at max size before submit, and says a timeout is not excused by explaining its cause. The failures showed that several runs submitted untested drafts (lcb-3655 had 0 test runs) and that the TLE runs were submitted after timed-out timing checks. The step-8 cost-definition check targets the wrong-answer cases where the cost model was misread. One trial on lcb-3655 still failed: the agent did run the public examples this time, but then submitted after a timeout without re-timing or brute-force checking, which is the behaviour the new wording now forbids. I did not re-trial after the final wording change, so its effect is unverified.\nPREDICTED_DELTA: +2",
+ "trials": [
+  {
+   "problem": "lcb-3655",
+   "passed": false,
+   "cost": 0.002665
+  }
+ ],
+ "validations": 2,
+ "calls": 6,
+ "tin": 62430,
+ "tout": 2272,
+ "cached": 0,
+ "cost": 0.010044,
+ "secs": 233.3,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

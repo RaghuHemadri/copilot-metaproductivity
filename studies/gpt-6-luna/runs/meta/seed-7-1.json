@@ -1,0 +1,30 @@
+{
+ "id": "seed-7-1",
+ "parent": "seed-7",
+ "depth": 2,
+ "k": 1,
+ "tag": "e1",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-20 03:21:05",
+ "errors": [],
+ "changes": "Added a mandatory submission gate: only submit the exact code that passes all public examples, and never submit heuristic or unjustified work; validated successfully.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Added a mandatory submission gate: only submit the exact code that passes all public examples, and never submit heuristic or unjustified work; validated successfully.\nPREDICTED_DELTA: +2 percentage points",
+ "trials": [],
+ "validations": 1,
+ "calls": 7,
+ "tin": 92620,
+ "tout": 1507,
+ "cached": 0,
+ "cost": 0.010016,
+ "secs": 49.2,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

@@ -1,5 +1,6 @@
 """Regrades stored evaluation rows with the current grader (CPU-time limits). Idempotent: rows already graded with
-grader 'cpu' are skipped. Usage: python tools/regrade.py [glob]   (default: all studies)"""
+grader 'cpu' are skipped, unless --all (e.g. to grade every row on one machine after moving the study; run it while no
+experiment is running). Usage: python tools/regrade.py [--all] [glob]   (default: all studies)"""
 import glob, json, os, sys
 from concurrent.futures import ThreadPoolExecutor
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
@@ -7,7 +8,7 @@ import prepare
 
 def regrade_file(path: str) -> tuple[int, int]:
     rows = [json.loads(l) for l in open(path) if l.strip()]
-    todo = [r for r in rows if r.get("grader") != "cpu"]
+    todo = [r for r in rows if ALL or r.get("grader") != "cpu"]
     if not todo:
         return 0, 0
     def one(r):
@@ -27,8 +28,11 @@ def regrade_file(path: str) -> tuple[int, int]:
     os.replace(tmp, path)
     return len(todo), flips
 
+ALL = "--all" in sys.argv
+
 if __name__ == "__main__":
-    pat = sys.argv[1] if len(sys.argv) > 1 else "studies/*/runs/evals/*/*.jsonl"
+    args = [a for a in sys.argv[1:] if a != "--all"]
+    pat = args[0] if args else "studies/*/runs/evals/*/*.jsonl"
     tot = fl = 0
     for p in sorted(glob.glob(pat)):
         n, f = regrade_file(p)

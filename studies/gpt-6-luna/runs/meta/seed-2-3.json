@@ -1,0 +1,30 @@
+{
+ "id": "seed-2-3",
+ "parent": "seed-2",
+ "depth": 2,
+ "k": 3,
+ "tag": "e1",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-19 20:46:28",
+ "errors": [],
+ "changes": "Strengthened the solver prompt to require tiny-case brute-force differential checks for subtle algorithms and reject sample-specific workarounds.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Strengthened the solver prompt to require tiny-case brute-force differential checks for subtle algorithms and reject sample-specific workarounds.\nPREDICTED_DELTA: +2 percentage points",
+ "trials": [],
+ "validations": 1,
+ "calls": 8,
+ "tin": 112674,
+ "tout": 1553,
+ "cached": 0,
+ "cost": 0.012044,
+ "secs": 61.5,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

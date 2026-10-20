@@ -1,0 +1,30 @@
+{
+ "id": "seed-7-4",
+ "parent": "seed-7",
+ "depth": 2,
+ "k": 4,
+ "tag": "e1",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-20 03:21:09",
+ "errors": [],
+ "changes": "Strengthened the solver\u2019s submission gate: require a passing test run on the exact final code, and emphasize tiny-case checks and constraint-scale complexity review.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Strengthened the solver\u2019s submission gate: require a passing test run on the exact final code, and emphasize tiny-case checks and constraint-scale complexity review.\nPREDICTED_DELTA: +2 percentage points",
+ "trials": [],
+ "validations": 1,
+ "calls": 8,
+ "tin": 118758,
+ "tout": 2018,
+ "cached": 0,
+ "cost": 0.012885,
+ "secs": 52.9,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

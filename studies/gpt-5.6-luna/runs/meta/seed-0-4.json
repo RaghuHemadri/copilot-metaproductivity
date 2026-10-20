@@ -1,0 +1,36 @@
+{
+ "id": "seed-0-4",
+ "parent": "seed-0",
+ "depth": 2,
+ "k": 4,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-5.6-luna",
+ "created": "2026-10-19 23:40:31",
+ "errors": [],
+ "changes": "Strengthened the solver workflow with explicit worst-case complexity checks, independent brute-force validation, realistic benchmarking, constructive-output handling, and a stricter final audit before submission.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Strengthened the solver workflow with explicit worst-case complexity checks, independent brute-force validation, realistic benchmarking, constructive-output handling, and a stricter final audit before submission.\nPREDICTED_DELTA: +2 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-abc366-g",
+   "passed": false,
+   "cost": 0.004923
+  }
+ ],
+ "validations": 1,
+ "calls": 8,
+ "tin": 118008,
+ "tout": 2189,
+ "cached": 0,
+ "cost": 0.031151,
+ "secs": 263.7,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

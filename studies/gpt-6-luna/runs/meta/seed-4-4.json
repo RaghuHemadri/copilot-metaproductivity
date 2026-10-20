@@ -1,0 +1,30 @@
+{
+ "id": "seed-4-4",
+ "parent": "seed-4",
+ "depth": 2,
+ "k": 4,
+ "tag": "e1",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-20 00:11:56",
+ "errors": [],
+ "changes": "Added a correctness gate requiring full-constraint reasoning and, when feasible, differential checks against a simple reference; it also rules out sample-specific or incomplete solutions.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Added a correctness gate requiring full-constraint reasoning and, when feasible, differential checks against a simple reference; it also rules out sample-specific or incomplete solutions.\nPREDICTED_DELTA: +2 percentage points",
+ "trials": [],
+ "validations": 1,
+ "calls": 7,
+ "tin": 95757,
+ "tout": 1633,
+ "cached": 0,
+ "cost": 0.010392,
+ "secs": 33.0,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

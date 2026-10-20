@@ -1,0 +1,19 @@
+{
+ "model": "gpt-6-luna",
+ "pass_rate": 0.688,
+ "by_difficulty": {
+  "hard": 0.578,
+  "medium": 0.906
+ },
+ "cost": 0.1149,
+ "mean_calls": 2.82,
+ "submitted": 0.917,
+ "infra_errors": 0,
+ "tasks_with_warnings": 0,
+ "budget_stops": 0,
+ "mean_secs": 23.6,
+ "wall_s": 0,
+ "tin": 485925,
+ "tout": 132589,
+ "cached": 0
+}

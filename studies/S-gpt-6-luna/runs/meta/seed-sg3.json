@@ -1,0 +1,30 @@
+{
+ "id": "seed-sg3",
+ "parent": "seed",
+ "depth": 1,
+ "k": 3,
+ "tag": "S:gpt-6-sol",
+ "suffix": "sg",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-sol",
+ "created": "2026-10-19 23:08:15",
+ "errors": [],
+ "changes": "Strengthened the solver\u2019s pre-submission checks: test the exact final code, debug failed examples, and verify constructive outputs independently.",
+ "predicted_delta": 5.0,
+ "final": "CHANGES: Strengthened the solver\u2019s pre-submission checks: test the exact final code, debug failed examples, and verify constructive outputs independently.\nPREDICTED_DELTA: +5 percentage points",
+ "trials": [],
+ "validations": 1,
+ "calls": 8,
+ "tin": 118292,
+ "tout": 1444,
+ "cached": 0,
+ "cost": 0.251024,
+ "secs": 34.3,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

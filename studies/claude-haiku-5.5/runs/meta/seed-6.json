@@ -1,0 +1,37 @@
+{
+ "id": "seed-6",
+ "parent": "seed",
+ "depth": 1,
+ "k": 6,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "skills/verify-before-submit/SKILL.md",
+  "solver.md"
+ ],
+ "researcher_model": "claude-haiku-5.5",
+ "created": "2026-10-19 23:16:36",
+ "errors": [],
+ "changes": "Rewrote /agent/solver.md into a stricter workflow: verify the exact final code with run_tests right before submit, compare against a brute-force solver on small random inputs, time a worst-case input, and watch for edge cases and modular pitfalls. Added the skill /agent/skills/verify-before-submit/SKILL.md with the stress-testing checklist. Targets the failures where the agent submitted untested code (5 final programs failing public examples) or passed samples but failed hidden tests on wrong answers and timeouts (9 cases). validate() passed. One trial on lcb-abc378-g, previously failing, now passes.",
+ "predicted_delta": 4.0,
+ "final": "The previously failing problem now passes, though one trial is a small sample. I'm stopping here.\n\nCHANGES: Rewrote /agent/solver.md into a stricter workflow: verify the exact final code with run_tests right before submit, compare against a brute-force solver on small random inputs, time a worst-case input, and watch for edge cases and modular pitfalls. Added the skill /agent/skills/verify-before-submit/SKILL.md with the stress-testing checklist. Targets the failures where the agent submitted untested code (5 final programs failing public examples) or passed samples but failed hidden tests on wrong answers and timeouts (9 cases). validate() passed. One trial on lcb-abc378-g, previously failing, now passes.\nPREDICTED_DELTA: +4",
+ "trials": [
+  {
+   "problem": "lcb-abc378-g",
+   "passed": true,
+   "cost": 0.085886
+  }
+ ],
+ "validations": 1,
+ "calls": 6,
+ "tin": 53325,
+ "tout": 2427,
+ "cached": 0,
+ "cost": 0.092432,
+ "secs": 555.3,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

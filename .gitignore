@@ -1,11 +1,11 @@
 .venv/
 .env
-data/
-logs/
+# data/ is rebuilt by setup.sh (about 9 GB); only the study's splits and the checksums of every built file are tracked
+data/*
+!data/splits.json
+!data/manifest.sha256
 __pycache__/
 *.pyc
 .pytest_cache/
-studies/*/runs/
-studies/ledger.json
+*.tmp
 studies/.ledger.lock
-studies/ledger.tmp

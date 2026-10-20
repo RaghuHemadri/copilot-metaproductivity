@@ -1,0 +1,19 @@
+{
+ "model": "mai-code-1.1-flash",
+ "pass_rate": 0.604,
+ "by_difficulty": {
+  "hard": 0.469,
+  "medium": 0.875
+ },
+ "cost": 2.8068,
+ "mean_calls": 5.74,
+ "submitted": 0.948,
+ "infra_errors": 0,
+ "tasks_with_warnings": 6,
+ "budget_stops": 4,
+ "mean_secs": 101.1,
+ "wall_s": 0,
+ "tin": 5667103,
+ "tout": 1394450,
+ "cached": 0
+}

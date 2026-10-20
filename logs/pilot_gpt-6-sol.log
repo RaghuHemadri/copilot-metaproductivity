@@ -1,0 +1,2 @@
+22:46:19 [gpt-6-sol] eval seed v2_dev r0: 63 tasks in 451s $1.438
+22:46:19 [gpt-6-sol] PILOT {"model": "gpt-6-sol", "pass_rate": 0.854, "by_difficulty": {"hard": 0.781, "medium": 1.0}, "cost": 2.7091, "mean_calls": 3.99, "submitted": 1.0, "infra_errors": 0, "tasks_with_warnings": 13, "budget_stops": 0, "mean_secs": 42.4, "wall_s": 451, "tin": 700190, "tout": 130872, "cached": 0}

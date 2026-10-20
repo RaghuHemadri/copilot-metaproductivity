@@ -91,7 +91,12 @@ def banned_strings() -> tuple[str, ...]:
 def _eval_task(genome: dict, slug: str) -> dict:
     task = prepare.load_task(slug)
     for attempt in range(4):  # re-run only infrastructure failures (no model call happened), never agent failures
-        r = runtime.solve(genome, task, MODEL)
+        try:
+            r = runtime.solve(genome, task, MODEL)
+        except TimeoutError:  # the session hung past its time budget and was cancelled: also infrastructure
+            if attempt == 3:
+                raise
+            continue
         if not r["error"]:
             break
         time.sleep(5 * (attempt + 1))

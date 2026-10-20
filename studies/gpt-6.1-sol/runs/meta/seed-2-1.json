@@ -1,0 +1,30 @@
+{
+ "id": "seed-2-1",
+ "parent": "seed-2",
+ "depth": 2,
+ "k": 1,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6.1-sol",
+ "created": "2026-10-20 01:03:01",
+ "errors": [],
+ "changes": "Added targeted differential tests and independent validation of non-unique outputs; validation passed. Remaining development failures appear to be judge/statement mismatches.",
+ "predicted_delta": 0.0,
+ "final": "CHANGES: Added targeted differential tests and independent validation of non-unique outputs; validation passed. Remaining development failures appear to be judge/statement mismatches.\nPREDICTED_DELTA: +0 percentage points on development; improved held-out correctness checks.",
+ "trials": [],
+ "validations": 1,
+ "calls": 7,
+ "tin": 61270,
+ "tout": 1184,
+ "cached": 0,
+ "cost": 0.13438,
+ "secs": 35.5,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

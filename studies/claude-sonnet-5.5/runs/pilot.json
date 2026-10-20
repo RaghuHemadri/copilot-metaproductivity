@@ -1,0 +1,19 @@
+{
+ "model": "claude-sonnet-5.5",
+ "pass_rate": 0.854,
+ "by_difficulty": {
+  "hard": 0.781,
+  "medium": 1.0
+ },
+ "cost": 4.1674,
+ "mean_calls": 2.29,
+ "submitted": 0.99,
+ "infra_errors": 0,
+ "tasks_with_warnings": 3,
+ "budget_stops": 1,
+ "mean_secs": 23.2,
+ "wall_s": 0,
+ "tin": 915596,
+ "tout": 233617,
+ "cached": 0
+}

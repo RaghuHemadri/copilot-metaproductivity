@@ -1,0 +1,36 @@
+{
+ "id": "seed-6-5",
+ "parent": "seed-6",
+ "depth": 2,
+ "k": 5,
+ "tag": "e1",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-20 02:32:11",
+ "errors": [],
+ "changes": "Strengthened solver guidance to require independent brute-force checks and structured larger stress cases for subtle algorithms, targeting hidden-test wrong answers.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Strengthened solver guidance to require independent brute-force checks and structured larger stress cases for subtle algorithms, targeting hidden-test wrong answers.\nPREDICTED_DELTA: +2 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-3686",
+   "passed": false,
+   "cost": 0.002161
+  }
+ ],
+ "validations": 2,
+ "calls": 12,
+ "tin": 212668,
+ "tout": 3374,
+ "cached": 0,
+ "cost": 0.025115,
+ "secs": 160.5,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

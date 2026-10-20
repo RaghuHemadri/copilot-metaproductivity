@@ -1,0 +1,30 @@
+{
+ "id": "seed-1-4",
+ "parent": "seed-1",
+ "depth": 2,
+ "k": 4,
+ "tag": "e1",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-19 20:45:58",
+ "errors": [],
+ "changes": "Strengthened the solver\u2019s correctness gate: require a justified worst-case algorithm and forbid submitting a knowingly unproven fallback, even when samples pass.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Strengthened the solver\u2019s correctness gate: require a justified worst-case algorithm and forbid submitting a knowingly unproven fallback, even when samples pass.\nPREDICTED_DELTA: +2 percentage points",
+ "trials": [],
+ "validations": 1,
+ "calls": 7,
+ "tin": 74035,
+ "tout": 1569,
+ "cached": 0,
+ "cost": 0.008188,
+ "secs": 31.6,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

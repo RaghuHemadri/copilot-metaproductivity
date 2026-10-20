@@ -1,0 +1,36 @@
+{
+ "id": "seed-1",
+ "parent": "seed",
+ "depth": 1,
+ "k": 1,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6.1-sol",
+ "created": "2026-10-19 23:20:05",
+ "errors": [],
+ "changes": "Added targeted worst-case runtime benchmarking before submission; the previously timing-out development problem now passes in a trial.",
+ "predicted_delta": 1.0,
+ "final": "CHANGES: Added targeted worst-case runtime benchmarking before submission; the previously timing-out development problem now passes in a trial.\nPREDICTED_DELTA: +1 percentage point",
+ "trials": [
+  {
+   "problem": "lcb-3686",
+   "passed": true,
+   "cost": 0.061914
+  }
+ ],
+ "validations": 1,
+ "calls": 8,
+ "tin": 77591,
+ "tout": 934,
+ "cached": 0,
+ "cost": 0.226436,
+ "secs": 270.5,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

@@ -1,0 +1,19 @@
+{
+ "model": "claude-haiku-5.5",
+ "pass_rate": 0.854,
+ "by_difficulty": {
+  "hard": 0.797,
+  "medium": 0.969
+ },
+ "cost": 0.4579,
+ "mean_calls": 3.32,
+ "submitted": 1.0,
+ "infra_errors": 0,
+ "tasks_with_warnings": 0,
+ "budget_stops": 0,
+ "mean_secs": 29.2,
+ "wall_s": 0,
+ "tin": 2152148,
+ "tout": 485276,
+ "cached": 0
+}

@@ -1,0 +1,41 @@
+{
+ "id": "seed-sh3",
+ "parent": "seed",
+ "depth": 1,
+ "k": 3,
+ "tag": "S:gpt-6.1-sol",
+ "suffix": "sh",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6.1-sol",
+ "created": "2026-10-19 23:19:08",
+ "errors": [],
+ "changes": "Strengthened testing and debugging requirements, including retesting edits and submitting verified code. Validation passed; trials fixed one failure, while another still timed out.",
+ "predicted_delta": 4.0,
+ "final": "CHANGES: Strengthened testing and debugging requirements, including retesting edits and submitting verified code. Validation passed; trials fixed one failure, while another still timed out.\nPREDICTED_DELTA: +4 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-3733",
+   "passed": false,
+   "cost": 0.00337
+  },
+  {
+   "problem": "lcb-3594",
+   "passed": true,
+   "cost": 0.000808
+  }
+ ],
+ "validations": 1,
+ "calls": 8,
+ "tin": 89818,
+ "tout": 1222,
+ "cached": 0,
+ "cost": 0.196034,
+ "secs": 686.7,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

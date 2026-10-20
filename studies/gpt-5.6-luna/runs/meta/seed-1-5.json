@@ -1,0 +1,36 @@
+{
+ "id": "seed-1-5",
+ "parent": "seed-1",
+ "depth": 2,
+ "k": 5,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-5.6-luna",
+ "created": "2026-10-19 23:40:44",
+ "errors": [],
+ "changes": "Strengthened the solver workflow with hard gates for passing all public examples, differential testing, complexity proof, and near-limit performance testing before submission.",
+ "predicted_delta": 4.0,
+ "final": "CHANGES: Strengthened the solver workflow with hard gates for passing all public examples, differential testing, complexity proof, and near-limit performance testing before submission.\nPREDICTED_DELTA: +4 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-3674",
+   "passed": false,
+   "cost": 0.005658
+  }
+ ],
+ "validations": 2,
+ "calls": 8,
+ "tin": 89357,
+ "tout": 1685,
+ "cached": 0,
+ "cost": 0.025551,
+ "secs": 276.3,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

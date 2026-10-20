@@ -1,0 +1,30 @@
+{
+ "id": "seed-2-0",
+ "parent": "seed-2",
+ "depth": 2,
+ "k": 0,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6.1-sol",
+ "created": "2026-10-20 01:03:07",
+ "errors": [],
+ "changes": "Added independent brute-force and semantic validation, including checks for invalid test inputs and non-unique outputs. Validation passed.",
+ "predicted_delta": 1.0,
+ "final": "CHANGES: Added independent brute-force and semantic validation, including checks for invalid test inputs and non-unique outputs. Validation passed.\nPREDICTED_DELTA: +1 percentage point",
+ "trials": [],
+ "validations": 1,
+ "calls": 7,
+ "tin": 60236,
+ "tout": 1350,
+ "cached": 0,
+ "cost": 0.133972,
+ "secs": 41.4,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

@@ -1,0 +1,36 @@
+{
+ "id": "seed-2-1",
+ "parent": "seed-2",
+ "depth": 2,
+ "k": 1,
+ "tag": "e1",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-19 20:48:36",
+ "errors": [],
+ "changes": "Added a small-case differential-check step for nontrivial algorithms to catch logic errors that public examples miss.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Added a small-case differential-check step for nontrivial algorithms to catch logic errors that public examples miss.\nPREDICTED_DELTA: +2 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-3686",
+   "passed": false,
+   "cost": 0.003663
+  }
+ ],
+ "validations": 1,
+ "calls": 7,
+ "tin": 66361,
+ "tout": 1648,
+ "cached": 0,
+ "cost": 0.011123,
+ "secs": 190.1,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

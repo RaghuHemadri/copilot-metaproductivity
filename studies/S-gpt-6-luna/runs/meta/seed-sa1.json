@@ -1,0 +1,36 @@
+{
+ "id": "seed-sa1",
+ "parent": "seed",
+ "depth": 1,
+ "k": 1,
+ "tag": "S:gpt-6-astra",
+ "suffix": "sa",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-astra",
+ "created": "2026-10-19 23:16:25",
+ "errors": [],
+ "changes": "Added a final-code testing gate and executable debugging loop to prevent skipped tests, unresolved failures, and post-test regressions. Validation passed; one previously failing problem passed its trial.",
+ "predicted_delta": 6.0,
+ "final": "CHANGES: Added a final-code testing gate and executable debugging loop to prevent skipped tests, unresolved failures, and post-test regressions. Validation passed; one previously failing problem passed its trial.\nPREDICTED_DELTA: +6 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-abc380-f",
+   "passed": true,
+   "cost": 0.001404
+  }
+ ],
+ "validations": 1,
+ "calls": 8,
+ "tin": 85045,
+ "tout": 1205,
+ "cached": 0,
+ "cost": 0.912104,
+ "secs": 524.5,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

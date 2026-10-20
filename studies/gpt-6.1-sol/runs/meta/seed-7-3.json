@@ -1,0 +1,30 @@
+{
+ "id": "seed-7-3",
+ "parent": "seed-7",
+ "depth": 2,
+ "k": 3,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6.1-sol",
+ "created": "2026-10-20 01:03:03",
+ "errors": [],
+ "changes": "Added independent correctness audits with valid small-case generation, brute-force comparisons, and semantic validation of non-unique outputs. Validation passed.",
+ "predicted_delta": 0.0,
+ "final": "CHANGES: Added independent correctness audits with valid small-case generation, brute-force comparisons, and semantic validation of non-unique outputs. Validation passed.\nPREDICTED_DELTA: +0 percentage points; reported failures appear to be evaluator inconsistencies.",
+ "trials": [],
+ "validations": 1,
+ "calls": 8,
+ "tin": 75206,
+ "tout": 1137,
+ "cached": 0,
+ "cost": 0.161782,
+ "secs": 36.5,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

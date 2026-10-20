@@ -1,0 +1,36 @@
+{
+ "id": "seed-5-1",
+ "parent": "seed-5",
+ "depth": 2,
+ "k": 1,
+ "tag": "e1",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-20 00:17:52",
+ "errors": [],
+ "changes": "Strengthened the solver workflow with explicit correctness invariants, adversarial-case checks, and differential testing against a small-instance oracle when practical; also made passing all provided tests a strict submission requirement.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Strengthened the solver workflow with explicit correctness invariants, adversarial-case checks, and differential testing against a small-instance oracle when practical; also made passing all provided tests a strict submission requirement.\nPREDICTED_DELTA: +2 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-abc396-e",
+   "passed": false,
+   "cost": 0.001683
+  }
+ ],
+ "validations": 1,
+ "calls": 8,
+ "tin": 109096,
+ "tout": 2950,
+ "cached": 0,
+ "cost": 0.014068,
+ "secs": 184.3,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

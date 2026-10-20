@@ -1,0 +1,38 @@
+{
+ "id": "seed-sh9",
+ "parent": "seed",
+ "depth": 1,
+ "k": 9,
+ "tag": "S:gpt-6.1-sol",
+ "suffix": "sh",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6.1-sol",
+ "created": "2026-10-19 23:32:16",
+ "errors": [],
+ "changes": "Added mandatory testing, failure diagnosis, and exact-source submission checks to address the dominant failure pattern. Validation passed; one previously failing problem passed a trial.",
+ "predicted_delta": 4.0,
+ "final": "CHANGES: Added mandatory testing, failure diagnosis, and exact-source submission checks to address the dominant failure pattern. Validation passed; one previously failing problem passed a trial.\nPREDICTED_DELTA: +4 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-abc394-e",
+   "passed": true,
+   "cost": 0.004958
+  }
+ ],
+ "validations": 1,
+ "calls": 8,
+ "tin": 66288,
+ "tout": 1074,
+ "cached": 0,
+ "cost": 0.148274,
+ "secs": 139.8,
+ "stop_reason": null,
+ "error": null,
+ "warnings": [
+  "model.call_failure: \"429 Too Many Requests\""
+ ]
+}

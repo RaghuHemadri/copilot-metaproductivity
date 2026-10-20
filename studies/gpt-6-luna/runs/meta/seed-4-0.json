@@ -1,0 +1,30 @@
+{
+ "id": "seed-4-0",
+ "parent": "seed-4",
+ "depth": 2,
+ "k": 0,
+ "tag": "e1",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-20 00:12:00",
+ "errors": [],
+ "changes": "Strengthened solver verification: require independent small-case brute-force checks for subtle algorithms when feasible, and prohibit submitting sample-specific or knowingly unsupported solutions. Validation passed.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Strengthened solver verification: require independent small-case brute-force checks for subtle algorithms when feasible, and prohibit submitting sample-specific or knowingly unsupported solutions. Validation passed.\nPREDICTED_DELTA: +2 percentage points",
+ "trials": [],
+ "validations": 1,
+ "calls": 8,
+ "tin": 120458,
+ "tout": 1957,
+ "cached": 0,
+ "cost": 0.013024,
+ "secs": 37.2,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

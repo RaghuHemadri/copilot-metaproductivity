@@ -1,0 +1,38 @@
+{
+ "id": "seed-0-5",
+ "parent": "seed-0",
+ "depth": 2,
+ "k": 5,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-haiku-5.5",
+ "created": "2026-10-20 01:16:06",
+ "errors": [],
+ "changes": "Rewrote /agent/solver.md. Several failed runs submitted after 0\u20132 tool calls with no run_tests or brute-force check, so I made verification a mandatory gate: run_tests on examples, then one brute-force comparison, then one timing run, all before submit. I added guidance on the failure patterns seen in the logs: DP over counts with a large candidate range (lcb-3638 timed out), checking Dijkstra cost definitions by hand on the examples (lcb-3655), and validating GF(2) XOR outputs by plugging them back in (lcb-abc366-g). I also required verification runs to stay small (under about 5 s), since a timed-out check was hiding real bugs. One trial on lcb-3655 now runs the public tests and then fails on a hidden-test wrong answer; its brute-force run timed out, which motivated the small-run rule. I did not trial the other changes, and validate() reports OK.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Rewrote /agent/solver.md. Several failed runs submitted after 0\u20132 tool calls with no run_tests or brute-force check, so I made verification a mandatory gate: run_tests on examples, then one brute-force comparison, then one timing run, all before submit. I added guidance on the failure patterns seen in the logs: DP over counts with a large candidate range (lcb-3638 timed out), checking Dijkstra cost definitions by hand on the examples (lcb-3655), and validating GF(2) XOR outputs by plugging them back in (lcb-abc366-g). I also required verification runs to stay small (under about 5 s), since a timed-out check was hiding real bugs. One trial on lcb-3655 now runs the public tests and then fails on a hidden-test wrong answer; its brute-force run timed out, which motivated the small-run rule. I did not trial the other changes, and validate() reports OK.\nPREDICTED_DELTA: +2",
+ "trials": [
+  {
+   "problem": "lcb-3655",
+   "passed": false,
+   "cost": 0.003239
+  }
+ ],
+ "validations": 2,
+ "calls": 8,
+ "tin": 93145,
+ "tout": 4141,
+ "cached": 0,
+ "cost": 0.014624,
+ "secs": 164.4,
+ "stop_reason": null,
+ "error": null,
+ "warnings": [
+  "model.call_failure: \"429 Too Many Requests\""
+ ]
+}

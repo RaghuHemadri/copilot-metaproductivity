@@ -1,0 +1,41 @@
+{
+ "id": "seed-0",
+ "parent": "seed",
+ "depth": 1,
+ "k": 0,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-haiku-5.5",
+ "created": "2026-10-19 23:15:36",
+ "errors": [],
+ "changes": "Rewrote `/agent/solver.md` to require brute-force comparison on small random inputs, one moderate-size timing run, and no submission of solutions that are too slow or only checked on examples. Added a cap on verification calls and a ban on numpy. Failures were mostly hidden-test wrong answers and time limits on hard problems, which the solver was submitting after only the public examples passed.",
+ "predicted_delta": 3.0,
+ "final": "I changed the solver's workflow in `/agent/solver.md`. It now verifies before submitting, and I did not add skills or sub-agents. Validation passes. I ran 2 of my 3 trials on the failing problems, and both still failed.\n\n- **What the failures showed:** Most failures were hard problems that passed the public examples and then failed hidden tests (wrong answers, time limits, runtime errors). The solver submitted after one public-example pass (96/96 submitted, public tests run on only 49/96), so it never compared against brute force or timed the program at full size.\n- **What I changed:** The prompt now requires:\n  - choosing an algorithm that fits the largest constraints,\n  - comparing the fast solution against a brute-force solver on many small random cases,\n  - timing one large-input run,\n  - never submitting a solution measured as too slow, and\n  - capping verification at about 3 `run_python` calls, with inputs kept small enough to avoid sandbox timeouts.\n- **Trial results:**\n  - `lcb-3638`: failed after the first edit. The solver spent its calls on heavy stress runs that timed out and used numpy. I then tightened the verification guidance (small brute-force inputs, one moderate timing run, no numpy).\n  - `lcb-arc193-d`: failed. The solver now verified correctness on 1500 random cases, but its set-based DP was too slow at N=2\u00b710^5 (about 7 s), and it submitted anyway. I added the \"never submit a measured-too-slow solution\" rule after this trial, so it has not been tested.\n\nThe remaining gap is algorithmic: the solver can verify correctness, but it still needs to find the faster formulation. I did not run the final version of the prompt, so the effect is unmeasured.\n\nCHANGES: Rewrote `/agent/solver.md` to require brute-force comparison on small random inputs, one moderate-size timing run, and no submission of solutions that are too slow or only checked on examples. Added a cap on verification calls and a ban on numpy. Failures were mostly hidden-test wrong answers and time limits on hard problems, which the solver was submitting after only the public examples passed.\nPREDICTED_DELTA: +3",
+ "trials": [
+  {
+   "problem": "lcb-3638",
+   "passed": false,
+   "cost": 0.019689
+  },
+  {
+   "problem": "lcb-arc193-d",
+   "passed": false,
+   "cost": 0.038068
+  }
+ ],
+ "validations": 3,
+ "calls": 8,
+ "tin": 102115,
+ "tout": 4129,
+ "cached": 0,
+ "cost": 0.070033,
+ "secs": 495.2,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

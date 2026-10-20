@@ -1,0 +1,33 @@
+{
+ "id": "seed-ss0",
+ "parent": "seed",
+ "depth": 1,
+ "k": 0,
+ "tag": "S:claude-sonnet-5.5",
+ "suffix": "ss",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-sonnet-5.5",
+ "created": "2026-10-19 23:08:00",
+ "errors": [],
+ "changes": "I rewrote solver.md. The agent now has to pass the public examples before it submits. It also has to stress-test against a brute-force solution, time a max-size input, and check edge cases. Previous runs used only about 3 of the 16 model calls and often submitted wrong or too-slow code. I did not run any trials, so the change is untested.",
+ "predicted_delta": 4.0,
+ "final": "CHANGES: I rewrote solver.md. The agent now has to pass the public examples before it submits. It also has to stress-test against a brute-force solution, time a max-size input, and check edge cases. Previous runs used only about 3 of the 16 model calls and often submitted wrong or too-slow code. I did not run any trials, so the change is untested.\nPREDICTED_DELTA: +4",
+ "trials": [],
+ "validations": 1,
+ "calls": 5,
+ "tin": 16575,
+ "tout": 922,
+ "cached": 0,
+ "cost": 0.04237,
+ "secs": 18.7,
+ "stop_reason": null,
+ "error": null,
+ "warnings": [
+  "model.call_failure: \"429 Too Many Requests\"",
+  "model.call_failure: \"429 Too Many Requests\""
+ ]
+}

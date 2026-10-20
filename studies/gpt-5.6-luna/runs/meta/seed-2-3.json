@@ -1,0 +1,36 @@
+{
+ "id": "seed-2-3",
+ "parent": "seed-2",
+ "depth": 2,
+ "k": 3,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-5.6-luna",
+ "created": "2026-10-19 23:39:08",
+ "errors": [],
+ "changes": "Strengthened the solver\u2019s irreversible submission gate: it must rerun public tests on the exact final code and submit only after a 100% pass, with any code change invalidating prior results.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Strengthened the solver\u2019s irreversible submission gate: it must rerun public tests on the exact final code and submit only after a 100% pass, with any code change invalidating prior results.\nPREDICTED_DELTA: +2 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-3733",
+   "passed": false,
+   "cost": 0.01105
+  }
+ ],
+ "validations": 1,
+ "calls": 8,
+ "tin": 87317,
+ "tout": 1264,
+ "cached": 0,
+ "cost": 0.03003,
+ "secs": 180.8,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

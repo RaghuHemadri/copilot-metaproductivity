@@ -1,0 +1,36 @@
+{
+ "id": "seed-3-3",
+ "parent": "seed-3",
+ "depth": 2,
+ "k": 3,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6.1-sol",
+ "created": "2026-10-20 01:05:02",
+ "errors": [],
+ "changes": "Added stable-output guidance and bounded checker-mismatch triage while preserving semantic correctness. Validation passed; the trial still failed literal comparison.",
+ "predicted_delta": 0.0,
+ "final": "CHANGES: Added stable-output guidance and bounded checker-mismatch triage while preserving semantic correctness. Validation passed; the trial still failed literal comparison.\nPREDICTED_DELTA: +0 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-abc366-g",
+   "passed": false,
+   "cost": 0.040906
+  }
+ ],
+ "validations": 1,
+ "calls": 8,
+ "tin": 78750,
+ "tout": 1570,
+ "cached": 0,
+ "cost": 0.214106,
+ "secs": 155.5,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

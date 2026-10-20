@@ -1,0 +1,50 @@
+{
+ "id": "seed-so9",
+ "parent": "seed",
+ "depth": 1,
+ "k": 9,
+ "tag": "S:claude-opus-5.5",
+ "suffix": "so",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "skills/stress-test/SKILL.md",
+  "solver.md"
+ ],
+ "researcher_model": "claude-opus-5.5",
+ "created": "2026-10-19 23:34:30",
+ "errors": [],
+ "changes": "Rewrote /agent/solver.md. It now opens with a hard rule against submitting untested or known-wrong code. It tells the agent to use its 16-call budget instead of submitting after 2\u20134 calls. It adds a workflow: understand the problem, check samples by hand, and use a brute force to find patterns on hard problems. Before submitting, the agent must compare against a brute force on random small inputs, time a maximum-size input, and avoid deep recursion. A pre-submit checklist and Python tips cover speed, big numbers and output. Added a skill, /agent/skills/stress-test, with ready-to-use code for the brute-force comparison and the timing run. Reason: most failures (19/34) were submissions that fail the public examples, made with most of the budget unused; most others failed hidden tests (wrong answer or too slow) without any brute-force or timing check.",
+ "predicted_delta": 3.0,
+ "final": "I changed the agent's solving instructions and added one skill. In 2 of 3 trial runs the agent still submitted code it had just seen fail, so I don't expect much of a gain.\n\n**What's going wrong:** 19 of the 34 failures were programs that fail the public examples, often submitted after only 2\u20134 of the 16 model calls (average 3.3 calls per problem, and no problem ran out of budget). Another 15 passed the examples but failed hidden tests: 8 wrong answers, 6 too slow, 1 crash. The agent rarely tests against a simple brute-force solution or on maximum-size input.\n\n**Trial results (3 runs):**\n- **lcb-abc380-f: passed** in 5 calls (failed before). It timed its solution before submitting.\n- **lcb-arc196-a, first run: failed.** Its own brute-force check printed a wrong case, and it submitted anyway without running the examples.\n- **lcb-arc196-a, second run (after I added a pre-submit checklist): failed.** It ran the tests once on an empty program (0/3 passed), then submitted different code that was never tested and crashed on the examples.\n\nAfter those failures I added a \"HARD RULE\" at the top of `solver.md`: submit only the exact code that passed every public example; after a failed test, a mismatch or an edit, fix and re-test first. That rule has not been tried, because the 3 trials were used up. `validate()` reports OK.\n\nCHANGES: Rewrote /agent/solver.md. It now opens with a hard rule against submitting untested or known-wrong code. It tells the agent to use its 16-call budget instead of submitting after 2\u20134 calls. It adds a workflow: understand the problem, check samples by hand, and use a brute force to find patterns on hard problems. Before submitting, the agent must compare against a brute force on random small inputs, time a maximum-size input, and avoid deep recursion. A pre-submit checklist and Python tips cover speed, big numbers and output. Added a skill, /agent/skills/stress-test, with ready-to-use code for the brute-force comparison and the timing run. Reason: most failures (19/34) were submissions that fail the public examples, made with most of the budget unused; most others failed hidden tests (wrong answer or too slow) without any brute-force or timing check.\nPREDICTED_DELTA: +3",
+ "trials": [
+  {
+   "problem": "lcb-abc380-f",
+   "passed": true,
+   "cost": 0.002772
+  },
+  {
+   "problem": "lcb-arc196-a",
+   "passed": false,
+   "cost": 0.002841
+  },
+  {
+   "problem": "lcb-arc196-a",
+   "passed": false,
+   "cost": 0.002696
+  }
+ ],
+ "validations": 2,
+ "calls": 15,
+ "tin": 171945,
+ "tout": 5126,
+ "cached": 0,
+ "cost": 0.798609,
+ "secs": 274.1,
+ "stop_reason": null,
+ "error": null,
+ "warnings": [
+  "model.call_failure: \"429 Too Many Requests\"",
+  "model.call_failure: \"429 Too Many Requests\""
+ ]
+}

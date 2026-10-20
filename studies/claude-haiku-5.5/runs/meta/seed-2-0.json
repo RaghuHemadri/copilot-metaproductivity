@@ -1,0 +1,36 @@
+{
+ "id": "seed-2-0",
+ "parent": "seed-2",
+ "depth": 2,
+ "k": 0,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-haiku-5.5",
+ "created": "2026-10-20 01:17:44",
+ "errors": [],
+ "changes": "In /agent/solver.md I added a submit gate with three checks (public examples pass, a random cross-check against an independent brute force has zero mismatches, and max-size timing is acceptable). I also added guidance to avoid submitting enumeration-based solutions on hard problems and to keep using the remaining budget instead. Most failures were submissions made before any cross-check, or with a solution the agent already expected to time out, while the budget was far from exhausted. I ran one trial on lcb-3655, which still failed: the agent again skipped the cross-check, arguing the state space was small. I then strengthened that rule to say a small state space does not replace the independent check. That final wording is untested, and validate() passes.",
+ "predicted_delta": 3.0,
+ "final": "CHANGES: In /agent/solver.md I added a submit gate with three checks (public examples pass, a random cross-check against an independent brute force has zero mismatches, and max-size timing is acceptable). I also added guidance to avoid submitting enumeration-based solutions on hard problems and to keep using the remaining budget instead. Most failures were submissions made before any cross-check, or with a solution the agent already expected to time out, while the budget was far from exhausted. I ran one trial on lcb-3655, which still failed: the agent again skipped the cross-check, arguing the state space was small. I then strengthened that rule to say a small state space does not replace the independent check. That final wording is untested, and validate() passes.\nPREDICTED_DELTA: +3",
+ "trials": [
+  {
+   "problem": "lcb-3655",
+   "passed": false,
+   "cost": 0.003037
+  }
+ ],
+ "validations": 2,
+ "calls": 6,
+ "tin": 63042,
+ "tout": 2982,
+ "cached": 0,
+ "cost": 0.010832,
+ "secs": 261.4,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

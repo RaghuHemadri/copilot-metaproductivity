@@ -1,0 +1,48 @@
+22:46:21 [gpt-6.1-sol] === Blite start
+23:00:38 [gpt-6.1-sol] eval seed v2_dev r1: 96 tasks in 857s $2.438
+23:12:14 [gpt-6.1-sol] eval seed v2_dev r3: 96 tasks in 1552s $2.439
+23:15:34 [gpt-6.1-sol] eval seed v2_dev r2: 96 tasks in 1753s $2.377
+23:17:44 [gpt-6.1-sol] child seed-5: valid=True changed=True files=['solver.md'] pred=1.0 calls=8 trials=1 $0.198 129s err=None problems=[]
+23:17:56 [gpt-6.1-sol] child seed-4: valid=True changed=True files=['solver.md'] pred=1.0 calls=8 trials=1 $0.200 141s err=None problems=[]
+23:18:06 [gpt-6.1-sol] child seed-7: valid=True changed=True files=['solver.md'] pred=1.0 calls=8 trials=1 $0.195 151s err=None problems=[]
+23:18:44 [gpt-6.1-sol] child seed-6: valid=True changed=True files=['solver.md'] pred=1.0 calls=8 trials=1 $0.200 189s err=None problems=[]
+23:19:23 [gpt-6.1-sol] child seed-0: valid=True changed=True files=['solver.md'] pred=1.0 calls=8 trials=1 $0.232 229s err=None problems=[]
+23:19:37 [gpt-6.1-sol] child seed-3: valid=True changed=True files=['solver.md'] pred=1.0 calls=8 trials=1 $0.254 242s err=None problems=[]
+23:19:53 [gpt-6.1-sol] child seed-2: valid=True changed=True files=['solver.md'] pred=1.0 calls=8 trials=1 $0.232 258s err=None problems=[]
+23:20:05 [gpt-6.1-sol] child seed-1: valid=True changed=True files=['solver.md'] pred=1.0 calls=8 trials=1 $0.226 270s err=None problems=[]
+23:38:55 [gpt-6.1-sol] === Blite start
+00:32:47 [gpt-6.1-sol] eval seed-0 v2_dev r0: 96 tasks in 3231s $3.337
+00:39:47 [gpt-6.1-sol] eval seed-2 v2_dev r0: 96 tasks in 3652s $3.282
+00:47:12 [gpt-6.1-sol] eval seed-5 v2_dev r0: 96 tasks in 4097s $3.339
+00:49:03 [gpt-6.1-sol] eval seed-1 v2_dev r0: 96 tasks in 4207s $3.013
+00:55:00 [gpt-6.1-sol] eval seed-4 v2_dev r0: 96 tasks in 4564s $3.551
+00:58:47 [gpt-6.1-sol] eval seed-3 v2_dev r0: 96 tasks in 4792s $4.290
+00:59:38 [gpt-6.1-sol] eval seed-7 v2_dev r0: 96 tasks in 4843s $2.854
+01:02:25 [gpt-6.1-sol] eval seed-6 v2_dev r0: 96 tasks in 5010s $3.440
+01:02:25 [gpt-6.1-sol] measure seed: s0=0.938 s1=0.917 children=[0.938, 0.938, 0.948, 0.948, 0.938, 0.948, 0.927, 0.948]
+01:02:59 [gpt-6.1-sol] child seed-3-1: valid=True changed=True files=['solver.md'] pred=0.0 calls=7 trials=0 $0.136 33s err=None problems=[]
+01:02:59 [gpt-6.1-sol] child seed-3-2: valid=True changed=True files=['solver.md'] pred=0.0 calls=7 trials=0 $0.132 33s err=None problems=[]
+01:03:00 [gpt-6.1-sol] child seed-3-0: valid=True changed=True files=['solver.md'] pred=0.0 calls=7 trials=0 $0.136 34s err=None problems=[]
+01:03:01 [gpt-6.1-sol] child seed-2-1: valid=True changed=True files=['solver.md'] pred=0.0 calls=7 trials=0 $0.134 36s err=None problems=[]
+01:03:03 [gpt-6.1-sol] child seed-7-3: valid=True changed=True files=['solver.md'] pred=0.0 calls=8 trials=0 $0.162 36s err=None problems=[]
+01:03:07 [gpt-6.1-sol] child seed-7-0: valid=True changed=True files=['solver.md'] pred=0.0 calls=8 trials=0 $0.165 41s err=None problems=[]
+01:03:07 [gpt-6.1-sol] child seed-2-0: valid=True changed=True files=['solver.md'] pred=1.0 calls=7 trials=0 $0.134 41s err=None problems=[]
+01:04:56 [gpt-6.1-sol] child seed-7-2: valid=True changed=True files=['solver.md'] pred=0.0 calls=8 trials=1 $0.193 150s err=None problems=[]
+01:05:02 [gpt-6.1-sol] child seed-3-3: valid=True changed=True files=['solver.md'] pred=0.0 calls=8 trials=1 $0.214 156s err=None problems=[]
+01:06:13 [gpt-6.1-sol] child seed-2-3: valid=True changed=True files=['solver.md'] pred=1.0 calls=8 trials=1 $0.178 227s err=None problems=[]
+01:06:18 [gpt-6.1-sol] child seed-2-2: valid=True changed=True files=['solver.md'] pred=1.0 calls=8 trials=1 $0.183 232s err=None problems=[]
+01:07:13 [gpt-6.1-sol] child seed-7-1: valid=True changed=True files=['solver.md'] pred=0.0 calls=11 trials=2 $0.341 287s err=None problems=[]
+01:27:35 [gpt-6.1-sol] eval seed-7 v2_dev r1: 96 tasks in 1510s $2.917
+01:30:12 [gpt-6.1-sol] eval seed-2 v2_dev r1: 96 tasks in 1667s $3.222
+01:37:12 [gpt-6.1-sol] eval seed-3 v2_dev r1: 96 tasks in 2086s $4.372
+01:48:17 [gpt-6.1-sol] eval seed-3-1 v2_dev r0: 96 tasks in 2718s $4.400
+01:56:07 [gpt-6.1-sol] eval seed-3-2 v2_dev r0: 96 tasks in 3188s $4.347
+02:07:24 [gpt-6.1-sol] eval seed-3-0 v2_dev r0: 96 tasks in 3865s $4.559
+02:17:08 [gpt-6.1-sol] eval seed-2-1 v2_dev r0: 96 tasks in 4447s $4.001
+02:26:52 [gpt-6.1-sol] eval seed-7-3 v2_dev r0: 96 tasks in 5029s $4.088
+02:36:58 [gpt-6.1-sol] eval seed-7-0 v2_dev r0: 96 tasks in 5631s $3.903
+02:48:25 [gpt-6.1-sol] eval seed-2-0 v2_dev r0: 96 tasks in 6318s $4.100
+02:58:13 [gpt-6.1-sol] eval seed-7-2 v2_dev r0: 96 tasks in 6797s $3.049
+03:21:49 [gpt-6.1-sol] eval seed-3-3 v2_dev r0: 96 tasks in 8207s $4.230
+03:21:49 [gpt-6.1-sol] measure seed-3: s0=0.948 s1=0.938 children=[0.938, 0.938, 0.948, 0.958]
+CopilotSession.send_and_wait failed

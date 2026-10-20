@@ -1,0 +1,36 @@
+{
+ "id": "seed-2-0",
+ "parent": "seed-2",
+ "depth": 2,
+ "k": 0,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-5.6-luna",
+ "created": "2026-10-19 23:38:51",
+ "errors": [],
+ "changes": "Strengthened solver instructions to require a final public-test pass, adversarial/reference validation for nontrivial algorithms, performance checks, and prohibit submitting unverified guesses.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Strengthened solver instructions to require a final public-test pass, adversarial/reference validation for nontrivial algorithms, performance checks, and prohibit submitting unverified guesses.\nPREDICTED_DELTA: +2 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-arc196-d",
+   "passed": false,
+   "cost": 0.007004
+  }
+ ],
+ "validations": 2,
+ "calls": 13,
+ "tin": 240293,
+ "tout": 2747,
+ "cached": 0,
+ "cost": 0.058359,
+ "secs": 164.0,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

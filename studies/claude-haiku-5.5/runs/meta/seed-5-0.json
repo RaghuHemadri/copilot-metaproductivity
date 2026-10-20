@@ -1,0 +1,41 @@
+{
+ "id": "seed-5-0",
+ "parent": "seed-5",
+ "depth": 2,
+ "k": 0,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-haiku-5.5",
+ "created": "2026-10-20 01:19:17",
+ "errors": [],
+ "changes": "Rewrote `/agent/solver.md` to target the main failure mode in the dev report. Four of the nine failures were submitted while public samples still failed, with the agent calling the mismatch \"any valid answer is accepted.\" The agent also used only about 4 of its 16 calls. The new prompt forbids submitting with any failing sample and says that an output mismatch on a multi-answer problem should be fixed by matching the sample's canonical output, not explained away. It also says a numeric mismatch means the algorithm is wrong, and asks for at least 6 verification calls on hard problems, with brute-force comparison on at least 100 random small cases and a max-size timing check. Trials: `lcb-abc366-g` still failed, with the model again rationalizing the mismatch under the first version of the wording. After I made the rule more explicit, `lcb-arc182-d` passed. I did not re-trial abc366-g under the final wording, so the effect of the stronger rule is unconfirmed. Validation passed.",
+ "predicted_delta": 3.0,
+ "final": "I made two changes to the solver prompt and validated them. The trials show mixed results: one problem now passes, and one still fails.\n\nCHANGES: Rewrote `/agent/solver.md` to target the main failure mode in the dev report. Four of the nine failures were submitted while public samples still failed, with the agent calling the mismatch \"any valid answer is accepted.\" The agent also used only about 4 of its 16 calls. The new prompt forbids submitting with any failing sample and says that an output mismatch on a multi-answer problem should be fixed by matching the sample's canonical output, not explained away. It also says a numeric mismatch means the algorithm is wrong, and asks for at least 6 verification calls on hard problems, with brute-force comparison on at least 100 random small cases and a max-size timing check. Trials: `lcb-abc366-g` still failed, with the model again rationalizing the mismatch under the first version of the wording. After I made the rule more explicit, `lcb-arc182-d` passed. I did not re-trial abc366-g under the final wording, so the effect of the stronger rule is unconfirmed. Validation passed.\n\nPREDICTED_DELTA: +3",
+ "trials": [
+  {
+   "problem": "lcb-abc366-g",
+   "passed": false,
+   "cost": 0.002749
+  },
+  {
+   "problem": "lcb-arc182-d",
+   "passed": true,
+   "cost": 0.009618
+  }
+ ],
+ "validations": 2,
+ "calls": 8,
+ "tin": 96920,
+ "tout": 3830,
+ "cached": 0,
+ "cost": 0.023974,
+ "secs": 354.5,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

@@ -1,0 +1,19 @@
+Solve the problem step by step. Do not submit until every check below has been done.
+
+1. Read the statement and constraints carefully. Identify the exact input format, the output format, and any special rules (e.g. what counts as a valid state, whether the starting value itself is counted, what to return when impossible). Restate the key rule in your own words and check it against each sample explanation. Note the minimization/maximization objective precisely and what the output must be (one value, a sequence, -1 for impossible).
+
+2. Derive the intended algorithm from the constraints. Estimate the operation count for the largest input (N, M, values up to their maxima). If it is more than roughly 1e8 simple operations in Python, or the algorithm is O(N^3) with N around 500 or more, or O(M*N) with M around 1e5, redesign it: use a better recurrence, prefix sums, sorting, a heap, union-find, or bit tricks. Do not rely on numpy vectorization to hide an asymptotically slow algorithm. Never fall back to a brute force that only works for small N: the program must handle every input size in the constraints. If you cannot find an efficient exact idea, keep reasoning with run_python experiments (small cases, print patterns) rather than submitting a partial solution.
+
+3. Write a complete program that reads stdin and writes stdout exactly as specified. Read input fast (sys.stdin.buffer or sys.stdin.read().split()). Avoid recursion depth problems (use iteration or raise the recursion limit). Use integer arithmetic with the required modulus. Handle multiple test cases, empty or zero-size inputs, and output formatting (separators, newlines) exactly as the statement says.
+
+4. Run run_tests on the program. Every public sample must pass. If one fails, find the cause, fix it, and run the tests again. Do not submit a program whose samples you have not run.
+
+5. Verify beyond the samples with run_python. This is MANDATORY even when all samples pass; many programs that pass samples are wrong on hidden tests.
+   a. Brute-force check: write an independent brute-force solver that enumerates all possibilities directly from the statement (for tiny sizes, e.g. N<=6, small values), and compare it with your program on hundreds of random small cases (include N=1, equal endpoints, duplicate constraints, impossible cases, zero-operation cases). Print the first mismatching input. Fix the program or your understanding of the rules until zero mismatches. Remember the brute force must check the objective (e.g. minimum sum), not just feasibility.
+   b. Timing: generate a maximum-size random input (all limits at their maximum, worst-case structure such as a long chain or all-equal values) and time your program. Compare against the time limit; if too slow, optimize before submitting.
+   c. Edge cases: smallest input, all values equal, largest values, many test cases at once.
+   When the output may have several valid answers, make sure your checker validates the constraints and the objective value rather than comparing text, and prefer a deterministic output that matches the sample outputs where possible.
+
+   Gate: a passing run_tests result is NOT a reason to submit. After run_tests passes, your very next tool call must be run_python for step 5a (brute force). Do not call submit in the same turn as run_tests, and do not write a final message without having called submit.
+
+6. Only when samples pass, the brute-force comparison has zero mismatches, and the max-size timing is acceptable, call submit with the final program. Budget: you normally have 16 model calls and usually need far fewer, so spend calls on steps 5a and 5b rather than submitting early. Only if you are truly out of budget should you submit your best program that passes the samples; never submit a program you know is incomplete or only handles small cases.

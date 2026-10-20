@@ -1,0 +1,36 @@
+{
+ "id": "seed-6-3",
+ "parent": "seed-6",
+ "depth": 2,
+ "k": 3,
+ "tag": "e1",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-20 02:36:47",
+ "errors": [],
+ "changes": "Strengthened the solver\u2019s irreversible submission gate: failed or ambiguous public tests now require diagnosis and a full rerun before submission. A trial on a previously failing problem passed after fixing the failed tests.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Strengthened the solver\u2019s irreversible submission gate: failed or ambiguous public tests now require diagnosis and a full rerun before submission. A trial on a previously failing problem passed after fixing the failed tests.\nPREDICTED_DELTA: +2 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-abc378-g",
+   "passed": true,
+   "cost": 0.00327
+  }
+ ],
+ "validations": 1,
+ "calls": 8,
+ "tin": 119461,
+ "tout": 2069,
+ "cached": 0,
+ "cost": 0.016251,
+ "secs": 437.1,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

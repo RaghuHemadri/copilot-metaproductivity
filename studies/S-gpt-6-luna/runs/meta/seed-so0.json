@@ -1,0 +1,49 @@
+{
+ "id": "seed-so0",
+ "parent": "seed",
+ "depth": 1,
+ "k": 0,
+ "tag": "S:claude-opus-5.5",
+ "suffix": "so",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-opus-5.5",
+ "created": "2026-10-19 23:35:37",
+ "errors": [],
+ "changes": "Rewrote `/agent/solver.md` (the old one was 7 lines). It now has strict rules: submit only after all examples pass, the next call after a failed run must be `run_tests` or `run_python`, failing code may be submitted only after about 13 calls, and code must go through `submit`, not plain text. It also has a workflow with complexity estimates, a brute-force cross-check on random small inputs, and a worst-case timing test (for the 6 time-limit failures), plus a debugging procedure and Python speed tips. The aim is to get the agent to use the budget it was leaving unused.",
+ "predicted_delta": 8.0,
+ "final": "I rewrote `/agent/solver.md`. In one trial, a problem that failed in the evaluation (lcb-arc194-a) now passes. I didn't get to test the time-limit or wrong-answer cases.\n\n**What was going wrong:** The most common failure was submitting a program that still failed the public examples (19 of 34 failures). The agent quit early: it averaged 3.3 of its 16 model calls and never ran out. Some runs submitted without running the tests at all, and one wrote code as plain text without calling submit.\n\n**What the trials showed:** My first rewrite added clear rules (\"never submit unless all examples pass\"), but on lcb-arc194-a the agent still submitted failing code after 3 calls, twice. What finally worked was a step-by-step protocol: after any failed test run, the next call must be `run_tests` or `run_python`, never `submit`. With that, the agent took 8 calls: it fixed the code until all examples passed, checked it against a brute force on random inputs, and passed the hidden tests. The trial on lcb-abc380-f didn't run because I had used all 3 trials.\n\nCHANGES: Rewrote `/agent/solver.md` (the old one was 7 lines). It now has strict rules: submit only after all examples pass, the next call after a failed run must be `run_tests` or `run_python`, failing code may be submitted only after about 13 calls, and code must go through `submit`, not plain text. It also has a workflow with complexity estimates, a brute-force cross-check on random small inputs, and a worst-case timing test (for the 6 time-limit failures), plus a debugging procedure and Python speed tips. The aim is to get the agent to use the budget it was leaving unused.\n\nPREDICTED_DELTA: +8",
+ "trials": [
+  {
+   "problem": "lcb-arc194-a",
+   "passed": false,
+   "cost": 0.002865
+  },
+  {
+   "problem": "lcb-arc194-a",
+   "passed": false,
+   "cost": 0.002564
+  },
+  {
+   "problem": "lcb-arc194-a",
+   "passed": true,
+   "cost": 0.005533
+  }
+ ],
+ "validations": 2,
+ "calls": 16,
+ "tin": 182777,
+ "tout": 4208,
+ "cached": 0,
+ "cost": 0.82623,
+ "secs": 340.8,
+ "stop_reason": null,
+ "error": null,
+ "warnings": [
+  "model.call_failure: \"429 Too Many Requests\"",
+  "model.call_failure: \"429 Too Many Requests\""
+ ]
+}

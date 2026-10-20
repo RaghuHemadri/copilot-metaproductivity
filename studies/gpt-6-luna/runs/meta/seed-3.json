@@ -1,0 +1,36 @@
+{
+ "id": "seed-3",
+ "parent": "seed",
+ "depth": 1,
+ "k": 3,
+ "tag": "e1",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-19 19:37:13",
+ "errors": [],
+ "changes": "Strengthened the solver prompt to require a correctness rationale, mandatory sample testing, and extra checks for tricky algorithms before submission; the trial on lcb-3551 passed.",
+ "predicted_delta": 3.0,
+ "final": "CHANGES: Strengthened the solver prompt to require a correctness rationale, mandatory sample testing, and extra checks for tricky algorithms before submission; the trial on lcb-3551 passed.\nPREDICTED_DELTA: +3 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-3551",
+   "passed": true,
+   "cost": 0.001247
+  }
+ ],
+ "validations": 1,
+ "calls": 9,
+ "tin": 99683,
+ "tout": 1603,
+ "cached": 0,
+ "cost": 0.012017,
+ "secs": 248.7,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

@@ -1,0 +1,41 @@
+{
+ "id": "seed-7-5",
+ "parent": "seed-7",
+ "depth": 2,
+ "k": 5,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-5.6-luna",
+ "created": "2026-10-20 02:55:23",
+ "errors": [],
+ "changes": "Strengthened solver workflow to prohibit submission after any failed/timeout test, require independent exhaustive/adversarial validation, and enforce realistic maximum-scale performance headroom.",
+ "predicted_delta": 4.0,
+ "final": "CHANGES: Strengthened solver workflow to prohibit submission after any failed/timeout test, require independent exhaustive/adversarial validation, and enforce realistic maximum-scale performance headroom.\nPREDICTED_DELTA: +4 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-abc392-f",
+   "passed": false,
+   "cost": 0.002813
+  },
+  {
+   "problem": "lcb-3686",
+   "passed": false,
+   "cost": 0.007187
+  }
+ ],
+ "validations": 2,
+ "calls": 11,
+ "tin": 209562,
+ "tout": 2411,
+ "cached": 0,
+ "cost": 0.054806,
+ "secs": 293.8,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

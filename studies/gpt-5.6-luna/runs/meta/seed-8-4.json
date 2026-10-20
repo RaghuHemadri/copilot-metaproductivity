@@ -1,0 +1,41 @@
+{
+ "id": "seed-8-4",
+ "parent": "seed-8",
+ "depth": 2,
+ "k": 4,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-5.6-luna",
+ "created": "2026-10-20 03:05:18",
+ "errors": [],
+ "changes": "Strengthened the solver\u2019s submission gate with a validation ledger: failed examples, brute-force checks, crashes, and performance timeouts now require algorithm revision and revalidation before submission.",
+ "predicted_delta": 3.0,
+ "final": "CHANGES: Strengthened the solver\u2019s submission gate with a validation ledger: failed examples, brute-force checks, crashes, and performance timeouts now require algorithm revision and revalidation before submission.\nPREDICTED_DELTA: +3 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-abc373-f",
+   "passed": false,
+   "cost": 0.009193
+  },
+  {
+   "problem": "lcb-abc373-f",
+   "passed": false,
+   "cost": 0.011536
+  }
+ ],
+ "validations": 2,
+ "calls": 11,
+ "tin": 186377,
+ "tout": 2490,
+ "cached": 0,
+ "cost": 0.060992,
+ "secs": 309.8,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

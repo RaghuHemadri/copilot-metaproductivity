@@ -1,0 +1,41 @@
+{
+ "id": "seed-7-1",
+ "parent": "seed-7",
+ "depth": 2,
+ "k": 1,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6.1-sol",
+ "created": "2026-10-20 01:07:13",
+ "errors": [],
+ "changes": "Added literal-reference differential tests and boundary-index audits for optimized simulations; validated the harness. Neither trial improved hidden-test results.",
+ "predicted_delta": 0.0,
+ "final": "CHANGES: Added literal-reference differential tests and boundary-index audits for optimized simulations; validated the harness. Neither trial improved hidden-test results.\nPREDICTED_DELTA: +0 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-arc181-c",
+   "passed": false,
+   "cost": 0.039624
+  },
+  {
+   "problem": "lcb-abc392-f",
+   "passed": false,
+   "cost": 0.024362
+  }
+ ],
+ "validations": 2,
+ "calls": 11,
+ "tin": 124855,
+ "tout": 2761,
+ "cached": 0,
+ "cost": 0.341306,
+ "secs": 286.9,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

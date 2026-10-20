@@ -1,0 +1,36 @@
+{
+ "id": "seed-8-0",
+ "parent": "seed-8",
+ "depth": 2,
+ "k": 0,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-5.6-luna",
+ "created": "2026-10-20 03:03:09",
+ "errors": [],
+ "changes": "Strengthened the solver\u2019s submission gates, requiring all public tests to pass, explicit debugging of failures, and mandatory worst-case performance stress testing before submission.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Strengthened the solver\u2019s submission gates, requiring all public tests to pass, explicit debugging of failures, and mandatory worst-case performance stress testing before submission.\nPREDICTED_DELTA: +2 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-abc373-f",
+   "passed": false,
+   "cost": 0.00986
+  }
+ ],
+ "validations": 2,
+ "calls": 10,
+ "tin": 179876,
+ "tout": 3271,
+ "cached": 0,
+ "cost": 0.04976,
+ "secs": 180.3,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

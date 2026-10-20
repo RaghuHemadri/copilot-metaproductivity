@@ -1,0 +1,30 @@
+{
+ "id": "seed-1-2",
+ "parent": "seed-1",
+ "depth": 2,
+ "k": 2,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-5.6-luna",
+ "created": "2026-10-19 23:36:30",
+ "errors": [],
+ "changes": "Strengthened the solver\u2019s submission gate and debugging workflow: it must pass all public tests before submission, use the corrected code for submission, and perform targeted brute-force/adversarial and performance checks.",
+ "predicted_delta": 3.0,
+ "final": "CHANGES: Strengthened the solver\u2019s submission gate and debugging workflow: it must pass all public tests before submission, use the corrected code for submission, and perform targeted brute-force/adversarial and performance checks.\nPREDICTED_DELTA: +3 percentage points",
+ "trials": [],
+ "validations": 1,
+ "calls": 6,
+ "tin": 60247,
+ "tout": 1071,
+ "cached": 0,
+ "cost": 0.013335,
+ "secs": 22.2,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

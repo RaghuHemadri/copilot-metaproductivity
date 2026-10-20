@@ -1,0 +1,30 @@
+{
+ "id": "seed-sl4",
+ "parent": "seed",
+ "depth": 1,
+ "k": 4,
+ "tag": "S:gpt-6-luna",
+ "suffix": "sl",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-19 23:08:25",
+ "errors": [],
+ "changes": "Strengthened the solver workflow with a mandatory all-examples-pass gate before submission and focused debugging guidance for failures.",
+ "predicted_delta": 4.0,
+ "final": "CHANGES: Strengthened the solver workflow with a mandatory all-examples-pass gate before submission and focused debugging guidance for failures.\nPREDICTED_DELTA: +4 percentage points",
+ "trials": [],
+ "validations": 1,
+ "calls": 8,
+ "tin": 76359,
+ "tout": 1238,
+ "cached": 0,
+ "cost": 0.008255,
+ "secs": 43.4,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

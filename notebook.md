@@ -248,3 +248,44 @@ Found by dry runs of every program with stubbed evaluations and model calls (`te
   without errors.
 - 429 responses: 28 of the first 450 solves after the relaunch, all in the start bursts of Programs A and S (which
   overlapped the smoke test); 1 in the next 600. Throughput 30-40 solves per minute with the CPU saturated.
+
+## Amendment 5 (2026-10-20 09:40, before any hypothesis test): crash of the first machine; move to a dedicated machine
+- **Crash:** the first machine runs WSL2 on Windows (kernel 6.6.87.2-microsoft-standard-WSL2). Its kernel pipes core
+  dumps to `/wsl-capture-crash`, and a piped core pattern ignores `RLIMIT_CORE=0`. So every sandboxed solution killed
+  at its CPU limit (SIGXCPU) was dumped to Windows: 3,523 crash captures in that boot.
+  - From about 03:10 on 2026-10-20, throughput fell below a third and the 90th percentile of solve time more than
+    doubled.
+  - The Windows agent became unreachable at 03:46 and the VM died at 03:50:26. The last row was written at 03:49:28;
+    the machine came back at 08:35.
+  - Spend at the crash: $272.43. The ledger matches the raw data exactly; the costs of attempts in flight are lost.
+- **Rows from the slowdown are kept:** 370 rows were written between 03:10 and 03:49:28, and 9 of them stopped at the
+  480 s time budget (before: about 1 in 3,000 rows). Some were already in reports that researchers acted on, so no row
+  is edited. A sensitivity analysis excludes evaluations with rows in this window.
+- **Fix 1, core dumps (infrastructure; verdicts unchanged):** the sandbox sets `RLIMIT_CORE=1` (`prlimit --core=1`),
+  which makes the kernel skip the dump even when it would be piped (WSL, apport, systemd-coredump). Checked: a
+  time-limited program gets the same return code and verdict, the kernel logs "Aborting core", no crash is captured,
+  and the selfcheck passes.
+- **Fix 2, hung sessions:** at 02:29, in Programs A and B, a solve ran past the runtime's outer timeout (time budget +
+  180 s, counted from submission).
+  - The timeout aborted that agent's measurement, which resumes later; nothing is lost. But the timed-out coroutine
+    kept running and kept its session slot (a leak, reproduced offline).
+  - Now the runtime cancels the coroutine at the outer timeout, and session cleanup is bounded (30 s).
+  - An evaluation re-runs a timed-out solve as an infrastructure failure (up to 4 tries), as it already did for solves
+    without any model call.
+  - Budgets and everything agents see are unchanged. Tests: `tests/test_runtime_offline.py`.
+- **Grading calibration:** `tools/grader_equivalence.py 200 1 ref` regrades a stratified sample of stored solutions
+  (100 passes, 25 time limits, 74 others) with the reference grader.
+  - On the first machine, idle, against verdicts given under full load: 4 of 199 pass/fail flips (2.0%). 3 stored time
+    limits now pass (reproducibly), and 1 borderline pass fails.
+  - So near the 6 s limit, CPU time depends somewhat on load. `setup.sh` runs this check on every new machine and warns
+    above 4%.
+- **If a machine grades differently** (more flips than this baseline), every row can be regraded on one machine at the
+  end with `tools/regrade.py --all`; git keeps the verdicts as run. Whether the primary analyses then use regraded
+  verdicts must be decided before any hypothesis test. Selection quantities (e.g. H3's apparent gain) keep the verdicts
+  the loop saw.
+- **Move:** the run data, the ledger and the logs are now tracked in git. `setup.sh` rebuilds `data/` from the
+  LiveCodeBench files at a pinned revision (0fe84c39) and checks every built file against `data/manifest.sha256`.
+  - A rebuild on the first machine was byte-identical (443 tasks, `tasks_meta.json`, `splits.json`).
+  - `/usr/bin/python3` must be 3.12, the sandbox interpreter of the study.
+  - Concurrency scales with the cores: sandbox slots = cores - 2, and sessions and workers up to 3x. The launch line in
+    `logs/supervisor.log` records the host, cores, slots and scale; rows written after it come from the new machine.

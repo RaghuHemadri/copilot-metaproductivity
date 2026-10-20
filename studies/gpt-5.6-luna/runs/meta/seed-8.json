@@ -1,0 +1,46 @@
+{
+ "id": "seed-8",
+ "parent": "seed",
+ "depth": 1,
+ "k": 8,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-5.6-luna",
+ "created": "2026-10-19 20:58:49",
+ "errors": [],
+ "changes": "Expanded solver workflow with constraint analysis, correctness checks, adversarial/brute-force validation, strict public-test gates, and a hard stop for checker disagreements.",
+ "predicted_delta": 3.0,
+ "final": "CHANGES: Expanded solver workflow with constraint analysis, correctness checks, adversarial/brute-force validation, strict public-test gates, and a hard stop for checker disagreements.\nPREDICTED_DELTA: +3 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-3733",
+   "passed": true,
+   "cost": 0.005681
+  },
+  {
+   "problem": "lcb-3655",
+   "passed": false,
+   "cost": 0.003471
+  },
+  {
+   "problem": "lcb-3686",
+   "passed": true,
+   "cost": 0.006198
+  }
+ ],
+ "validations": 2,
+ "calls": 11,
+ "tin": 121315,
+ "tout": 1459,
+ "cached": 0,
+ "cost": 0.041364,
+ "secs": 399.7,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

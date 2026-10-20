@@ -1,0 +1,30 @@
+{
+ "id": "seed-2-2",
+ "parent": "seed-2",
+ "depth": 2,
+ "k": 2,
+ "tag": "e1",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-19 20:45:55",
+ "errors": [],
+ "changes": "Added a targeted pre-submit check: compare nontrivial algorithms with a small brute-force oracle when feasible, or independently validate key invariants and output conditions.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Added a targeted pre-submit check: compare nontrivial algorithms with a small brute-force oracle when feasible, or independently validate key invariants and output conditions.\nPREDICTED_DELTA: +2 percentage points",
+ "trials": [],
+ "validations": 1,
+ "calls": 7,
+ "tin": 79406,
+ "tout": 1532,
+ "cached": 0,
+ "cost": 0.008707,
+ "secs": 29.1,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

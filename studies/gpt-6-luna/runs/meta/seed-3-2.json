@@ -1,0 +1,36 @@
+{
+ "id": "seed-3-2",
+ "parent": "seed-3",
+ "depth": 2,
+ "k": 2,
+ "tag": "e1",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-20 00:10:23",
+ "errors": [],
+ "changes": "Strengthened the solver workflow to require testing the exact final source and retesting after any code change, addressing failures where untested or known-failing variants were submitted.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Strengthened the solver workflow to require testing the exact final source and retesting after any code change, addressing failures where untested or known-failing variants were submitted.\nPREDICTED_DELTA: +2 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-arc181-c",
+   "passed": false,
+   "cost": 0.000782
+  }
+ ],
+ "validations": 1,
+ "calls": 8,
+ "tin": 108498,
+ "tout": 2000,
+ "cached": 0,
+ "cost": 0.012632,
+ "secs": 74.6,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

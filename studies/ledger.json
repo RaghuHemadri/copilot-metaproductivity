@@ -1,0 +1,16 @@
+{
+ "total": {
+  "copilot": 272.426263
+ },
+ "by_tag": {
+  "copilot:smoke": 0.148573,
+  "copilot:eval:v2_dev": 229.586764,
+  "copilot:improve": 29.261284,
+  "copilot:eval:v2_dev2": 0.216902,
+  "copilot:meta": 0.0,
+  "copilot:judge": 0.0,
+  "copilot:audit": 13.21274
+ },
+ "updated": "2026-10-20 03:49:28",
+ "note": "Copilot spend carried over from the pre-split runs (2026-10-19, same account); Crusoe spend ($0.80, gpt-oss-120b) excluded with its data"
+}

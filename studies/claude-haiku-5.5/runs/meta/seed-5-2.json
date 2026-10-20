@@ -1,0 +1,36 @@
+{
+ "id": "seed-5-2",
+ "parent": "seed-5",
+ "depth": 2,
+ "k": 2,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-haiku-5.5",
+ "created": "2026-10-20 01:18:15",
+ "errors": [],
+ "changes": "I rewrote `/agent/solver.md` to address the main failure pattern in the development report. Several failed runs submitted without running the public samples, and one submitted a knowingly incomplete placeholder (a BFS that printed -1 for N > 12). The new prompt requires running the samples before submitting, forbids placeholder or fallback programs in the final code, and asks for one combined brute-force, edge-case and timing script to save calls. It also asks the agent to look for structure (per bit, per component, union-find) before coding, and gives an explicit budget plan. `validate()` passes. One trial on the previously failing lcb-arc193-d passed (6 model calls).",
+ "predicted_delta": 3.0,
+ "final": "CHANGES: I rewrote `/agent/solver.md` to address the main failure pattern in the development report. Several failed runs submitted without running the public samples, and one submitted a knowingly incomplete placeholder (a BFS that printed -1 for N > 12). The new prompt requires running the samples before submitting, forbids placeholder or fallback programs in the final code, and asks for one combined brute-force, edge-case and timing script to save calls. It also asks the agent to look for structure (per bit, per component, union-find) before coding, and gives an explicit budget plan. `validate()` passes. One trial on the previously failing lcb-arc193-d passed (6 model calls).\n\nPREDICTED_DELTA: +3",
+ "trials": [
+  {
+   "problem": "lcb-arc193-d",
+   "passed": true,
+   "cost": 0.036091
+  }
+ ],
+ "validations": 1,
+ "calls": 5,
+ "tin": 54561,
+ "tout": 2717,
+ "cached": 0,
+ "cost": 0.042906,
+ "secs": 293.0,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

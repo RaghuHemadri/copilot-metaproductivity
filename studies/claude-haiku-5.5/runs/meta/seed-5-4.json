@@ -1,0 +1,36 @@
+{
+ "id": "seed-5-4",
+ "parent": "seed-5",
+ "depth": 2,
+ "k": 4,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-haiku-5.5",
+ "created": "2026-10-20 01:20:21",
+ "errors": [],
+ "changes": "Edited /agent/solver.md (validate OK). Added a budget plan (about 6 calls to derive and code, 3 to test and fix, and 3 reserved for the brute-force and max-size timing checks, batched into one run_python). Added a rule never to submit a stub or known-incomplete program, with instructions to reduce and brute-force-probe the problem instead. Added short hints for the failure types seen in the report: XOR union-find with per-bit majority for minimizing sums, prefix counts for occupancy problems, and a check of the brute force when a wrong answer appears with samples passing. Motivation: the report showed 96/96 submissions, with the ones that failed either submitting after sample checks only or submitting a placeholder (arc193-d). One trial on lcb-arc193-d still failed (time limit exceeded). It submitted a heuristic that passed the samples, so the stub rule did not fix that case. I stopped there rather than spend the remaining trials on one problem.",
+ "predicted_delta": 1.0,
+ "final": "I made one change to the solver prompt and ran one trial. The trial on lcb-arc193-d still failed, so I can't claim a measured improvement.\n\nCHANGES: Edited /agent/solver.md (validate OK). Added a budget plan (about 6 calls to derive and code, 3 to test and fix, and 3 reserved for the brute-force and max-size timing checks, batched into one run_python). Added a rule never to submit a stub or known-incomplete program, with instructions to reduce and brute-force-probe the problem instead. Added short hints for the failure types seen in the report: XOR union-find with per-bit majority for minimizing sums, prefix counts for occupancy problems, and a check of the brute force when a wrong answer appears with samples passing. Motivation: the report showed 96/96 submissions, with the ones that failed either submitting after sample checks only or submitting a placeholder (arc193-d). One trial on lcb-arc193-d still failed (time limit exceeded). It submitted a heuristic that passed the samples, so the stub rule did not fix that case. I stopped there rather than spend the remaining trials on one problem.\n\nPREDICTED_DELTA: +1",
+ "trials": [
+  {
+   "problem": "lcb-arc193-d",
+   "passed": false,
+   "cost": 0.041496
+  }
+ ],
+ "validations": 1,
+ "calls": 5,
+ "tin": 56232,
+ "tout": 2723,
+ "cached": 0,
+ "cost": 0.048481,
+ "secs": 418.6,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

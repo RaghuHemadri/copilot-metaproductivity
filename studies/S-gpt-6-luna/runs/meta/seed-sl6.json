@@ -1,0 +1,34 @@
+{
+ "id": "seed-sl6",
+ "parent": "seed",
+ "depth": 1,
+ "k": 6,
+ "tag": "S:gpt-6-luna",
+ "suffix": "sl",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-19 23:08:39",
+ "errors": [],
+ "changes": "Strengthened the solver prompt with a hard run_tests gate: inspect failures, fix them, and submit only after all public examples pass.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Strengthened the solver prompt with a hard run_tests gate: inspect failures, fix them, and submit only after all public examples pass.\nPREDICTED_DELTA: +2 percentage points",
+ "trials": [],
+ "validations": 1,
+ "calls": 10,
+ "tin": 74954,
+ "tout": 1349,
+ "cached": 0,
+ "cost": 0.00817,
+ "secs": 57.4,
+ "stop_reason": null,
+ "error": null,
+ "warnings": [
+  "model.call_failure: \"429 Too Many Requests\"",
+  "model.call_failure: \"429 Too Many Requests\"",
+  "model.call_failure: \"429 Too Many Requests\""
+ ]
+}

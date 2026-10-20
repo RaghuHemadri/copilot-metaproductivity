@@ -1,0 +1,36 @@
+{
+ "id": "seed-sl9",
+ "parent": "seed",
+ "depth": 1,
+ "k": 9,
+ "tag": "S:gpt-6-luna",
+ "suffix": "sl",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-19 23:12:52",
+ "errors": [],
+ "changes": "Strengthened solver instructions with a mandatory public-example test gate, debugging loop, and checks against incomplete or sample-specific solutions; validation passed. A trial on a prior failure passed.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Strengthened solver instructions with a mandatory public-example test gate, debugging loop, and checks against incomplete or sample-specific solutions; validation passed. A trial on a prior failure passed.\nPREDICTED_DELTA: +2 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-3594",
+   "passed": true,
+   "cost": 0.000667
+  }
+ ],
+ "validations": 1,
+ "calls": 8,
+ "tin": 108500,
+ "tout": 1724,
+ "cached": 0,
+ "cost": 0.012379,
+ "secs": 310.7,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

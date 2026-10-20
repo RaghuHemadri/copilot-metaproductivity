@@ -102,8 +102,10 @@ def sandbox_run(files: dict[str, str], argv: list[str], stdin: str = "", timeout
             os.chmod(work / name, 0o644)
         os.chmod(base, 0o755)
         os.chown(work, NOBODY, NOBODY)
+        # --core=1: no core dumps. A core_pattern that pipes them to a handler (WSL, apport, systemd-coredump) ignores
+        # a limit of 0, so every time-limit kill (SIGXCPU) was dumped; 1 makes the kernel skip the dump.
         script = ("mount -t tmpfs -o size=1m tmpfs /root && mount -t tmpfs -o size=1m tmpfs /mnt && cd \"$1\" && shift && "
-                  f"exec setpriv --reuid={NOBODY} --regid={NOBODY} --clear-groups -- prlimit --as={MEM_BYTES} "
+                  f"exec setpriv --reuid={NOBODY} --regid={NOBODY} --clear-groups -- prlimit --as={MEM_BYTES} --core=1 "
                   f"--fsize={64 * 1024 ** 2} --nproc=256 --cpu={cpu}:{cpu + 1} -- {SANDBOX_PYTHON} -I \"$@\"")
         cmd = ["unshare", "--mount", "--net", "--", "sh", "-c", script, "sh", str(work), *argv]
         t0 = time.time()
@@ -315,7 +317,7 @@ def grade_fast(task: dict, code: str | None) -> dict:
         os.chmod(base, 0o755)
         os.chown(work, NOBODY, NOBODY)
         script = ("mount -t tmpfs -o size=1m tmpfs /root && mount -t tmpfs -o size=1m tmpfs /mnt && cd \"$1\" && shift && "
-                  f"exec setpriv --reuid={NOBODY} --regid={NOBODY} --clear-groups -- prlimit --as={MEM_BYTES} "
+                  f"exec setpriv --reuid={NOBODY} --regid={NOBODY} --clear-groups -- prlimit --as={MEM_BYTES} --core=1 "
                   f"--fsize={64 * 1024 ** 2} --nproc=256 -- {SANDBOX_PYTHON} -I \"$@\"")
         argv = ["-c", FORK_SERVER, LCB_IMPORTS, "solution.py", "func" if task["fn_name"] else "stdin",
                 task["fn_name"] or "", str(n), str(cpu)]

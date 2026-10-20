@@ -320,13 +320,17 @@ Tiny-paper version: H2, H3 and H4 only.
 - [ ] Code, genomes, traces and per-problem results released (anonymized for review if needed).
 
 ## 11. Run notes
-- **Status:** launched with `./run_all.sh` on 2026-10-19 (exact times in `logs/supervisor.log`). Carried over from the
-  runs before the split (amendment 3; nothing is rerun):
+- **Status (2026-10-20):** nothing is running. The first machine (WSL) crashed at 03:50 after about 4.5 hours of runs
+  (notebook, amendment 5); the study moves to a dedicated Linux machine and resumes from the pushed state
+  (`./setup.sh`, then `./run_all.sh`). Spend so far $272. Carried over from the runs before the split (amendment 3;
+  nothing is rerun):
   - the pilots of 11 Copilot models;
   - A1 generation 0 on gpt-6-luna (the seed plus 8 measured children; 26 attempts);
   - the first 10 Program B attempts on gpt-5.6-luna and gpt-5.3-codex (codex's Program B is cut; its partial data
     is kept as exploratory);
   - partial evaluations of A1 generation 1, Program S's seed and the gpt-6-sol pilot.
+- **Set up a machine (once):** `cp .env.example .env`, fill in the token, `sudo ./setup.sh` (data rebuilt and checked
+  against `data/manifest.sha256`, sandbox and tests, grading calibration, live smoke test).
 - **Launch everything:** `nohup ./run_all.sh > logs/run_all.out 2>&1 &` (or inside `tmux`). Every program runs under
   a supervisor that restarts a crashed job (at most 30 times) until its `DONE_<program>` marker exists. When all jobs
   are done, `./analyze.sh` writes `results/`.
@@ -338,9 +342,10 @@ Tiny-paper version: H2, H3 and H4 only.
 - **Environment:** `.venv` from `requirements.txt` (GitHub Copilot SDK 1.0.23, which pins Copilot CLI 1.0.100; numpy,
   scipy, PyYAML). Authentication: `COPILOT_GITHUB_TOKEN` in `.env` (git-ignored), else the local `gh` login.
 - **One process per study:** `RSI_MODEL=<model> .venv/bin/python experiments.py <program>`. Data goes to
-  `studies/<model>/`, or `studies/$RSI_STUDY/` when set (Program S uses `S-gpt-6-luna`); genomes are tracked, runs
-  untracked.
-- **Concurrency:** `RSI_SESSIONS_PER_MODEL` (sessions per model and process; Program A 32, S 16, others 12) and
-  `RSI_TASK_WORKERS`. The machine-wide sandbox cap is 10 slots.
+  `studies/<model>/`, or `studies/$RSI_STUDY/` when set (Program S uses `S-gpt-6-luna`). Genomes, runs, the ledger
+  and the logs are tracked; run one machine at a time.
+- **Concurrency:** scales with the machine (`run_all.sh`): sandbox slots = cores - 2 (`RSI_MACHINE_SANDBOX_SLOTS`; 10
+  on the first machine), and sessions per model and process (Program A 32, S 16, others 12) and task workers times
+  `RSI_SCALE` (1-3 by slots). Watch the 429 rate.
 - **Cap:** `RSI_COPILOT_CAP_USD` (default 1200, also set by `run_all.sh`). Jobs stop when the ledger
   (`studies/ledger.json`) reaches it.

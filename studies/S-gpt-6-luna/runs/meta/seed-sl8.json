@@ -1,0 +1,39 @@
+{
+ "id": "seed-sl8",
+ "parent": "seed",
+ "depth": 1,
+ "k": 8,
+ "tag": "S:gpt-6-luna",
+ "suffix": "sl",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-19 23:15:46",
+ "errors": [],
+ "changes": "Strengthened `solver.md` to require testing the exact final code and fixing failed examples before submission; validation passed, and the `lcb-3594` trial passed.",
+ "predicted_delta": 4.0,
+ "final": "CHANGES: Strengthened `solver.md` to require testing the exact final code and fixing failed examples before submission; validation passed, and the `lcb-3594` trial passed.\nPREDICTED_DELTA: +4 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-3594",
+   "passed": true,
+   "cost": 0.0006
+  }
+ ],
+ "validations": 1,
+ "calls": 10,
+ "tin": 83358,
+ "tout": 1635,
+ "cached": 0,
+ "cost": 0.009753,
+ "secs": 484.2,
+ "stop_reason": null,
+ "error": null,
+ "warnings": [
+  "model.call_failure: \"429 Too Many Requests\"",
+  "model.call_failure: \"429 Too Many Requests\""
+ ]
+}

@@ -1,0 +1,36 @@
+{
+ "id": "seed-7",
+ "parent": "seed",
+ "depth": 1,
+ "k": 7,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6.1-sol",
+ "created": "2026-10-19 23:18:06",
+ "errors": [],
+ "changes": "Added maximum-size performance audits and targeted stress benchmarks before submission; the previously timing-out development problem now passes.",
+ "predicted_delta": 1.0,
+ "final": "CHANGES: Added maximum-size performance audits and targeted stress benchmarks before submission; the previously timing-out development problem now passes.\nPREDICTED_DELTA: +1 percentage point",
+ "trials": [
+  {
+   "problem": "lcb-3686",
+   "passed": true,
+   "cost": 0.029544
+  }
+ ],
+ "validations": 1,
+ "calls": 8,
+ "tin": 77657,
+ "tout": 1038,
+ "cached": 0,
+ "cost": 0.195238,
+ "secs": 151.4,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

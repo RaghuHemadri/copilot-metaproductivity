@@ -1,0 +1,38 @@
+{
+ "id": "seed-2-4",
+ "parent": "seed-2",
+ "depth": 2,
+ "k": 4,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-haiku-5.5",
+ "created": "2026-10-20 01:15:40",
+ "errors": [],
+ "changes": "Rewrote /agent/solver.md. Historical failures came mostly from submitting after 3 calls with no random brute-force cross-check or timing run, even though the average use was 3.8 of 16 calls. The new prompt tells the solver that spending 8\u201310 calls on verification is expected, makes the cross-check and max-size timing run mandatory, requires a single combined brute-force/fast/checker script, requires output-property checking when several answers are valid, and forbids submitting code that failed a public example or the cross-check. validate() reports OK. The one trial (lcb-abc396-e) still failed: the solver ran a 400-case cross-check and submitted, but its output differed from the expected one on an input where several answers may be valid. The cross-check evidently did not validate the objective (minimal sum) or answer equivalence. The prompt now asks for that, but the trial shows the solver can still skip it, so I would not count on this fix without more trials. I did not edit the subagents or add a skill.",
+ "predicted_delta": 2.0,
+ "final": "I made one prompt change and ran one trial, which failed, so the effect is not yet shown to help.\n\nCHANGES: Rewrote /agent/solver.md. Historical failures came mostly from submitting after 3 calls with no random brute-force cross-check or timing run, even though the average use was 3.8 of 16 calls. The new prompt tells the solver that spending 8\u201310 calls on verification is expected, makes the cross-check and max-size timing run mandatory, requires a single combined brute-force/fast/checker script, requires output-property checking when several answers are valid, and forbids submitting code that failed a public example or the cross-check. validate() reports OK. The one trial (lcb-abc396-e) still failed: the solver ran a 400-case cross-check and submitted, but its output differed from the expected one on an input where several answers may be valid. The cross-check evidently did not validate the objective (minimal sum) or answer equivalence. The prompt now asks for that, but the trial shows the solver can still skip it, so I would not count on this fix without more trials. I did not edit the subagents or add a skill.\n\nPREDICTED_DELTA: +2",
+ "trials": [
+  {
+   "problem": "lcb-abc396-e",
+   "passed": false,
+   "cost": 0.003353
+  }
+ ],
+ "validations": 1,
+ "calls": 6,
+ "tin": 53507,
+ "tout": 3296,
+ "cached": 0,
+ "cost": 0.010352,
+ "secs": 137.5,
+ "stop_reason": null,
+ "error": null,
+ "warnings": [
+  "model.call_failure: \"429 Too Many Requests\""
+ ]
+}

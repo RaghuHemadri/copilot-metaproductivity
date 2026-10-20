@@ -1,0 +1,36 @@
+{
+ "id": "seed-7-2",
+ "parent": "seed-7",
+ "depth": 2,
+ "k": 2,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-5.6-luna",
+ "created": "2026-10-20 02:53:44",
+ "errors": [],
+ "changes": "Strengthened the solver workflow with an explicit hard submission gate requiring all public tests to pass, plus syntax, timeout, and task-format checks before submission.",
+ "predicted_delta": 3.0,
+ "final": "CHANGES: Strengthened the solver workflow with an explicit hard submission gate requiring all public tests to pass, plus syntax, timeout, and task-format checks before submission.\nPREDICTED_DELTA: +3 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-3686",
+   "passed": true,
+   "cost": 0.004044
+  }
+ ],
+ "validations": 1,
+ "calls": 8,
+ "tin": 70430,
+ "tout": 1546,
+ "cached": 0,
+ "cost": 0.019985,
+ "secs": 194.7,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

@@ -1,0 +1,36 @@
+{
+ "id": "seed-sa0",
+ "parent": "seed",
+ "depth": 1,
+ "k": 0,
+ "tag": "S:gpt-6-astra",
+ "suffix": "sa",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-astra",
+ "created": "2026-10-19 23:12:21",
+ "errors": [],
+ "changes": "Added exact-source testing and submission rules to prevent skipped tests, unresolved failures, and untested rewrites. Validation passed; one previously failing development problem passed its trial.",
+ "predicted_delta": 5.0,
+ "final": "CHANGES: Added exact-source testing and submission rules to prevent skipped tests, unresolved failures, and untested rewrites. Validation passed; one previously failing development problem passed its trial.\nPREDICTED_DELTA: +5 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-abc394-e",
+   "passed": true,
+   "cost": 0.002177
+  }
+ ],
+ "validations": 1,
+ "calls": 8,
+ "tin": 80774,
+ "tout": 1085,
+ "cached": 0,
+ "cost": 0.864167,
+ "secs": 280.7,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

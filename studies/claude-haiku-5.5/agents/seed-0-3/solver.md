@@ -1,0 +1,21 @@
+Solve the problem step by step. Public examples are weak evidence: hidden tests are much larger and stricter, so do not submit after only the examples pass.
+
+1. Read the statement and the constraints carefully. Identify the exact input format, the output format (including -1 / impossible cases and multiple test cases), and the largest constraint values (N, T, sum of N, value ranges).
+2. Choose an algorithm whose complexity fits the largest constraints in Python (about 10^7 simple operations total is a safe budget). Prefer O(N log N) or O(N) formulas, greedy, sorting, prefix sums, two pointers, or DP with small state. Avoid per-query loops over all N, nested loops over pairs, and repeated set/list rebuilding inside binary search. Watch for many test cases: avoid per-test costs proportional to a global maximum.
+3. Write a complete program that reads stdin robustly (read all tokens with sys.stdin.read().split()) and prints exactly the required output.
+4. Verify before submitting:
+   a. Run run_tests on the public examples; fix any failure.
+   b. Write a simple brute-force solver (exhaustive search / BFS / direct simulation) for tiny inputs and compare it with your fast solution on many random small cases (one run_python call, a few hundred cases, several seeds, including edge cases such as all-equal values, N=1, impossible cases, and maximum-value characters). Keep brute force inputs tiny (N <= 8) so the run stays fast. Any mismatch: print the mismatching input, reason about the bug, fix it, and repeat.
+   c. Time the fast solution once on a large input (about max N or max sum of N, adversarial patterns like all ones, alternating, or sorted). The sandbox kills runs longer than about 5 seconds, so use a single run with a moderate size, and do not run brute force on large inputs. Avoid numpy and heavy imports; plain Python lists are enough. If the timing is more than about 1 second at the largest size, improve the algorithm (for example, replace nested loops over the alphabet or over all frequencies with prefix sums or a smaller state).
+   Never submit a solution you measured as too slow at the largest size, or one that only matches brute force on small inputs; use the remaining budget to find a faster formulation (binary search on the answer with a linear greedy check, sorting, prefix sums, or a bounded DP) and re-verify.
+   Do not spend more than 3 run_python calls on verification in total; if a run times out, shrink the input rather than repeating the same heavy run.
+5. If you are unsure about the model or a formula, derive it on a small example by hand or by brute force first; do not guess a closed form.
+6. Keep your budget in mind (16 model calls): combine tests into one run_python call where possible. Reserve at least 2 calls for final testing and submission. Submit only the program that passed the checks in steps 4a-4c.
+
+7. Hard gate before submit (these runs have failed by skipping it): 
+   - Never call submit before run_tests has been run on the public examples AND the output matched the expected sample output exactly (for problems with many valid answers, check the answer with a validity checker instead). A sample you did not run is not checked. Do not "check by hand" a sample and assume it passes.
+   - Passing the public examples is NOT enough to submit. Before submit you must also have run step 4b (brute-force comparison on many random small inputs, one run_python call) AND step 4c (one timing run at about max size). Only skip them if the tool calls have already been used up; in that case say so explicitly.
+   - Never submit a program that was not executed at least once on the samples in this session.
+   - Do not stop early just because you have a plausible formula. You are expected to use several calls (typically 6-10) to verify; stopping at 2-3 calls is the most common cause of hidden-test failures.
+   - If the samples fail, debug with the failing output in view; do not submit a "best effort" program.
+   - Pay attention to the exact definition in the statement (e.g. whether a cost includes the starting value, whether a vertex with no neighbours is constrained, whether 0 or 1-indexed); when your formula disagrees with a sample, the formula is wrong, not the sample.

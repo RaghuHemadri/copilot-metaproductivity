@@ -5,7 +5,14 @@
 # analysis is written to results/.
 cd "$(dirname "$0")"
 mkdir -p logs results
-export RSI_COPILOT_CAP_USD=${RSI_COPILOT_CAP_USD:-1200} RSI_SESSIONS_PER_MODEL=12 RSI_TASK_WORKERS=24
+# Concurrency scales with the machine. The sandbox (CPU) is the bottleneck: one slot per core, minus two. Sessions and
+# task workers scale by X = slots / 10, relative to the 12-core machine where the study started (10 slots, X = 1), and
+# at most 3 by default: more sessions risk 429 responses. Raise RSI_SCALE if tools/status.py shows few warnings.
+CORES=$(nproc)
+SLOTS=${RSI_MACHINE_SANDBOX_SLOTS:-$(( CORES > 12 ? CORES - 2 : 10 ))}
+X=${RSI_SCALE:-$(( SLOTS < 20 ? 1 : (SLOTS < 30 ? 2 : 3) ))}
+export RSI_MACHINE_SANDBOX_SLOTS=$SLOTS MAX_SANDBOX_PROCS=$SLOTS
+export RSI_COPILOT_CAP_USD=${RSI_COPILOT_CAP_USD:-1200} RSI_SESSIONS_PER_MODEL=$((12 * X)) RSI_TASK_WORKERS=$((24 * X))
 PY=.venv/bin/python
 STAGGER=${STAGGER:-180}
 supervise() {  # model program [study]
@@ -16,12 +23,12 @@ supervise() {  # model program [study]
   done
 }
 wait_a1() { until grep -q '"picks"' studies/$1/runs/groups/A1.json 2>/dev/null; do sleep 300; done; }
-echo "$(date '+%F %T') launch, cap \$$RSI_COPILOT_CAP_USD (ledger total)" >> logs/supervisor.log
+echo "$(date '+%F %T') launch on $(hostname): cap \$$RSI_COPILOT_CAP_USD (ledger total), $CORES cores, $SLOTS sandbox slots, scale $X" >> logs/supervisor.log
 # Program A is the longest job, so it gets the most sessions; the sandbox CPU bounds the machine's total throughput.
-( export RSI_SESSIONS_PER_MODEL=32 RSI_TASK_WORKERS=48; supervise gpt-6-luna A ) &
+( export RSI_SESSIONS_PER_MODEL=$((32 * X)) RSI_TASK_WORKERS=$((48 * X)); supervise gpt-6-luna A ) &
 sleep $STAGGER
 # Program S: SOTA researchers of one gpt-6-luna solver (amendment 1)
-( export RSI_SESSIONS_PER_MODEL=16; supervise gpt-6-luna S S-gpt-6-luna ) &
+( export RSI_SESSIONS_PER_MODEL=$((16 * X)); supervise gpt-6-luna S S-gpt-6-luna ) &
 sleep $STAGGER
 supervise gpt-5.6-luna B &
 sleep $STAGGER

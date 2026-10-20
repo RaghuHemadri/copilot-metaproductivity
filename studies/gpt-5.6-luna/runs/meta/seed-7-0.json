@@ -1,0 +1,36 @@
+{
+ "id": "seed-7-0",
+ "parent": "seed-7",
+ "depth": 2,
+ "k": 0,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-5.6-luna",
+ "created": "2026-10-20 02:52:35",
+ "errors": [],
+ "changes": "Strengthened the solver\u2019s submission gate to explicitly forbid `submit` until `run_tests` confirms every public example passes, while reserving budget for mandatory validation and emphasizing interface/complexity checks.",
+ "predicted_delta": 3.0,
+ "final": "CHANGES: Strengthened the solver\u2019s submission gate to explicitly forbid `submit` until `run_tests` confirms every public example passes, while reserving budget for mandatory validation and emphasizing interface/complexity checks.\n\nPREDICTED_DELTA: +3 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-abc378-g",
+   "passed": false,
+   "cost": 0.011575
+  }
+ ],
+ "validations": 2,
+ "calls": 11,
+ "tin": 123058,
+ "tout": 1942,
+ "cached": 0,
+ "cost": 0.038517,
+ "secs": 125.9,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

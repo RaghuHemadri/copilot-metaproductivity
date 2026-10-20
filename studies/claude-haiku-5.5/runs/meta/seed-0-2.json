@@ -1,0 +1,36 @@
+{
+ "id": "seed-0-2",
+ "parent": "seed-0",
+ "depth": 2,
+ "k": 2,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-haiku-5.5",
+ "created": "2026-10-20 01:17:25",
+ "errors": [],
+ "changes": "The dev failures were mostly submissions made after 2 model calls with no `run_tests` or brute-force check; the solver often claimed correctness by hand. I added a HARD RULE to `/agent/solver.md` that blocks `submit` until the public examples pass via `run_tests` and at least one brute-force comparison has run, plus a short list of common slips to check. `validate()` passes, and a trial on lcb-abc387-f (previously failed) now passes with the verification steps run. I did not re-run the other failures, so the gain is unconfirmed beyond that one case.",
+ "predicted_delta": 3.0,
+ "final": "The trial on lcb-abc387-f now passes, and the solver ran both the public tests and a brute-force comparison before submitting.\n\nCHANGES: The dev failures were mostly submissions made after 2 model calls with no `run_tests` or brute-force check; the solver often claimed correctness by hand. I added a HARD RULE to `/agent/solver.md` that blocks `submit` until the public examples pass via `run_tests` and at least one brute-force comparison has run, plus a short list of common slips to check. `validate()` passes, and a trial on lcb-abc387-f (previously failed) now passes with the verification steps run. I did not re-run the other failures, so the gain is unconfirmed beyond that one case.\nPREDICTED_DELTA: +3",
+ "trials": [
+  {
+   "problem": "lcb-abc387-f",
+   "passed": true,
+   "cost": 0.003123
+  }
+ ],
+ "validations": 1,
+ "calls": 5,
+ "tin": 45291,
+ "tout": 1421,
+ "cached": 0,
+ "cost": 0.008363,
+ "secs": 243.6,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

@@ -1,0 +1,36 @@
+{
+ "id": "seed-7",
+ "parent": "seed",
+ "depth": 1,
+ "k": 7,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-5.6-luna",
+ "created": "2026-10-19 21:02:07",
+ "errors": [],
+ "changes": "Strengthened the solver workflow with mandatory full public-test validation, boundary/adversarial testing, complexity review, and prohibition on submitting untested or failing code.",
+ "predicted_delta": 4.0,
+ "final": "CHANGES: Strengthened the solver workflow with mandatory full public-test validation, boundary/adversarial testing, complexity review, and prohibition on submitting untested or failing code.\nPREDICTED_DELTA: +4 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-abc392-f",
+   "passed": false,
+   "cost": 0.002972
+  }
+ ],
+ "validations": 1,
+ "calls": 8,
+ "tin": 85346,
+ "tout": 1933,
+ "cached": 0,
+ "cost": 0.022361,
+ "secs": 132.1,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

@@ -52,3 +52,39 @@ def test_costs():
     assert abs(llm.cost_of("claude-haiku-5.5", 1_000_000, 1_000_000) - 0.6) < 1e-9
     assert abs(llm.cost_of("claude-haiku-5.5", 1_000_000, 0, cached=1_000_000) - 0.01) < 1e-9
     assert all(llm.provider_of(m) == "copilot" for m in llm.MODELS)
+
+
+def test_hung_session_is_cancelled_and_releases_its_slot():
+    import asyncio, time
+    eng = rt._Engine()
+    eng.client = object()  # skip starting the Copilot CLI
+    done = {}
+
+    async def hang():
+        async with eng.sem("m"):
+            try:
+                await asyncio.sleep(3600)
+            finally:
+                done["cancelled"] = True
+    try:
+        eng.run(hang(), timeout=0.5)
+        raise AssertionError("expected TimeoutError")
+    except TimeoutError:
+        pass
+    time.sleep(0.3)
+    assert done.get("cancelled") and eng.sem("m")._value == rt.SESSIONS_PER_MODEL
+
+
+def test_eval_task_retries_a_hung_solve(monkeypatch):
+    import prepare, rsi
+    calls = []
+
+    def fake_solve(genome, task, model, budget=None):
+        calls.append(task["slug"])
+        if len(calls) == 1:
+            raise TimeoutError  # what runtime.solve raises after cancelling a hung session
+        return dict(code="print(1)", submitted=True, test_runs=0, py_runs=0, calls=1, tin=0, tout=0, cached=0, cost=0.0,
+                    secs=0.1, stop_reason=None, error=None, warnings=[], trace=[])
+    monkeypatch.setattr(rt, "solve", fake_solve)
+    r = rsi._eval_task({}, prepare.load_splits()["v2_dev"][0])
+    assert len(calls) == 2 and r["passed"] is False and r["code"] == "print(1)"

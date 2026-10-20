@@ -1,0 +1,30 @@
+{
+ "id": "seed-4-5",
+ "parent": "seed-4",
+ "depth": 2,
+ "k": 5,
+ "tag": "e1",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-20 00:11:54",
+ "errors": [],
+ "changes": "Updated the solver prompt to encourage independent brute-force checks on small cases and targeted edge-case testing for subtle algorithms; validation passed.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Updated the solver prompt to encourage independent brute-force checks on small cases and targeted edge-case testing for subtle algorithms; validation passed.\nPREDICTED_DELTA: +2 percentage points",
+ "trials": [],
+ "validations": 1,
+ "calls": 7,
+ "tin": 88205,
+ "tout": 1651,
+ "cached": 0,
+ "cost": 0.009646,
+ "secs": 30.9,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

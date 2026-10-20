@@ -1,0 +1,30 @@
+{
+ "id": "seed-0-0",
+ "parent": "seed-0",
+ "depth": 2,
+ "k": 0,
+ "tag": "e1",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-19 20:46:30",
+ "errors": [],
+ "changes": "Strengthened the solver\u2019s submission gate: only submit the exact final source after the latest full public-test run passes.",
+ "predicted_delta": 3.0,
+ "final": "CHANGES: Strengthened the solver\u2019s submission gate: only submit the exact final source after the latest full public-test run passes.\nPREDICTED_DELTA: +3 percentage points",
+ "trials": [],
+ "validations": 1,
+ "calls": 8,
+ "tin": 99087,
+ "tout": 1983,
+ "cached": 0,
+ "cost": 0.0109,
+ "secs": 63.1,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

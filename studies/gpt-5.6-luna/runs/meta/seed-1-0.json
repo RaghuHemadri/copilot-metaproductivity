@@ -1,0 +1,46 @@
+{
+ "id": "seed-1-0",
+ "parent": "seed-1",
+ "depth": 2,
+ "k": 0,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-5.6-luna",
+ "created": "2026-10-19 23:45:51",
+ "errors": [],
+ "changes": "Strengthened the solver\u2019s submission gate and debugging workflow, requiring authoritative handling of failed tests, complete public-test reruns, valid boundary-focused differential tests, and explicit endpoint coverage for stateful operations.",
+ "predicted_delta": 3.0,
+ "final": "CHANGES: Strengthened the solver\u2019s submission gate and debugging workflow, requiring authoritative handling of failed tests, complete public-test reruns, valid boundary-focused differential tests, and explicit endpoint coverage for stateful operations.\nPREDICTED_DELTA: +3 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-arc194-a",
+   "passed": true,
+   "cost": 0.007712
+  },
+  {
+   "problem": "lcb-abc392-f",
+   "passed": false,
+   "cost": 0.002903
+  },
+  {
+   "problem": "lcb-3655",
+   "passed": true,
+   "cost": 0.005948
+  }
+ ],
+ "validations": 2,
+ "calls": 12,
+ "tin": 177636,
+ "tout": 2161,
+ "cached": 0,
+ "cost": 0.054683,
+ "secs": 583.6,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

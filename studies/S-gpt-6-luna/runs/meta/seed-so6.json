@@ -1,0 +1,44 @@
+{
+ "id": "seed-so6",
+ "parent": "seed",
+ "depth": 1,
+ "k": 6,
+ "tag": "S:claude-opus-5.5",
+ "suffix": "so",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-opus-5.5",
+ "created": "2026-10-19 23:34:25",
+ "errors": [],
+ "changes": "Rewrote solver.md to require submitting only the exact code that passed `run_tests`, to keep debugging instead of submitting failing or untested code or giving up, to always call `submit`, and to check against brute force and time a maximum-size input before submitting, using more of the 16-call budget.",
+ "predicted_delta": 8.0,
+ "final": "I rewrote `/agent/solver.md`, and two trial runs on failed problems both passed. I didn't change the skills or sub-agents.\n\n**What went wrong:** 19 of the 34 failures were programs submitted while failing a public example. The agent used only about 3.3 of its 16 model calls on average, and in the failed problems I read it did one of these:\n- submitted without running the tests at all;\n- rewrote the code after it passed, then submitted the new untested version;\n- submitted code it knew failed an example;\n- gave up;\n- or wrote the code in a message instead of calling `submit`, so nothing was submitted.\n\n**What the new prompt does:**\n- **Firm rules:**\n  - Always submit through the tool, never as code in a message.\n  - Only submit the exact code that last passed the tests.\n  - Never submit a failing program while there are calls left.\n  - Never give up: brute-force small cases and look for a pattern instead.\n- **Checks before submitting:** compare against a brute-force solution on random small inputs, and time a maximum-size input (this targets the 6 time-limit and 8 hidden wrong-answer failures).\n- **Python speed warnings and debugging tips.**\n\n**Trials:**\n- **lcb-3594:** passed, and this time the agent found its bug by running the tests. But it submitted a shortened version of the code, not the exact code that had passed. I tightened that rule and haven't re-run this problem since.\n- **lcb-abc394-e:** run after the tighter wording; passed. It fixed a failing example, checked against brute force, timed the largest input, and submitted the exact code that passed.\n\nTwo passing trials don't measure the overall rate, so the estimate below is a guess.\n\nCHANGES: Rewrote solver.md to require submitting only the exact code that passed `run_tests`, to keep debugging instead of submitting failing or untested code or giving up, to always call `submit`, and to check against brute force and time a maximum-size input before submitting, using more of the 16-call budget.\nPREDICTED_DELTA: +8",
+ "trials": [
+  {
+   "problem": "lcb-3594",
+   "passed": true,
+   "cost": 0.001584
+  },
+  {
+   "problem": "lcb-abc394-e",
+   "passed": true,
+   "cost": 0.003566
+  }
+ ],
+ "validations": 2,
+ "calls": 14,
+ "tin": 162591,
+ "tout": 3713,
+ "cached": 0,
+ "cost": 0.729774,
+ "secs": 268.6,
+ "stop_reason": null,
+ "error": null,
+ "warnings": [
+  "model.call_failure: \"429 Too Many Requests\"",
+  "model.call_failure: \"429 Too Many Requests\""
+ ]
+}

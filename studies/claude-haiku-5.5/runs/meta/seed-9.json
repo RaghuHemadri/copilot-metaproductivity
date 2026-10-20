@@ -1,0 +1,36 @@
+{
+ "id": "seed-9",
+ "parent": "seed",
+ "depth": 1,
+ "k": 9,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-haiku-5.5",
+ "created": "2026-10-19 23:08:05",
+ "errors": [],
+ "changes": "Rewrote `/agent/solver.md` to make the verification steps mandatory before submitting. The agent must run every public example, stress-test a brute-force reference on small random inputs (and not submit on any mismatch), time maximum-size inputs, and check Python complexity limits up front. The failure reports showed submits without any public-example run (lcb-3655) and submits despite a brute-force mismatch (lcb-arc193-d). `validate()` passes. One trial on lcb-3655 now runs the public examples before submitting, but it still fails the hidden tests on a wrong-answer case (got 80458, expected 93646), so the prompt change did not fix that problem. I did not add a skill or sub-agent.",
+ "predicted_delta": 3.0,
+ "final": "I made one prompt change and ran one trial. The trial still failed, so I'm not claiming a gain beyond the process fix.\n\nCHANGES: Rewrote `/agent/solver.md` to make the verification steps mandatory before submitting. The agent must run every public example, stress-test a brute-force reference on small random inputs (and not submit on any mismatch), time maximum-size inputs, and check Python complexity limits up front. The failure reports showed submits without any public-example run (lcb-3655) and submits despite a brute-force mismatch (lcb-arc193-d). `validate()` passes. One trial on lcb-3655 now runs the public examples before submitting, but it still fails the hidden tests on a wrong-answer case (got 80458, expected 93646), so the prompt change did not fix that problem. I did not add a skill or sub-agent.\nPREDICTED_DELTA: +3",
+ "trials": [
+  {
+   "problem": "lcb-3655",
+   "passed": false,
+   "cost": 0.002034
+  }
+ ],
+ "validations": 1,
+ "calls": 5,
+ "tin": 49122,
+ "tout": 2496,
+ "cached": 0,
+ "cost": 0.008194,
+ "secs": 44.1,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

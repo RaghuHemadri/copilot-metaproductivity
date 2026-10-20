@@ -1,0 +1,19 @@
+{
+ "model": "claude-opus-5.5",
+ "pass_rate": 0.896,
+ "by_difficulty": {
+  "hard": 0.859,
+  "medium": 0.969
+ },
+ "cost": 6.8265,
+ "mean_calls": 2.84,
+ "submitted": 1.0,
+ "infra_errors": 0,
+ "tasks_with_warnings": 7,
+ "budget_stops": 0,
+ "mean_secs": 23.2,
+ "wall_s": 0,
+ "tin": 885376,
+ "tout": 164250,
+ "cached": 0
+}

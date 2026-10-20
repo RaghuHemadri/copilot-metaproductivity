@@ -1,0 +1,36 @@
+{
+ "id": "seed-2-5",
+ "parent": "seed-2",
+ "depth": 2,
+ "k": 5,
+ "tag": "e1",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-19 20:49:29",
+ "errors": [],
+ "changes": "Added a focused pre-submit correctness audit: differential-test nontrivial algorithms against a simple reference on small cases when feasible, otherwise target adversarial edge cases. Validation passed; the trial on lcb-3686 passed.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Added a focused pre-submit correctness audit: differential-test nontrivial algorithms against a simple reference on small cases when feasible, otherwise target adversarial edge cases. Validation passed; the trial on lcb-3686 passed.\nPREDICTED_DELTA: +2 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-3686",
+   "passed": true,
+   "cost": 0.005553
+  }
+ ],
+ "validations": 1,
+ "calls": 8,
+ "tin": 77655,
+ "tout": 1360,
+ "cached": 0,
+ "cost": 0.013999,
+ "secs": 242.4,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

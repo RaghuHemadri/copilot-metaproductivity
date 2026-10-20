@@ -1,0 +1,30 @@
+{
+ "id": "seed-sg0",
+ "parent": "seed",
+ "depth": 1,
+ "k": 0,
+ "tag": "S:gpt-6-sol",
+ "suffix": "sg",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-sol",
+ "created": "2026-10-19 23:08:08",
+ "errors": [],
+ "changes": "Strengthened the solver prompt to require testing the exact code before submission and diagnosing sample failures instead of submitting unchanged code.",
+ "predicted_delta": 5.0,
+ "final": "CHANGES: Strengthened the solver prompt to require testing the exact code before submission and diagnosing sample failures instead of submitting unchanged code.\nPREDICTED_DELTA: +5 percentage points",
+ "trials": [],
+ "validations": 1,
+ "calls": 7,
+ "tin": 83031,
+ "tout": 1132,
+ "cached": 0,
+ "cost": 0.177382,
+ "secs": 26.9,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

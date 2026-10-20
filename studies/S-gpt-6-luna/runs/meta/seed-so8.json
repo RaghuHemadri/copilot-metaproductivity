@@ -1,0 +1,45 @@
+{
+ "id": "seed-so8",
+ "parent": "seed",
+ "depth": 1,
+ "k": 8,
+ "tag": "S:claude-opus-5.5",
+ "suffix": "so",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-opus-5.5",
+ "created": "2026-10-19 23:19:32",
+ "errors": [],
+ "changes": "Rewrote solver.md with hard rules: never submit code that hasn't passed all public examples, submit exactly the last tested code, debug or rethink on failures and use the unused call budget. Added brute-force comparison and a max-size timing check for hard problems, plus Python speed guidance. Targets the most common failure (19/34: final program fails public examples) and hidden wrong answers and time limits.",
+ "predicted_delta": 8.0,
+ "final": "I rewrote the solver prompt to stop the agent from submitting untested code. Two of the 19 problems that failed for that reason (lcb-abc394-e and lcb-3594) pass now, each in 3 model calls; I didn't rerun any of the others.\n\n**What went wrong:** the most common failure kind, on 19 of 34 failed problems, was submitting a program that fails the public examples. Grepping the failed traces showed three patterns:\n- **Untested code submitted:** the agent submitted without ever running the tests, as in lcb-3594.\n- **Tested code changed before submitting:** the tests passed on one version, then a tidied-up rewrite was submitted. In lcb-abc394-e that rewrite failed the examples.\n- **Submitting after failures:** the agent submitted while examples were still failing, using only about 3 of its 16 model calls.\n\n**Changes to `/agent/solver.md`:**\n- Never submit code that hasn't passed every public example in `run_tests`.\n- Submit exactly the code that last passed the tests, byte for byte; any edit means testing again.\n- If examples fail, debug or rethink the approach instead of submitting. A failing program may only be submitted after about 14 of the 16 calls are used.\n- For hard problems, compare against a brute force on random small inputs and time a maximum-size input. This targets the other 15 failures: wrong answers, time limits and one runtime error on hidden tests.\n- Short notes on Python speed limits and on input/output handling.\n\n`validate()` passes. I only made the prompt change, with no skills or sub-agents. I used 2 of the 3 trials, and the history log has no earlier versions to compare against.\n\nCHANGES: Rewrote solver.md with hard rules: never submit code that hasn't passed all public examples, submit exactly the last tested code, debug or rethink on failures and use the unused call budget. Added brute-force comparison and a max-size timing check for hard problems, plus Python speed guidance. Targets the most common failure (19/34: final program fails public examples) and hidden wrong answers and time limits.\nPREDICTED_DELTA: +8",
+ "trials": [
+  {
+   "problem": "lcb-abc394-e",
+   "passed": true,
+   "cost": 0.001705
+  },
+  {
+   "problem": "lcb-3594",
+   "passed": true,
+   "cost": 0.000694
+  }
+ ],
+ "validations": 1,
+ "calls": 12,
+ "tin": 116590,
+ "tout": 2769,
+ "cached": 0,
+ "cost": 0.524139,
+ "secs": 711.2,
+ "stop_reason": null,
+ "error": null,
+ "warnings": [
+  "model.call_failure: \"429 Too Many Requests\"",
+  "model.call_failure: \"429 Too Many Requests\"",
+  "model.call_failure: \"429 Too Many Requests\""
+ ]
+}

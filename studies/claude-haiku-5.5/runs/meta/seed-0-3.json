@@ -1,0 +1,38 @@
+{
+ "id": "seed-0-3",
+ "parent": "seed-0",
+ "depth": 2,
+ "k": 3,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-haiku-5.5",
+ "created": "2026-10-20 01:15:42",
+ "errors": [],
+ "changes": "In `/agent/solver.md` I added a \"hard gate before submit\" step. Most failed runs submitted after 2\u20133 model calls with no test run, or after only the public examples passed, and the budget was barely used (mean 3.6 of 16 calls). The gate requires the public samples to match exactly, requires the brute-force comparison and the timing run before submitting, asks for roughly 6\u201310 calls of verification, and says to treat a formula that disagrees with a sample as wrong. One trial (lcb-3655) still failed: the solver passed the examples and submitted without running the brute-force or timing checks. I then tightened the gate to make those checks mandatory. I did not re-run the trial after that last edit, and `validate` passes.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: In `/agent/solver.md` I added a \"hard gate before submit\" step. Most failed runs submitted after 2\u20133 model calls with no test run, or after only the public examples passed, and the budget was barely used (mean 3.6 of 16 calls). The gate requires the public samples to match exactly, requires the brute-force comparison and the timing run before submitting, asks for roughly 6\u201310 calls of verification, and says to treat a formula that disagrees with a sample as wrong. One trial (lcb-3655) still failed: the solver passed the examples and submitted without running the brute-force or timing checks. I then tightened the gate to make those checks mandatory. I did not re-run the trial after that last edit, and `validate` passes.\nPREDICTED_DELTA: +2",
+ "trials": [
+  {
+   "problem": "lcb-3655",
+   "passed": false,
+   "cost": 0.002173
+  }
+ ],
+ "validations": 2,
+ "calls": 8,
+ "tin": 72312,
+ "tout": 2406,
+ "cached": 0,
+ "cost": 0.010607,
+ "secs": 140.3,
+ "stop_reason": null,
+ "error": null,
+ "warnings": [
+  "model.call_failure: \"429 Too Many Requests\""
+ ]
+}

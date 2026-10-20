@@ -1,0 +1,45 @@
+{
+ "id": "seed-so1",
+ "parent": "seed",
+ "depth": 1,
+ "k": 1,
+ "tag": "S:claude-opus-5.5",
+ "suffix": "so",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-opus-5.5",
+ "created": "2026-10-19 23:33:01",
+ "errors": [],
+ "changes": "Rewrote solver.md into a stricter workflow: always run run_tests before submitting, never submit after a failed example while budget remains, submit exactly the code that last passed (re-test after any change), check non-trivial problems against a brute force on random inputs and time them on a max-size input, and always end with a submit call. This targets the main failure cause: submitting code that was untested, failing, or rewritten (19 of 34 failures fail public examples).",
+ "predicted_delta": 7.0,
+ "final": "I rewrote the solver's system prompt in `/agent/solver.md`. It passes `validate()`, and 2 of 3 trial runs passed on problems the agent had previously failed.\n\n**What the failures showed:** 19 of the 34 failures were programs that failed the public examples. They happened in three ways:\n- **Submitted untested code:** about 12 failures never called `run_tests` at all.\n- **Submitted after a failing test:** the agent submitted even though its last test run failed, while it still had most of its budget (on average it used 3.3 of 16 calls).\n- **Rewrote code at submit time:** the version it submitted was a rewrite of code that had passed, and the rewrite broke. Examples are lcb-arc192-d (passed 3/3 at 654 chars, then a 1249-char version was submitted) and lcb-abc394-e.\n\nA few failures also ended without calling `submit` at all, and 6 timed out on the hidden tests.\n\n**What the new prompt says:**\n- It sets out a workflow that requires running `run_tests` before every submission.\n- It forbids submitting after a failed example while calls remain, and says there is plenty of budget left to fix bugs.\n- It requires submitting exactly the code string that last passed, with no reformatting or cleanup. Any change has to be tested again.\n- On non-trivial problems, the agent should compare its solution with a small brute-force solver on random small inputs and time it on a maximum-size input.\n- It adds a few Python tips: fast input reading, avoiding deep recursion, keeping LeetCode method signatures, and always ending with a `submit` call.\n\n**Trials:**\n- lcb-arc192-d passed. It used 6 calls and fixed bugs over several test runs, but still submitted a changed version without re-testing after its last test had failed. It passed anyway, so the new submission rule isn't fully followed yet.\n- lcb-abc394-e passed. It submitted exactly the code it had tested.\n\nCHANGES: Rewrote solver.md into a stricter workflow: always run run_tests before submitting, never submit after a failed example while budget remains, submit exactly the code that last passed (re-test after any change), check non-trivial problems against a brute force on random inputs and time them on a max-size input, and always end with a submit call. This targets the main failure cause: submitting code that was untested, failing, or rewritten (19 of 34 failures fail public examples).\nPREDICTED_DELTA: +7",
+ "trials": [
+  {
+   "problem": "lcb-arc192-d",
+   "passed": true,
+   "cost": 0.004304
+  },
+  {
+   "problem": "lcb-abc394-e",
+   "passed": true,
+   "cost": 0.001575
+  }
+ ],
+ "validations": 1,
+ "calls": 13,
+ "tin": 150374,
+ "tout": 3034,
+ "cached": 0,
+ "cost": 0.668055,
+ "secs": 184.8,
+ "stop_reason": null,
+ "error": null,
+ "warnings": [
+  "model.call_failure: \"429 Too Many Requests\"",
+  "model.call_failure: \"429 Too Many Requests\"",
+  "model.call_failure: \"429 Too Many Requests\""
+ ]
+}

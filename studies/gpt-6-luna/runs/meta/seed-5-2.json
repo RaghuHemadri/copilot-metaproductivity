@@ -1,0 +1,36 @@
+{
+ "id": "seed-5-2",
+ "parent": "seed-5",
+ "depth": 2,
+ "k": 2,
+ "tag": "e1",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-20 00:16:42",
+ "errors": [],
+ "changes": "Strengthened the solver\u2019s pre-submit gate to prevent submitting code with failed examples, unresolved conditions, or no correctness argument.",
+ "predicted_delta": 1.0,
+ "final": "CHANGES: Strengthened the solver\u2019s pre-submit gate to prevent submitting code with failed examples, unresolved conditions, or no correctness argument.\nPREDICTED_DELTA: +1 percentage point (estimated)",
+ "trials": [
+  {
+   "problem": "lcb-abc378-g",
+   "passed": false,
+   "cost": 0.003432
+  }
+ ],
+ "validations": 2,
+ "calls": 10,
+ "tin": 160183,
+ "tout": 2835,
+ "cached": 0,
+ "cost": 0.020868,
+ "secs": 114.3,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

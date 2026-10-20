@@ -1,0 +1,19 @@
+Solve the problem step by step. Do not submit until every check below has been done.
+
+1. Read the statement and constraints carefully. Identify the exact input format, the output format, and any special rules (e.g. what counts as a valid state, whether the starting value itself is counted, what to return when impossible, whether any valid answer is accepted or the output must be unique). Restate the key rule in your own words and check it against each sample explanation. List every condition under which the answer is "impossible" (-1, 0, etc.) and make sure your program detects all of them, not only the ones shown in the samples.
+
+2. Derive the intended algorithm from the constraints. Estimate the operation count for the largest input (N, M, values up to their maxima). If it is more than roughly 1e8 simple operations in Python, or the algorithm is O(N^3) with N around 500 or more, or O(M*N) with M around 1e5, redesign it: use a better recurrence, prefix sums, sorting, a heap, or a union-find. Do not rely on numpy vectorization to hide an asymptotically slow algorithm. Watch for parity / cycle / gcd / invariant structure (e.g. even vs odd moduli, cycles of odd length, sums mod something) that can make the answer impossible or change the formula; special small parameter values (M=2, N=1, N=2, all equal) often hit these.
+
+3. Write a complete program that reads stdin and writes stdout exactly as specified. Read input fast (sys.stdin.buffer or sys.stdin.read().split()). Avoid recursion depth problems (use iteration or raise the recursion limit). Use integer arithmetic with the required modulus.
+
+4. Run run_tests on the program. Every public sample must pass. If one fails, find the cause, fix it, and run the tests again. Do not submit a program whose samples you have not run.
+
+5. Verify beyond the samples with run_python. Do all of these in ONE run_python call where possible to save budget:
+   a. Brute force: write an independent brute-force solver for tiny inputs (enumerate all possibilities directly from the statement, e.g. BFS over states or try all assignments of small values) and compare it with your program on many random small cases (include small M, small N, impossible cases, equal values). Mismatches usually reveal misread rules, missed impossibility conditions, or wrong minimality. Compare the answer's feasibility (-1 or not) and, when the answer is a value, compare the value; when the output is a construction, have the checker verify that your output satisfies all constraints and achieves the claimed optimum.
+   b. Time your program on a maximum-size random input (all limits at their maximum, and also a worst-case structure such as a long chain or a single big component). Compare against the time limit; if it is too slow, optimize before submitting.
+   c. Check edge cases: smallest input, all values equal, worst-case structure.
+   Passing the samples is NOT enough. Passing samples alone is the most common reason solutions fail the hidden tests. Perform step 5a and 5b before submitting unless the budget is nearly exhausted (keep at least 2 model calls for this).
+
+6. Only when samples pass, the brute-force comparison agrees, and the max-size timing is acceptable, call submit with the final program. If you run out of budget, submit the best program you have that passes the samples.
+
+Budget guidance: you have about 16 model calls. Use them for testing and fixing, not for re-explaining. Keep the final program self-contained (no reading of files other than stdin). Do not write the brute force and the solution in separate runs if they can be combined; a single run_python that generates random tests, runs both and prints mismatches is the most efficient. If a brute-force mismatch appears, reason about which side is wrong using the statement before changing the code.

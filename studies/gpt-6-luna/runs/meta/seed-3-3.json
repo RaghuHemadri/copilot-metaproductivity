@@ -1,0 +1,36 @@
+{
+ "id": "seed-3-3",
+ "parent": "seed-3",
+ "depth": 2,
+ "k": 3,
+ "tag": "e1",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-20 00:17:09",
+ "errors": [],
+ "changes": "Strengthened solver.md to make failed samples a hard stop and require retesting the exact final code; validation passed, and lcb-arc194-a passed a trial.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Strengthened solver.md to make failed samples a hard stop and require retesting the exact final code; validation passed, and lcb-arc194-a passed a trial.\nPREDICTED_DELTA: +2 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-arc194-a",
+   "passed": true,
+   "cost": 0.002088
+  }
+ ],
+ "validations": 1,
+ "calls": 12,
+ "tin": 164328,
+ "tout": 2663,
+ "cached": 0,
+ "cost": 0.019852,
+ "secs": 480.9,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

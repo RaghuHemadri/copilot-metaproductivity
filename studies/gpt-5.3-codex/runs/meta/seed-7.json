@@ -1,0 +1,30 @@
+{
+ "id": "seed-7",
+ "parent": "seed",
+ "depth": 1,
+ "k": 7,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-5.3-codex",
+ "created": "2026-10-19 21:07:06",
+ "errors": [],
+ "changes": "Edited /agent/solver.md to add a strict pre-code \u201ccomplexity gate\u201d and pre-submit checklist (must run run_tests at least once, forbid brute-force/placeholders for large constraints, and require worst-case complexity sanity check) to target the dominant failures: hidden TLEs and avoidable bad submissions.",
+ "predicted_delta": 3.0,
+ "final": "CHANGES: Edited /agent/solver.md to add a strict pre-code \u201ccomplexity gate\u201d and pre-submit checklist (must run run_tests at least once, forbid brute-force/placeholders for large constraints, and require worst-case complexity sanity check) to target the dominant failures: hidden TLEs and avoidable bad submissions.\nPREDICTED_DELTA: +3",
+ "trials": [],
+ "validations": 1,
+ "calls": 10,
+ "tin": 110745,
+ "tout": 1777,
+ "cached": 0,
+ "cost": 0.218682,
+ "secs": 31.6,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

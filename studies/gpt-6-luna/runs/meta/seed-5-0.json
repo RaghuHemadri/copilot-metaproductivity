@@ -1,0 +1,30 @@
+{
+ "id": "seed-5-0",
+ "parent": "seed-5",
+ "depth": 2,
+ "k": 0,
+ "tag": "e1",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-20 00:15:17",
+ "errors": [],
+ "changes": "Strengthened the solver\u2019s submission gate: failed examples or unresolved uncertainty must trigger further reasoning and retesting, not speculative submission.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Strengthened the solver\u2019s submission gate: failed examples or unresolved uncertainty must trigger further reasoning and retesting, not speculative submission.\nPREDICTED_DELTA: +2 percentage points",
+ "trials": [],
+ "validations": 1,
+ "calls": 7,
+ "tin": 71328,
+ "tout": 1814,
+ "cached": 0,
+ "cost": 0.00804,
+ "secs": 29.1,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

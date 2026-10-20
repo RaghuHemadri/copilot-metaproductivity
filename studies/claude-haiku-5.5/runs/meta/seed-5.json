@@ -1,0 +1,38 @@
+{
+ "id": "seed-5",
+ "parent": "seed",
+ "depth": 1,
+ "k": 5,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-haiku-5.5",
+ "created": "2026-10-19 23:08:06",
+ "errors": [],
+ "changes": "Rewrote /agent/solver.md into a stricter step-by-step workflow. The main failure was submitting right after a sample check or before any check at all: lcb-3655 never ran tests, and lcb-arc183-c checked only two small samples and then submitted an O(N^3) numpy solution that timed out. The new prompt requires checking the rule against sample explanations, estimating operation counts for max-size inputs, running all samples, comparing against a brute force on small random cases, timing a max-size input, and only then submitting. It is a gate, not a suggestion. One trial on lcb-3655 still failed (wrong answer). The agent passed the samples but skipped the brute-force and timing checks, which prompted the stronger gate. I did not re-trial after that last edit, and the trial hit a 429 rate-limit error, so the effect is unverified. validate() reports OK.",
+ "predicted_delta": 3.0,
+ "final": "CHANGES: Rewrote /agent/solver.md into a stricter step-by-step workflow. The main failure was submitting right after a sample check or before any check at all: lcb-3655 never ran tests, and lcb-arc183-c checked only two small samples and then submitted an O(N^3) numpy solution that timed out. The new prompt requires checking the rule against sample explanations, estimating operation counts for max-size inputs, running all samples, comparing against a brute force on small random cases, timing a max-size input, and only then submitting. It is a gate, not a suggestion. One trial on lcb-3655 still failed (wrong answer). The agent passed the samples but skipped the brute-force and timing checks, which prompted the stronger gate. I did not re-trial after that last edit, and the trial hit a 429 rate-limit error, so the effect is unverified. validate() reports OK.\nPREDICTED_DELTA: +3",
+ "trials": [
+  {
+   "problem": "lcb-3655",
+   "passed": false,
+   "cost": 0.002001
+  }
+ ],
+ "validations": 2,
+ "calls": 7,
+ "tin": 59744,
+ "tout": 2522,
+ "cached": 0,
+ "cost": 0.009236,
+ "secs": 45.3,
+ "stop_reason": null,
+ "error": null,
+ "warnings": [
+  "model.call_failure: \"429 Too Many Requests\""
+ ]
+}

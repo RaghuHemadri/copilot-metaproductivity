@@ -1,0 +1,19 @@
+{
+ "model": "gpt-6.1-sol",
+ "pass_rate": 0.938,
+ "by_difficulty": {
+  "hard": 0.922,
+  "medium": 0.969
+ },
+ "cost": 2.3329,
+ "mean_calls": 3.41,
+ "submitted": 1.0,
+ "infra_errors": 0,
+ "tasks_with_warnings": 1,
+ "budget_stops": 0,
+ "mean_secs": 38.3,
+ "wall_s": 0,
+ "tin": 599580,
+ "tout": 113372,
+ "cached": 0
+}

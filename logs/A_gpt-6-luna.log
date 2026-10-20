@@ -1,0 +1,91 @@
+22:26:47 [gpt-6-luna] === A1 start
+22:26:47 [gpt-6-luna] A1 gen0
+22:26:47 [gpt-6-luna] measure seed: s0=0.688 s1=0.698 children=[0.729, 0.708, 0.698, 0.708, 0.698, 0.719, 0.74, 0.75]
+22:26:47 [gpt-6-luna] A1 gen1: ['seed-0', 'seed-1', 'seed-2', 'seed-3', 'seed-4', 'seed-5', 'seed-6', 'seed-7']
+22:45:27 [gpt-6-luna] eval seed-1-1 v2_dev r0: 71 tasks in 1120s $0.120
+CopilotSession.send_and_wait failed
+CopilotSession.send_and_wait failed
+23:17:45 [gpt-6-luna] eval seed-2 v2_dev r1: 63 tasks in 3058s $0.087
+23:26:54 [gpt-6-luna] === A1 start
+23:26:54 [gpt-6-luna] A1 gen0
+23:26:54 [gpt-6-luna] measure seed: s0=0.688 s1=0.698 children=[0.729, 0.708, 0.698, 0.708, 0.698, 0.719, 0.74, 0.75]
+23:26:54 [gpt-6-luna] A1 gen1: ['seed-0', 'seed-1', 'seed-2', 'seed-3', 'seed-4', 'seed-5', 'seed-6', 'seed-7']
+23:27:33 [gpt-6-luna] eval seed-0-0 v2_dev r0: 9 tasks in 38s $0.011
+23:32:11 [gpt-6-luna] eval seed-0-1 v2_dev r0: 25 tasks in 317s $0.030
+23:35:59 [gpt-6-luna] eval seed-1-3 v2_dev r0: 15 tasks in 545s $0.025
+23:36:38 [gpt-6-luna] eval seed-0-2 v2_dev r0: 56 tasks in 584s $0.087
+23:41:55 [gpt-6-luna] eval seed-2-0 v2_dev r0: 15 tasks in 900s $0.030
+23:42:48 [gpt-6-luna] eval seed-2-2 v2_dev r0: 25 tasks in 954s $0.034
+23:53:52 [gpt-6-luna] eval seed-0-5 v2_dev r0: 26 tasks in 1617s $0.032
+23:55:32 [gpt-6-luna] eval seed-2-3 v2_dev r0: 23 tasks in 1718s $0.029
+23:55:41 [gpt-6-luna] eval seed-0-4 v2_dev r0: 31 tasks in 1727s $0.037
+23:56:15 [gpt-6-luna] eval seed-1-4 v2_dev r0: 35 tasks in 1761s $0.039
+00:01:04 [gpt-6-luna] eval seed-2-1 v2_dev r0: 45 tasks in 2050s $0.083
+00:02:10 [gpt-6-luna] eval seed-2-5 v2_dev r0: 46 tasks in 2116s $0.081
+00:08:38 [gpt-6-luna] eval seed-1-5 v2_dev r0: 61 tasks in 2504s $0.093
+00:09:07 [gpt-6-luna] eval seed-2-4 v2_dev r0: 54 tasks in 2533s $0.098
+00:09:07 [gpt-6-luna] measure seed-2: s0=0.698 s1=0.677 children=[0.708, 0.708, 0.729, 0.74, 0.74, 0.708]
+00:09:39 [gpt-6-luna] child seed-3-0: valid=True changed=True files=['solver.md'] pred=1.0 calls=7 trials=0 $0.009 31s err=None problems=[]
+00:09:48 [gpt-6-luna] child seed-3-1: valid=True changed=True files=['solver.md'] pred=2.0 calls=7 trials=0 $0.010 40s err=None problems=[]
+00:10:23 [gpt-6-luna] child seed-3-2: valid=True changed=True files=['solver.md'] pred=2.0 calls=8 trials=1 $0.013 75s err=None problems=[]
+00:11:22 [gpt-6-luna] eval seed-0-3 v2_dev r0: 62 tasks in 2668s $0.091
+00:11:22 [gpt-6-luna] measure seed-0: s0=0.729 s1=0.698 children=[0.698, 0.719, 0.74, 0.708, 0.729, 0.719]
+00:11:52 [gpt-6-luna] child seed-3-5: valid=True changed=True files=['solver.md'] pred=1.0 calls=8 trials=1 $0.018 164s err=None problems=[]
+00:11:54 [gpt-6-luna] child seed-4-5: valid=True changed=True files=['solver.md'] pred=2.0 calls=7 trials=0 $0.010 31s err=None problems=[]
+00:11:55 [gpt-6-luna] child seed-4-2: valid=True changed=True files=['solver.md'] pred=2.0 calls=8 trials=0 $0.010 32s err=None problems=[]
+00:11:56 [gpt-6-luna] child seed-4-4: valid=True changed=True files=['solver.md'] pred=2.0 calls=7 trials=0 $0.010 33s err=None problems=[]
+00:11:56 [gpt-6-luna] child seed-4-1: valid=True changed=True files=['solver.md'] pred=2.0 calls=7 trials=0 $0.011 34s err=None problems=[]
+00:12:00 [gpt-6-luna] child seed-4-0: valid=True changed=True files=['solver.md'] pred=2.0 calls=8 trials=0 $0.013 37s err=None problems=[]
+00:13:44 [gpt-6-luna] eval seed-1-0 v2_dev r0: 56 tasks in 2810s $0.079
+00:14:48 [gpt-6-luna] eval seed-1-2 v2_dev r0: 49 tasks in 2873s $0.061
+00:14:48 [gpt-6-luna] measure seed-1: s0=0.708 s1=0.688 children=[0.719, 0.729, 0.708, 0.729, 0.719, 0.688]
+00:15:17 [gpt-6-luna] child seed-5-0: valid=True changed=True files=['solver.md'] pred=2.0 calls=7 trials=0 $0.008 29s err=None problems=[]
+00:15:27 [gpt-6-luna] child seed-5-4: valid=True changed=True files=['solver.md'] pred=2.0 calls=9 trials=0 $0.012 38s err=None problems=[]
+00:16:42 [gpt-6-luna] child seed-5-2: valid=True changed=True files=['solver.md'] pred=1.0 calls=10 trials=1 $0.021 114s err=None problems=[]
+00:16:58 [gpt-6-luna] child seed-4-3: valid=True changed=True files=['solver.md'] pred=2.0 calls=8 trials=1 $0.012 336s err=None problems=[]
+00:17:09 [gpt-6-luna] child seed-3-3: valid=True changed=True files=['solver.md'] pred=2.0 calls=12 trials=1 $0.020 481s err=None problems=[]
+00:17:27 [gpt-6-luna] child seed-5-3: valid=True changed=True files=['solver.md'] pred=2.0 calls=10 trials=1 $0.016 159s err=None problems=[]
+00:17:52 [gpt-6-luna] child seed-5-1: valid=True changed=True files=['solver.md'] pred=2.0 calls=8 trials=1 $0.014 184s err=None problems=[]
+00:19:31 [gpt-6-luna] child seed-5-5: valid=True changed=True files=['solver.md'] pred=1.0 calls=11 trials=1 $0.017 283s err=None problems=[]
+00:19:41 [gpt-6-luna] child seed-3-4: valid=True changed=True files=['solver.md'] pred=2.0 calls=11 trials=1 $0.031 633s err=None problems=[]
+00:23:03 [gpt-6-luna] eval seed-3 v2_dev r1: 96 tasks in 836s $0.171
+00:31:42 [gpt-6-luna] eval seed-3-0 v2_dev r0: 96 tasks in 1323s $0.180
+00:40:29 [gpt-6-luna] eval seed-3-1 v2_dev r0: 96 tasks in 1841s $0.177
+00:49:11 [gpt-6-luna] eval seed-3-2 v2_dev r0: 96 tasks in 2328s $0.177
+CopilotSession.send_and_wait failed
+01:03:08 [gpt-6-luna] eval seed-3-5 v2_dev r0: 96 tasks in 3076s $0.199
+01:14:06 [gpt-6-luna] eval seed-4-5 v2_dev r0: 96 tasks in 3732s $0.216
+01:22:42 [gpt-6-luna] eval seed-4-2 v2_dev r0: 96 tasks in 4247s $0.147
+01:32:09 [gpt-6-luna] eval seed-4-4 v2_dev r0: 96 tasks in 4813s $0.215
+CopilotSession.send_and_wait failed
+01:41:33 [gpt-6-luna] eval seed-4-1 v2_dev r0: 96 tasks in 5376s $0.180
+01:50:19 [gpt-6-luna] eval seed-4-0 v2_dev r0: 96 tasks in 5899s $0.200
+01:57:47 [gpt-6-luna] eval seed-5 v2_dev r1: 96 tasks in 6179s $0.146
+02:06:26 [gpt-6-luna] eval seed-5-0 v2_dev r0: 96 tasks in 6668s $0.152
+02:12:47 [gpt-6-luna] eval seed-5-4 v2_dev r0: 96 tasks in 7040s $0.179
+02:24:48 [gpt-6-luna] eval seed-5-2 v2_dev r0: 96 tasks in 7686s $0.155
+02:29:30 [gpt-6-luna] eval seed-4-3 v2_dev r0: 96 tasks in 7951s $0.172
+02:29:30 [gpt-6-luna] measure seed-4 failed: TimeoutError: 
+02:29:57 [gpt-6-luna] child seed-6-1: valid=True changed=True files=['solver.md'] pred=2.0 calls=7 trials=0 $0.008 27s err=None problems=[]
+02:30:08 [gpt-6-luna] child seed-6-0: valid=True changed=True files=['solver.md'] pred=2.0 calls=7 trials=0 $0.010 38s err=None problems=[]
+02:32:11 [gpt-6-luna] child seed-6-5: valid=True changed=True files=['solver.md'] pred=2.0 calls=12 trials=1 $0.025 160s err=None problems=[]
+02:33:00 [gpt-6-luna] child seed-6-2: valid=True changed=True files=['solver.md'] pred=1.0 calls=11 trials=1 $0.023 210s err=None problems=[]
+02:35:50 [gpt-6-luna] child seed-6-4: valid=True changed=True files=['solver.md'] pred=2.0 calls=8 trials=1 $0.014 380s err=None problems=[]
+02:36:47 [gpt-6-luna] child seed-6-3: valid=True changed=True files=['solver.md'] pred=2.0 calls=8 trials=1 $0.016 437s err=None problems=[]
+02:39:51 [gpt-6-luna] eval seed-3-3 v2_dev r0: 96 tasks in 8562s $0.176
+02:49:30 [gpt-6-luna] eval seed-5-3 v2_dev r0: 96 tasks in 9124s $0.199
+02:58:53 [gpt-6-luna] eval seed-5-1 v2_dev r0: 96 tasks in 9660s $0.186
+03:20:14 [gpt-6-luna] eval seed-5-5 v2_dev r0: 96 tasks in 10842s $0.196
+03:20:15 [gpt-6-luna] measure seed-5: s0=0.719 s1=0.719 children=[0.656, 0.75, 0.708, 0.74, 0.729, 0.729]
+03:21:01 [gpt-6-luna] child seed-7-0: valid=True changed=True files=['solver.md'] pred=2.0 calls=7 trials=0 $0.010 45s err=None problems=[]
+03:21:01 [gpt-6-luna] child seed-7-5: valid=True changed=True files=['solver.md'] pred=2.0 calls=7 trials=0 $0.007 44s err=None problems=[]
+03:21:05 [gpt-6-luna] child seed-7-1: valid=True changed=True files=['solver.md'] pred=2.0 calls=7 trials=0 $0.010 49s err=None problems=[]
+03:21:09 [gpt-6-luna] child seed-7-4: valid=True changed=True files=['solver.md'] pred=2.0 calls=8 trials=0 $0.013 53s err=None problems=[]
+03:21:10 [gpt-6-luna] child seed-7-2: valid=True changed=True files=['solver.md'] pred=2.0 calls=7 trials=0 $0.010 54s err=None problems=[]
+03:26:39 [gpt-6-luna] child seed-7-3: valid=True changed=True files=['solver.md'] pred=1.0 calls=11 trials=1 $0.019 383s err=None problems=[]
+CopilotSession.send_and_wait failed
+CopilotSession.send_and_wait failed
+CopilotSession.send_and_wait failed
+CopilotSession.send_and_wait failed
+CopilotSession.send_and_wait failed
+CopilotSession.send_and_wait failed

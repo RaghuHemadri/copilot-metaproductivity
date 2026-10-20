@@ -1,0 +1,30 @@
+{
+ "id": "seed-5",
+ "parent": "seed",
+ "depth": 1,
+ "k": 5,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-5.3-codex",
+ "created": "2026-10-19 21:07:03",
+ "errors": [],
+ "changes": "Updated /agent/solver.md to focus on the dominant failure mode (hidden TLE): added explicit worst-case complexity budgeting, Python operation guardrails, requirement to avoid knowingly incomplete heuristics, and a runtime-sanity step before submit so solutions are both correct and complexity-safe.",
+ "predicted_delta": 4.0,
+ "final": "CHANGES: Updated /agent/solver.md to focus on the dominant failure mode (hidden TLE): added explicit worst-case complexity budgeting, Python operation guardrails, requirement to avoid knowingly incomplete heuristics, and a runtime-sanity step before submit so solutions are both correct and complexity-safe.\nPREDICTED_DELTA: +4",
+ "trials": [],
+ "validations": 1,
+ "calls": 9,
+ "tin": 113965,
+ "tout": 1556,
+ "cached": 0,
+ "cost": 0.221223,
+ "secs": 28.4,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

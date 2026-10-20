@@ -1,0 +1,30 @@
+{
+ "id": "seed-0-2",
+ "parent": "seed-0",
+ "depth": 2,
+ "k": 2,
+ "tag": "e1",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-19 20:46:29",
+ "errors": [],
+ "changes": "Strengthened the solver\u2019s correctness gate: failed tests or brute-force checks block submission, and incomplete or constraint-violating approaches must not be submitted as solutions.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Strengthened the solver\u2019s correctness gate: failed tests or brute-force checks block submission, and incomplete or constraint-violating approaches must not be submitted as solutions.\nPREDICTED_DELTA: +2 percentage points",
+ "trials": [],
+ "validations": 1,
+ "calls": 7,
+ "tin": 79390,
+ "tout": 1970,
+ "cached": 0,
+ "cost": 0.008924,
+ "secs": 62.1,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

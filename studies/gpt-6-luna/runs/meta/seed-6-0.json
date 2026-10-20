@@ -1,0 +1,30 @@
+{
+ "id": "seed-6-0",
+ "parent": "seed-6",
+ "depth": 2,
+ "k": 0,
+ "tag": "e1",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-20 02:30:08",
+ "errors": [],
+ "changes": "Strengthened the solver\u2019s submission gate to forbid submitting code that fails public tests or differs from the tested version; added practical correctness checks for constraints and small cases.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Strengthened the solver\u2019s submission gate to forbid submitting code that fails public tests or differs from the tested version; added practical correctness checks for constraints and small cases.\nPREDICTED_DELTA: +2 percentage points",
+ "trials": [],
+ "validations": 1,
+ "calls": 7,
+ "tin": 88884,
+ "tout": 2045,
+ "cached": 0,
+ "cost": 0.009911,
+ "secs": 37.5,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

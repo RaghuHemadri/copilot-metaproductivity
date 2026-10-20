@@ -1,0 +1,36 @@
+{
+ "id": "seed-sa7",
+ "parent": "seed",
+ "depth": 1,
+ "k": 7,
+ "tag": "S:gpt-6-astra",
+ "suffix": "sa",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-astra",
+ "created": "2026-10-19 23:16:24",
+ "errors": [],
+ "changes": "Added an exact-code test-and-submit gate to prevent skipped tests, ignored failures, and untested rewrites. Validation passed; one previously failing development problem passed its trial.",
+ "predicted_delta": 6.0,
+ "final": "CHANGES: Added an exact-code test-and-submit gate to prevent skipped tests, ignored failures, and untested rewrites. Validation passed; one previously failing development problem passed its trial.\nPREDICTED_DELTA: +6 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-3733",
+   "passed": true,
+   "cost": 0.004052
+  }
+ ],
+ "validations": 1,
+ "calls": 8,
+ "tin": 87333,
+ "tout": 1121,
+ "cached": 0,
+ "cost": 0.933432,
+ "secs": 522.8,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

@@ -1,0 +1,36 @@
+{
+ "id": "seed-4",
+ "parent": "seed",
+ "depth": 1,
+ "k": 4,
+ "tag": "e1",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-19 19:36:30",
+ "errors": [],
+ "changes": "Strengthened solver.md to require precise problem parsing, an algorithm and complexity check, and at least one full run_tests check before submission; validation passed, and a trial caught and fixed a public-example failure.",
+ "predicted_delta": 3.0,
+ "final": "CHANGES: Strengthened solver.md to require precise problem parsing, an algorithm and complexity check, and at least one full run_tests check before submission; validation passed, and a trial caught and fixed a public-example failure.\nPREDICTED_DELTA: +3 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-3551",
+   "passed": true,
+   "cost": 0.00125
+  }
+ ],
+ "validations": 1,
+ "calls": 9,
+ "tin": 107508,
+ "tout": 1423,
+ "cached": 0,
+ "cost": 0.012712,
+ "secs": 206.2,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

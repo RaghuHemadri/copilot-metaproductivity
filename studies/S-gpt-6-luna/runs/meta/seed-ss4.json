@@ -1,0 +1,35 @@
+{
+ "id": "seed-ss4",
+ "parent": "seed",
+ "depth": 1,
+ "k": 4,
+ "tag": "S:claude-sonnet-5.5",
+ "suffix": "ss",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-sonnet-5.5",
+ "created": "2026-10-19 23:08:05",
+ "errors": [],
+ "changes": "I rewrote `/agent/solver.md`. The agent used only about 3 of its 16 model calls on average, and 19 of the 34 failures submitted a program that fails the public examples. The new prompt tells it to never submit a failing program. It also tells it to stress-test against a brute force, time a max-size input, and use the spare budget. I did not run any trials, so the effect is untested.",
+ "predicted_delta": 5.0,
+ "final": "CHANGES: I rewrote `/agent/solver.md`. The agent used only about 3 of its 16 model calls on average, and 19 of the 34 failures submitted a program that fails the public examples. The new prompt tells it to never submit a failing program. It also tells it to stress-test against a brute force, time a max-size input, and use the spare budget. I did not run any trials, so the effect is untested.\nPREDICTED_DELTA: +5",
+ "trials": [],
+ "validations": 1,
+ "calls": 7,
+ "tin": 16562,
+ "tout": 926,
+ "cached": 0,
+ "cost": 0.042384,
+ "secs": 23.8,
+ "stop_reason": null,
+ "error": null,
+ "warnings": [
+  "model.call_failure: \"429 Too Many Requests\"",
+  "model.call_failure: \"429 Too Many Requests\"",
+  "model.call_failure: \"429 Too Many Requests\"",
+  "model.call_failure: \"429 Too Many Requests\""
+ ]
+}

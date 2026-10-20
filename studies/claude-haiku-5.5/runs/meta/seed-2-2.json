@@ -1,0 +1,36 @@
+{
+ "id": "seed-2-2",
+ "parent": "seed-2",
+ "depth": 2,
+ "k": 2,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-haiku-5.5",
+ "created": "2026-10-20 01:17:08",
+ "errors": [],
+ "changes": "In /agent/solver.md I added a hard rule at the top: do not call submit until a brute-force vs fast random cross-check shows zero mismatches and a max-size timing check has been run. I also added a mandatory pre-submit gate to step 7, telling the agent to iterate rather than stop early since most runs use only about 4 of 16 calls, and to re-read the statement for special cases (for example, a forbidden starting state) before writing the brute force. The failure analysis showed most misses were submits right after the public examples passed (5 wrong answers on hidden tests, 4 slow or failing programs). One trial on lcb-3655 still failed: the agent submitted again without the cross-check, so the rule has not yet changed behaviour. I did not run a second trial.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: In /agent/solver.md I added a hard rule at the top: do not call submit until a brute-force vs fast random cross-check shows zero mismatches and a max-size timing check has been run. I also added a mandatory pre-submit gate to step 7, telling the agent to iterate rather than stop early since most runs use only about 4 of 16 calls, and to re-read the statement for special cases (for example, a forbidden starting state) before writing the brute force. The failure analysis showed most misses were submits right after the public examples passed (5 wrong answers on hidden tests, 4 slow or failing programs). One trial on lcb-3655 still failed: the agent submitted again without the cross-check, so the rule has not yet changed behaviour. I did not run a second trial.\nPREDICTED_DELTA: +2",
+ "trials": [
+  {
+   "problem": "lcb-3655",
+   "passed": false,
+   "cost": 0.002229
+  }
+ ],
+ "validations": 2,
+ "calls": 6,
+ "tin": 60724,
+ "tout": 2459,
+ "cached": 0,
+ "cost": 0.009531,
+ "secs": 225.6,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

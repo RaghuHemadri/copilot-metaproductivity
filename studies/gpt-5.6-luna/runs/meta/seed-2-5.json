@@ -1,0 +1,36 @@
+{
+ "id": "seed-2-5",
+ "parent": "seed-2",
+ "depth": 2,
+ "k": 5,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-5.6-luna",
+ "created": "2026-10-19 23:38:58",
+ "errors": [],
+ "changes": "Strengthened the solver\u2019s mandatory validation gate, explicitly forbidding submission unless the latest `run_tests` result shows every public example passing, and reinforced final correctness/performance audits.",
+ "predicted_delta": 3.0,
+ "final": "CHANGES: Strengthened the solver\u2019s mandatory validation gate, explicitly forbidding submission unless the latest `run_tests` result shows every public example passing, and reinforced final correctness/performance audits.\nPREDICTED_DELTA: +3 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-3733",
+   "passed": false,
+   "cost": 0.011152
+  }
+ ],
+ "validations": 2,
+ "calls": 8,
+ "tin": 88817,
+ "tout": 1593,
+ "cached": 0,
+ "cost": 0.030827,
+ "secs": 170.7,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

@@ -1,0 +1,36 @@
+{
+ "id": "seed-3",
+ "parent": "seed",
+ "depth": 1,
+ "k": 3,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-haiku-5.5",
+ "created": "2026-10-19 23:08:19",
+ "errors": [],
+ "changes": "Rewrote `/agent/solver.md` as a phased workflow. The main failure in the report was submitting untested code: many failures were submitted after 2\u20133 calls with no public-example run, or after a failing example, and some were never timed on max-size input. The new prompt requires passing every public example via run_tests before submitting, a brute-force comparison on small random inputs, and a timing check on max-size input. It also says a sample mismatch is not automatically acceptable, because the hidden grader seems to compare output exactly. The trial on lcb-abc366-g showed the agent testing properly but dismissing sample mismatches as \"any valid answer\", which is why that last rule was added. I did not run a trial after that final edit.",
+ "predicted_delta": 3.0,
+ "final": "The solver prompt is updated and passes validation. I used one of my three trials, and it still failed, so the gain is unproven.\n\nCHANGES: Rewrote `/agent/solver.md` as a phased workflow. The main failure in the report was submitting untested code: many failures were submitted after 2\u20133 calls with no public-example run, or after a failing example, and some were never timed on max-size input. The new prompt requires passing every public example via run_tests before submitting, a brute-force comparison on small random inputs, and a timing check on max-size input. It also says a sample mismatch is not automatically acceptable, because the hidden grader seems to compare output exactly. The trial on lcb-abc366-g showed the agent testing properly but dismissing sample mismatches as \"any valid answer\", which is why that last rule was added. I did not run a trial after that final edit.\nPREDICTED_DELTA: +3",
+ "trials": [
+  {
+   "problem": "lcb-abc366-g",
+   "passed": false,
+   "cost": 0.002575
+  }
+ ],
+ "validations": 2,
+ "calls": 7,
+ "tin": 89428,
+ "tout": 3489,
+ "cached": 0,
+ "cost": 0.013262,
+ "secs": 58.3,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

@@ -1,0 +1,30 @@
+{
+ "id": "seed-4-2",
+ "parent": "seed-4",
+ "depth": 2,
+ "k": 2,
+ "tag": "e1",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-20 00:11:55",
+ "errors": [],
+ "changes": "Added a full-constraints correctness gate to solver.md to discourage sample hacks, arbitrary cutoffs, and heuristic or knowingly partial submissions.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Added a full-constraints correctness gate to solver.md to discourage sample hacks, arbitrary cutoffs, and heuristic or knowingly partial submissions.\nPREDICTED_DELTA: +2 percentage points",
+ "trials": [],
+ "validations": 1,
+ "calls": 8,
+ "tin": 93705,
+ "tout": 1628,
+ "cached": 0,
+ "cost": 0.010185,
+ "secs": 31.9,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

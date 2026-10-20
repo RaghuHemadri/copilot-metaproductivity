@@ -1,0 +1,37 @@
+{
+ "id": "seed-1",
+ "parent": "seed",
+ "depth": 1,
+ "k": 1,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "skills/stress-testing/SKILL.md",
+  "solver.md"
+ ],
+ "researcher_model": "claude-haiku-5.5",
+ "created": "2026-10-19 23:09:12",
+ "errors": [],
+ "changes": "Most dev failures were hidden-test wrong answers and timeouts on programs that had only passed the samples, and about half the failed runs never ran the public tests. I rewrote /agent/solver.md to make verification mandatory before submit: a brute-force random comparison and a max-size timing run, with explicit guidance to avoid O(N^3) Python loops and common pitfalls. I also added a skill, /agent/skills/stress-testing/SKILL.md, with a concrete procedure for the brute-force harness, generators, and timing. validate() passes. One trial on lcb-arc183-c passed, but the agent still skipped the brute-force and timing checks, so I added a hard gate in the prompt and did not re-trial it.",
+ "predicted_delta": 4.0,
+ "final": "CHANGES: Most dev failures were hidden-test wrong answers and timeouts on programs that had only passed the samples, and about half the failed runs never ran the public tests. I rewrote /agent/solver.md to make verification mandatory before submit: a brute-force random comparison and a max-size timing run, with explicit guidance to avoid O(N^3) Python loops and common pitfalls. I also added a skill, /agent/skills/stress-testing/SKILL.md, with a concrete procedure for the brute-force harness, generators, and timing. validate() passes. One trial on lcb-arc183-c passed, but the agent still skipped the brute-force and timing checks, so I added a hard gate in the prompt and did not re-trial it.\nPREDICTED_DELTA: +4",
+ "trials": [
+  {
+   "problem": "lcb-arc183-c",
+   "passed": true,
+   "cost": 0.003755
+  }
+ ],
+ "validations": 2,
+ "calls": 6,
+ "tin": 62269,
+ "tout": 3154,
+ "cached": 0,
+ "cost": 0.011559,
+ "secs": 111.7,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

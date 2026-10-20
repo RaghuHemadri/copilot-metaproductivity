@@ -242,7 +242,12 @@ class _Engine:
         with self._lock:
             if self.client is None:
                 asyncio.run_coroutine_threadsafe(self._start(), self.loop).result(180)
-        return asyncio.run_coroutine_threadsafe(coro, self.loop).result(timeout)
+        fut = asyncio.run_coroutine_threadsafe(coro, self.loop)
+        try:
+            return fut.result(timeout)
+        except TimeoutError:
+            fut.cancel()  # a hung session must not keep running and holding its concurrency slot
+            raise
 
     async def _start(self):
         token = os.environ.get("COPILOT_GITHUB_TOKEN") or subprocess.run(
@@ -321,12 +326,12 @@ async def _session(run: Run, role: str, who: str, system_prompt: str, tools: lis
                 break
     finally:
         run.sessions.discard(session)
-        try:
-            await session.disconnect()
+        try:  # bounded, so that a cancelled session always releases its slot
+            await asyncio.wait_for(session.disconnect(), 30)
         except Exception:
             pass
         try:  # drop it from the client's registry and delete its stored state (else memory and disk grow per session)
-            await ENGINE.client.delete_session(session.session_id)
+            await asyncio.wait_for(ENGINE.client.delete_session(session.session_id), 30)
         except Exception:
             pass
     return state["last"]

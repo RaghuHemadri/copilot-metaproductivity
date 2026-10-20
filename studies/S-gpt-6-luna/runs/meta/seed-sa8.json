@@ -1,0 +1,36 @@
+{
+ "id": "seed-sa8",
+ "parent": "seed",
+ "depth": 1,
+ "k": 8,
+ "tag": "S:gpt-6-astra",
+ "suffix": "sa",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-astra",
+ "created": "2026-10-19 23:12:52",
+ "errors": [],
+ "changes": "Added a final-code verification gate: test before submission, investigate failures, and retest every edit. A previously failing regression trial now passes.",
+ "predicted_delta": 5.0,
+ "final": "CHANGES: Added a final-code verification gate: test before submission, investigate failures, and retest every edit. A previously failing regression trial now passes.\nPREDICTED_DELTA: +5 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-abc394-e",
+   "passed": true,
+   "cost": 0.002344
+  }
+ ],
+ "validations": 1,
+ "calls": 8,
+ "tin": 80949,
+ "tout": 1075,
+ "cached": 0,
+ "cost": 0.865584,
+ "secs": 310.6,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

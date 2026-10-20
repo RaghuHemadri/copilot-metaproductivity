@@ -1,0 +1,30 @@
+{
+ "id": "seed-6",
+ "parent": "seed",
+ "depth": 1,
+ "k": 6,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-5.3-codex",
+ "created": "2026-10-19 21:06:56",
+ "errors": [],
+ "changes": "Rewrote `/agent/solver.md` into a stricter solve workflow focused on the top failure mode (hidden-test TLE): explicit pre-code complexity targeting, performance-aware implementation rules, mandatory final public-test pass, and a new pre-submit worst-case runtime sanity check via `run_python` when constraints are large.",
+ "predicted_delta": 4.0,
+ "final": "CHANGES: Rewrote `/agent/solver.md` into a stricter solve workflow focused on the top failure mode (hidden-test TLE): explicit pre-code complexity targeting, performance-aware implementation rules, mandatory final public-test pass, and a new pre-submit worst-case runtime sanity check via `run_python` when constraints are large.\nPREDICTED_DELTA: +4",
+ "trials": [],
+ "validations": 1,
+ "calls": 8,
+ "tin": 73664,
+ "tout": 1287,
+ "cached": 0,
+ "cost": 0.14693,
+ "secs": 21.7,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

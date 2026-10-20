@@ -1,0 +1,30 @@
+{
+ "id": "seed-0-5",
+ "parent": "seed-0",
+ "depth": 2,
+ "k": 5,
+ "tag": "e1",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-19 20:46:25",
+ "errors": [],
+ "changes": "Strengthened the solver\u2019s submission gate to forbid submitting incomplete or known-failing solutions and require tests to pass on the exact final code.",
+ "predicted_delta": 1.0,
+ "final": "CHANGES: Strengthened the solver\u2019s submission gate to forbid submitting incomplete or known-failing solutions and require tests to pass on the exact final code.\nPREDICTED_DELTA: +1 percentage point",
+ "trials": [],
+ "validations": 1,
+ "calls": 7,
+ "tin": 83050,
+ "tout": 1612,
+ "cached": 0,
+ "cost": 0.009111,
+ "secs": 58.6,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

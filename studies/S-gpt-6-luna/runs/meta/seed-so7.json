@@ -1,0 +1,50 @@
+{
+ "id": "seed-so7",
+ "parent": "seed",
+ "depth": 1,
+ "k": 7,
+ "tag": "S:claude-opus-5.5",
+ "suffix": "so",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-opus-5.5",
+ "created": "2026-10-19 23:35:04",
+ "errors": [],
+ "changes": "Rewrote solver.md with strict rules: always use tools; submit exactly the code that last passed all examples (no rewriting); never submit failing code while calls remain, and switch to a brute force after two failed fixes; check speed at maximum input size and compare with a brute force before submitting (pasting the source into the Python tool); plus input/output and function-signature notes. This targets the most common failures: failing or rewritten code being submitted, answers given without tools, and too little checking.",
+ "predicted_delta": 10.0,
+ "final": "I rewrote the solver's system prompt (`/agent/solver.md`). It now passes `validate()`. I ran 3 trials; 2 of them, on problems that had failed before, now pass. That is too few to measure the real pass-rate change.\n\n**What was going wrong.** Most of the 34 failures came from how the agent finished, not from what it knew:\n- **Failing code submitted (19 problems).** In 19 failures the submitted program fails the public examples. In many of them the examples were still failing when it submitted, even with lots of budget left: it used only 3.3 of its 16 calls on average.\n- **Code rewritten before submitting (most failures).** Very often the submitted code is a reformatted rewrite of the code it had tested. In one case the tested version passed both examples and the rewrite failed.\n- **Answered without tools.** A few times it just wrote the code in a message, which ends the attempt with nothing tested.\n- **Wrong answers and timeouts on hidden tests (15 problems).** These passed the examples but were never checked for speed at maximum input size or against a brute force.\n\n**What the new prompt says:**\n- Always act through tool calls.\n- Submit exactly the code that last passed all examples, character for character. Any change means running the tests again.\n- Never submit failing code before call 14. After a failed test run, the next call must be for debugging, not submitting.\n- After two failed fixes, write a brute force to find the pattern, and fall back to submitting it if nothing better works.\n- Before submitting, time the program on a worst-case input and compare it with a brute force on random small inputs. Because the Python tool can't see the solution, paste the source into the script.\n- Short notes on reading input, deep recursion, and \"class Solution\"-style problems.\n\n**Trials:**\n- **lcb-abc394-e:** passed in 7 calls. It submitted the tested code unchanged, after a timing check and a brute-force check.\n- **lcb-arc194-a, first run:** still submitted with examples failing after 4 calls. I then made the \"no failing submissions\" rule much more forceful and added the brute-force fallback.\n- **lcb-arc194-a, second run:** passed. It fixed the bug, checked against a brute force and submitted the verified code.\n\nCHANGES: Rewrote solver.md with strict rules: always use tools; submit exactly the code that last passed all examples (no rewriting); never submit failing code while calls remain, and switch to a brute force after two failed fixes; check speed at maximum input size and compare with a brute force before submitting (pasting the source into the Python tool); plus input/output and function-signature notes. This targets the most common failures: failing or rewritten code being submitted, answers given without tools, and too little checking.\nPREDICTED_DELTA: +10",
+ "trials": [
+  {
+   "problem": "lcb-abc394-e",
+   "passed": true,
+   "cost": 0.003855
+  },
+  {
+   "problem": "lcb-arc194-a",
+   "passed": false,
+   "cost": 0.00217
+  },
+  {
+   "problem": "lcb-arc194-a",
+   "passed": true,
+   "cost": 0.002632
+  }
+ ],
+ "validations": 2,
+ "calls": 17,
+ "tin": 246153,
+ "tout": 5151,
+ "cached": 0,
+ "cost": 1.096289,
+ "secs": 308.3,
+ "stop_reason": null,
+ "error": null,
+ "warnings": [
+  "model.call_failure: \"429 Too Many Requests\"",
+  "model.call_failure: \"429 Too Many Requests\"",
+  "model.call_failure: \"429 Too Many Requests\""
+ ]
+}

@@ -1,0 +1,36 @@
+{
+ "id": "seed-6",
+ "parent": "seed",
+ "depth": 1,
+ "k": 6,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6.1-sol",
+ "created": "2026-10-19 23:18:44",
+ "errors": [],
+ "changes": "Added a targeted full-size timing check for performance-sensitive solutions; validation passed, and the previously timing-out problem passed its trial.",
+ "predicted_delta": 1.0,
+ "final": "CHANGES: Added a targeted full-size timing check for performance-sensitive solutions; validation passed, and the previously timing-out problem passed its trial.\nPREDICTED_DELTA: +1 percentage point",
+ "trials": [
+  {
+   "problem": "lcb-3686",
+   "passed": true,
+   "cost": 0.035718
+  }
+ ],
+ "validations": 1,
+ "calls": 8,
+ "tin": 77177,
+ "tout": 986,
+ "cached": 0,
+ "cost": 0.199932,
+ "secs": 189.2,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

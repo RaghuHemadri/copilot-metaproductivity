@@ -1,0 +1,30 @@
+{
+ "id": "seed-0",
+ "parent": "seed",
+ "depth": 1,
+ "k": 0,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-5.6-luna",
+ "created": "2026-10-19 21:00:21",
+ "errors": [],
+ "changes": "Strengthened the solver workflow with explicit proof, complexity, adversarial/brute-force testing, output validation, and a strict \u201cnever submit if tests fail\u201d gate.",
+ "predicted_delta": 4.0,
+ "final": "CHANGES: Strengthened the solver workflow with explicit proof, complexity, adversarial/brute-force testing, output validation, and a strict \u201cnever submit if tests fail\u201d gate.\n\nPREDICTED_DELTA: +4 percentage points",
+ "trials": [],
+ "validations": 1,
+ "calls": 7,
+ "tin": 90064,
+ "tout": 1361,
+ "cached": 0,
+ "cost": 0.019646,
+ "secs": 26.0,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

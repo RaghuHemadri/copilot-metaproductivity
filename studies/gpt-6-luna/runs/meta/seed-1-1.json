@@ -1,0 +1,36 @@
+{
+ "id": "seed-1-1",
+ "parent": "seed-1",
+ "depth": 2,
+ "k": 1,
+ "tag": "e1",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-19 20:47:49",
+ "errors": [],
+ "changes": "Strengthened the solver\u2019s pre-coding and pre-submission feasibility checks to catch algorithms whose worst-case time or memory will not fit the constraints.",
+ "predicted_delta": 1.0,
+ "final": "CHANGES: Strengthened the solver\u2019s pre-coding and pre-submission feasibility checks to catch algorithms whose worst-case time or memory will not fit the constraints.\nPREDICTED_DELTA: +1 percentage point",
+ "trials": [
+  {
+   "problem": "lcb-3638",
+   "passed": false,
+   "cost": 0.00111
+  }
+ ],
+ "validations": 1,
+ "calls": 9,
+ "tin": 147751,
+ "tout": 2325,
+ "cached": 0,
+ "cost": 0.017048,
+ "secs": 142.3,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

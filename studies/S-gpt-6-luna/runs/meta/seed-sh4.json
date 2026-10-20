@@ -1,0 +1,41 @@
+{
+ "id": "seed-sh4",
+ "parent": "seed",
+ "depth": 1,
+ "k": 4,
+ "tag": "S:gpt-6.1-sol",
+ "suffix": "sh",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6.1-sol",
+ "created": "2026-10-19 23:17:43",
+ "errors": [],
+ "changes": "Added a strict verification workflow: debug failing examples, retest every edit, and submit identical code immediately after its final passing test. Validation passed; one previously failing trial now passes.",
+ "predicted_delta": 4.0,
+ "final": "CHANGES: Added a strict verification workflow: debug failing examples, retest every edit, and submit identical code immediately after its final passing test. Validation passed; one previously failing trial now passes.\nPREDICTED_DELTA: +4 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-abc380-f",
+   "passed": false,
+   "cost": 0.002137
+  },
+  {
+   "problem": "lcb-abc394-e",
+   "passed": true,
+   "cost": 0.002423
+  }
+ ],
+ "validations": 2,
+ "calls": 10,
+ "tin": 119284,
+ "tout": 1454,
+ "cached": 0,
+ "cost": 0.257668,
+ "secs": 602.2,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

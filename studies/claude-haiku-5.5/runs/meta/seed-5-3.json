@@ -1,0 +1,43 @@
+{
+ "id": "seed-5-3",
+ "parent": "seed-5",
+ "depth": 2,
+ "k": 3,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-haiku-5.5",
+ "created": "2026-10-20 01:16:34",
+ "errors": [],
+ "changes": "Edited /agent/solver.md (validate OK). The main failures were the agent giving up on an efficient algorithm and submitting a slow brute force, and submitting right after sample checks with the brute-force and timing steps skipped. I added a hard gate before submit (samples pass, brute-force comparison with zero mismatches, max-size timing), a rule to keep searching for a structural or DP solution instead of settling for brute force, a rule to re-read counting and cost definitions literally, and a requirement that the brute force be written from the literal statement rather than from the fast model. One trial on lcb-3655 still failed: the agent now ran the checks, but its brute force shared the same wrong interpretation, so the last edit targets that. I used 2 of 3 trials and did not re-trial after the final edit.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Edited /agent/solver.md (validate OK). The main failures were the agent giving up on an efficient algorithm and submitting a slow brute force, and submitting right after sample checks with the brute-force and timing steps skipped. I added a hard gate before submit (samples pass, brute-force comparison with zero mismatches, max-size timing), a rule to keep searching for a structural or DP solution instead of settling for brute force, a rule to re-read counting and cost definitions literally, and a requirement that the brute force be written from the literal statement rather than from the fast model. One trial on lcb-3655 still failed: the agent now ran the checks, but its brute force shared the same wrong interpretation, so the last edit targets that. I used 2 of 3 trials and did not re-trial after the final edit.\nPREDICTED_DELTA: +2",
+ "trials": [
+  {
+   "problem": "lcb-3655",
+   "passed": false,
+   "cost": 0.002118
+  },
+  {
+   "problem": "lcb-3655",
+   "passed": false,
+   "cost": 0.003297
+  }
+ ],
+ "validations": 3,
+ "calls": 9,
+ "tin": 89829,
+ "tout": 3142,
+ "cached": 0,
+ "cost": 0.015969,
+ "secs": 191.5,
+ "stop_reason": null,
+ "error": null,
+ "warnings": [
+  "model.call_failure: \"429 Too Many Requests\""
+ ]
+}

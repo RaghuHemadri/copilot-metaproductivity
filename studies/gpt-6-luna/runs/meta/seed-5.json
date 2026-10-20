@@ -1,0 +1,36 @@
+{
+ "id": "seed-5",
+ "parent": "seed",
+ "depth": 1,
+ "k": 5,
+ "tag": "e1",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-19 19:35:10",
+ "errors": [],
+ "changes": "Strengthened solver instructions to require a constraint-fitting derivation and mandatory testing before submission; validation passed, and the lcb-3551 trial passed.",
+ "predicted_delta": 3.0,
+ "final": "CHANGES: Strengthened solver instructions to require a constraint-fitting derivation and mandatory testing before submission; validation passed, and the lcb-3551 trial passed.\nPREDICTED_DELTA: +3 percentage points (better detection and correction of untested errors)",
+ "trials": [
+  {
+   "problem": "lcb-3551",
+   "passed": true,
+   "cost": 0.001153
+  }
+ ],
+ "validations": 1,
+ "calls": 8,
+ "tin": 93205,
+ "tout": 1462,
+ "cached": 0,
+ "cost": 0.011204,
+ "secs": 126.3,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

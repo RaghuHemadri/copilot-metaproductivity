@@ -1,0 +1,41 @@
+{
+ "id": "seed-2-4",
+ "parent": "seed-2",
+ "depth": 2,
+ "k": 4,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-5.6-luna",
+ "created": "2026-10-19 23:42:49",
+ "errors": [],
+ "changes": "Strengthened solver submission gates so any checker mismatch blocks submission until fixed and revalidated; added explicit periodic, alternating, equal-value, and monotone adversarial tests.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Strengthened solver submission gates so any checker mismatch blocks submission until fixed and revalidated; added explicit periodic, alternating, equal-value, and monotone adversarial tests.\nPREDICTED_DELTA: +2 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-3686",
+   "passed": false,
+   "cost": 0.009724
+  },
+  {
+   "problem": "lcb-3686",
+   "passed": false,
+   "cost": 0.009656
+  }
+ ],
+ "validations": 3,
+ "calls": 16,
+ "tin": 268021,
+ "tout": 3294,
+ "cached": 0,
+ "cost": 0.076937,
+ "secs": 401.8,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

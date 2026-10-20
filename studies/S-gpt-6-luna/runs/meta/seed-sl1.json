@@ -1,0 +1,30 @@
+{
+ "id": "seed-sl1",
+ "parent": "seed",
+ "depth": 1,
+ "k": 1,
+ "tag": "S:gpt-6-luna",
+ "suffix": "sl",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-19 23:08:20",
+ "errors": [],
+ "changes": "Strengthened the solver prompt with a strict test-before-submit gate: all provided examples must pass on the current version, with fixes and retesting required after failures.",
+ "predicted_delta": 3.0,
+ "final": "CHANGES: Strengthened the solver prompt with a strict test-before-submit gate: all provided examples must pass on the current version, with fixes and retesting required after failures.\nPREDICTED_DELTA: +3 percentage points",
+ "trials": [],
+ "validations": 1,
+ "calls": 7,
+ "tin": 77171,
+ "tout": 1379,
+ "cached": 0,
+ "cost": 0.008407,
+ "secs": 38.5,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

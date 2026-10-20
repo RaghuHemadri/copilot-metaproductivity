@@ -1,0 +1,36 @@
+{
+ "id": "seed-8-1",
+ "parent": "seed-8",
+ "depth": 2,
+ "k": 1,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-5.6-luna",
+ "created": "2026-10-20 03:02:20",
+ "errors": [],
+ "changes": "Strengthened the solver workflow with mandatory performance-failure handling and explicit prohibitions against submitting after timed-out, crashed, or failed validation runs.",
+ "predicted_delta": 3.0,
+ "final": "CHANGES: Strengthened the solver workflow with mandatory performance-failure handling and explicit prohibitions against submitting after timed-out, crashed, or failed validation runs.\n\nPREDICTED_DELTA: +3 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-abc373-f",
+   "passed": false,
+   "cost": 0.008306
+  }
+ ],
+ "validations": 2,
+ "calls": 11,
+ "tin": 210429,
+ "tout": 2147,
+ "cached": 0,
+ "cost": 0.052968,
+ "secs": 131.2,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

@@ -1,0 +1,36 @@
+{
+ "id": "seed-7-2",
+ "parent": "seed-7",
+ "depth": 2,
+ "k": 2,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6.1-sol",
+ "created": "2026-10-20 01:04:56",
+ "errors": [],
+ "changes": "Added independent validity checks and general output-convention checks for non-unique-answer mismatches. Validation passed; the trial still failed exact comparison.",
+ "predicted_delta": 0.0,
+ "final": "CHANGES: Added independent validity checks and general output-convention checks for non-unique-answer mismatches. Validation passed; the trial still failed exact comparison.\nPREDICTED_DELTA: +0 percentage points on development; checker inconsistencies remain.",
+ "trials": [
+  {
+   "problem": "lcb-abc366-g",
+   "passed": false,
+   "cost": 0.033264
+  }
+ ],
+ "validations": 1,
+ "calls": 8,
+ "tin": 73374,
+ "tout": 1331,
+ "cached": 0,
+ "cost": 0.193322,
+ "secs": 150.0,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

@@ -1,0 +1,30 @@
+{
+ "id": "seed-7-0",
+ "parent": "seed-7",
+ "depth": 2,
+ "k": 0,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6.1-sol",
+ "created": "2026-10-20 01:03:07",
+ "errors": [],
+ "changes": "Added independent small-instance correctness checks and semantic validation for non-unique outputs; validation passed.",
+ "predicted_delta": 0.0,
+ "final": "CHANGES: Added independent small-instance correctness checks and semantic validation for non-unique outputs; validation passed.\nPREDICTED_DELTA: +0 percentage points on development\u2014the recorded failures appear to be evaluation inconsistencies; expect better held-out robustness.",
+ "trials": [],
+ "validations": 1,
+ "calls": 8,
+ "tin": 76197,
+ "tout": 1227,
+ "cached": 0,
+ "cost": 0.164664,
+ "secs": 41.1,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

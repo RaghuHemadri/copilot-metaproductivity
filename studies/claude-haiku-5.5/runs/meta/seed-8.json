@@ -1,0 +1,36 @@
+{
+ "id": "seed-8",
+ "parent": "seed",
+ "depth": 1,
+ "k": 8,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-haiku-5.5",
+ "created": "2026-10-19 23:09:31",
+ "errors": [],
+ "changes": "Rewrote `/agent/solver.md`. The failures were mostly process problems: several runs submitted untested code (the public examples were never run), and brute-force or naive-search solutions hit time limits on the maximum constraints. The new prompt asks the agent to estimate complexity before coding and look for structural insights, to always call run_tests before submitting, to stress-test against a brute force on small random inputs, to time a maximum-size input, and to check edge cases and modular arithmetic. Validate passes. One trial on lcb-abc387-f (previously failed) now passes.",
+ "predicted_delta": 3.0,
+ "final": "I made one change to the solver prompt and checked it on one failing development problem, which now passes. The run also shows the agent submitted again after its fix without re-running the public tests, so the new rule is not fully followed yet.\n\nCHANGES: Rewrote `/agent/solver.md`. The failures were mostly process problems: several runs submitted untested code (the public examples were never run), and brute-force or naive-search solutions hit time limits on the maximum constraints. The new prompt asks the agent to estimate complexity before coding and look for structural insights, to always call run_tests before submitting, to stress-test against a brute force on small random inputs, to time a maximum-size input, and to check edge cases and modular arithmetic. Validate passes. One trial on lcb-abc387-f (previously failed) now passes.\nPREDICTED_DELTA: +3",
+ "trials": [
+  {
+   "problem": "lcb-abc387-f",
+   "passed": true,
+   "cost": 0.004927
+  }
+ ],
+ "validations": 1,
+ "calls": 5,
+ "tin": 49441,
+ "tout": 1755,
+ "cached": 0,
+ "cost": 0.010749,
+ "secs": 130.4,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

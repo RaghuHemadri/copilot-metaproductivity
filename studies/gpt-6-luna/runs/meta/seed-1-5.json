@@ -1,0 +1,36 @@
+{
+ "id": "seed-1-5",
+ "parent": "seed-1",
+ "depth": 2,
+ "k": 5,
+ "tag": "e1",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-19 20:47:37",
+ "errors": [],
+ "changes": "Strengthened the solver\u2019s submission gate: it must test the exact final code on every sample and must not submit known-failing or infeasible guesses. Validation passed.",
+ "predicted_delta": 1.0,
+ "final": "CHANGES: Strengthened the solver\u2019s submission gate: it must test the exact final code on every sample and must not submit known-failing or infeasible guesses. Validation passed.\nPREDICTED_DELTA: +1 percentage point",
+ "trials": [
+  {
+   "problem": "lcb-abc367-g",
+   "passed": false,
+   "cost": 0.001901
+  }
+ ],
+ "validations": 1,
+ "calls": 9,
+ "tin": 130707,
+ "tout": 2011,
+ "cached": 0,
+ "cost": 0.015977,
+ "secs": 130.5,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

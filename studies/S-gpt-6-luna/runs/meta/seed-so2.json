@@ -1,0 +1,49 @@
+{
+ "id": "seed-so2",
+ "parent": "seed",
+ "depth": 1,
+ "k": 2,
+ "tag": "S:claude-opus-5.5",
+ "suffix": "so",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-opus-5.5",
+ "created": "2026-10-19 23:18:30",
+ "errors": [],
+ "changes": "Rewrote solver.md to stop early and unverified submissions. Only submit code that just passed all public examples in its exact form, otherwise keep debugging until about 13 calls are used; never give up in plain text. Added a workflow (brute force, random comparison against it, max-size timing, edge cases) and time-limit guidance for Python, aimed at the 19 failures that submitted code failing the public examples and the 6 time-limit failures.",
+ "predicted_delta": 4.0,
+ "final": "I rewrote `/agent/solver.md`. All three trials still failed, so I have no evidence yet that the change raises the pass rate.\n\n**What the report showed:** most failures came from the agent stopping too early. The solver usually used only 2\u20134 of its 16 model calls. Of the 34 failures, 19 submitted a program that already failed the public examples. It often submitted right after a failing test run, or submitted code different from what it had tested. Several times it gave up in plain text (\"I can't derive a solution\"), which ended the run.\n\n**What the new prompt says:**\n- **Every reply is a tool call:** nothing in plain text before submitting, and never give up.\n- **Pre-submit check:** only submit code that just passed every public example in exactly that form; keep debugging until about 13 calls are used.\n- **Workflow:** write a brute-force version first, compare it against the fast solution on random small inputs, time it on a maximum-size input, then check edge cases.\n- **Time limits:** rough limits for what input sizes Python can handle at each complexity, plus common faster techniques.\n\n**Trials:**\n- **lcb-arc194-a, first version:** the agent gave up in text after 3 calls. This is why I added the \"every reply is a tool call\" rule.\n- **lcb-arc194-a, second version:** it debugged a little, then submitted a program that still failed the examples, after 4 calls.\n- **lcb-arc184-c, final version:** it used 8 calls and actually explored the problem, but still submitted a program that failed an example.\n\nSo it now uses more of its budget, but it still sometimes ignores the \"don't submit failing code\" rule. `validate()` passes.\n\nCHANGES: Rewrote solver.md to stop early and unverified submissions. Only submit code that just passed all public examples in its exact form, otherwise keep debugging until about 13 calls are used; never give up in plain text. Added a workflow (brute force, random comparison against it, max-size timing, edge cases) and time-limit guidance for Python, aimed at the 19 failures that submitted code failing the public examples and the 6 time-limit failures.\nPREDICTED_DELTA: +4",
+ "trials": [
+  {
+   "problem": "lcb-arc194-a",
+   "passed": false,
+   "cost": 0.002729
+  },
+  {
+   "problem": "lcb-arc194-a",
+   "passed": false,
+   "cost": 0.00196
+  },
+  {
+   "problem": "lcb-arc184-c",
+   "passed": false,
+   "cost": 0.004381
+  }
+ ],
+ "validations": 2,
+ "calls": 12,
+ "tin": 167480,
+ "tout": 3973,
+ "cached": 0,
+ "cost": 0.75845,
+ "secs": 650.2,
+ "stop_reason": null,
+ "error": null,
+ "warnings": [
+  "model.call_failure: \"429 Too Many Requests\"",
+  "model.call_failure: \"429 Too Many Requests\""
+ ]
+}

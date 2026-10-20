@@ -1,0 +1,39 @@
+{
+ "id": "seed-sa6",
+ "parent": "seed",
+ "depth": 1,
+ "k": 6,
+ "tag": "S:gpt-6-astra",
+ "suffix": "sa",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-astra",
+ "created": "2026-10-19 23:31:41",
+ "errors": [],
+ "changes": "Added an exact-source verification gate to prevent skipped tests, unresolved failures, and untested final rewrites. Validation passed; one development trial passed.",
+ "predicted_delta": 6.0,
+ "final": "CHANGES: Added an exact-source verification gate to prevent skipped tests, unresolved failures, and untested final rewrites. Validation passed; one development trial passed.\nPREDICTED_DELTA: +6 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-abc394-e",
+   "passed": true,
+   "cost": 0.000849
+  }
+ ],
+ "validations": 1,
+ "calls": 10,
+ "tin": 81334,
+ "tout": 1138,
+ "cached": 0,
+ "cost": 0.871089,
+ "secs": 105.0,
+ "stop_reason": null,
+ "error": null,
+ "warnings": [
+  "model.call_failure: \"429 Too Many Requests\"",
+  "model.call_failure: \"429 Too Many Requests\""
+ ]
+}

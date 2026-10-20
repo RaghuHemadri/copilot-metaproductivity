@@ -1,0 +1,36 @@
+{
+ "id": "seed-2-3",
+ "parent": "seed-2",
+ "depth": 2,
+ "k": 3,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6.1-sol",
+ "created": "2026-10-20 01:06:13",
+ "errors": [],
+ "changes": "Added non-unique-output mismatch diagnostics and general, correctness-preserving output conventions; validation passed, and one previously failing problem passed its trial.",
+ "predicted_delta": 1.0,
+ "final": "CHANGES: Added non-unique-output mismatch diagnostics and general, correctness-preserving output conventions; validation passed, and one previously failing problem passed its trial.\nPREDICTED_DELTA: +1 percentage point",
+ "trials": [
+  {
+   "problem": "lcb-abc366-g",
+   "passed": true,
+   "cost": 0.020036
+  }
+ ],
+ "validations": 1,
+ "calls": 8,
+ "tin": 73785,
+ "tout": 1003,
+ "cached": 0,
+ "cost": 0.177636,
+ "secs": 227.1,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

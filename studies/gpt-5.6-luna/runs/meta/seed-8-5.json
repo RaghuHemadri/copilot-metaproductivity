@@ -1,0 +1,30 @@
+{
+ "id": "seed-8-5",
+ "parent": "seed-8",
+ "depth": 2,
+ "k": 5,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-5.6-luna",
+ "created": "2026-10-20 03:00:40",
+ "errors": [],
+ "changes": "Strengthened the solver\u2019s submission gate so it must never submit after public-test failures or timeouts, and must rerun all examples successfully after debugging.",
+ "predicted_delta": 4.0,
+ "final": "CHANGES: Strengthened the solver\u2019s submission gate so it must never submit after public-test failures or timeouts, and must rerun all examples successfully after debugging.\nPREDICTED_DELTA: +4 percentage points",
+ "trials": [],
+ "validations": 1,
+ "calls": 8,
+ "tin": 91521,
+ "tout": 2027,
+ "cached": 0,
+ "cost": 0.020737,
+ "secs": 31.2,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

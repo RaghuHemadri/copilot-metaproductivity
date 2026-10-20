@@ -1,0 +1,38 @@
+{
+ "id": "seed-0-0",
+ "parent": "seed-0",
+ "depth": 2,
+ "k": 0,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-haiku-5.5",
+ "created": "2026-10-20 01:15:31",
+ "errors": [],
+ "changes": "In /agent/solver.md I added rules to steps 6\u201310. The main one (rule 7) forbids calling submit until the final code has passed the public examples and a brute-force comparison that checks the objective value, not just feasibility. I also added guidance on edge cases (n=1, M=0, isolated components, forbidden start states) and on matching the exact output format. Failure reports showed submits with zero test runs (lcb-3655) and hidden-test failures from unchecked objectives and edge cases. One trial on lcb-3655 still failed: the agent passed the samples and submitted without the brute-force or timing check, so I made the brute-force step mandatory. That final wording was not re-trialed; validate() reports OK.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: In /agent/solver.md I added rules to steps 6\u201310. The main one (rule 7) forbids calling submit until the final code has passed the public examples and a brute-force comparison that checks the objective value, not just feasibility. I also added guidance on edge cases (n=1, M=0, isolated components, forbidden start states) and on matching the exact output format. Failure reports showed submits with zero test runs (lcb-3655) and hidden-test failures from unchecked objectives and edge cases. One trial on lcb-3655 still failed: the agent passed the samples and submitted without the brute-force or timing check, so I made the brute-force step mandatory. That final wording was not re-trialed; validate() reports OK.\nPREDICTED_DELTA: +2",
+ "trials": [
+  {
+   "problem": "lcb-3655",
+   "passed": false,
+   "cost": 0.003123
+  }
+ ],
+ "validations": 2,
+ "calls": 7,
+ "tin": 63708,
+ "tout": 2650,
+ "cached": 0,
+ "cost": 0.010819,
+ "secs": 129.7,
+ "stop_reason": null,
+ "error": null,
+ "warnings": [
+  "model.call_failure: \"429 Too Many Requests\""
+ ]
+}

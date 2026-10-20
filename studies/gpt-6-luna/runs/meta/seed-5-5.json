@@ -1,0 +1,36 @@
+{
+ "id": "seed-5-5",
+ "parent": "seed-5",
+ "depth": 2,
+ "k": 5,
+ "tag": "e1",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-20 00:19:31",
+ "errors": [],
+ "changes": "Strengthened solver.md\u2019s verification gate with complexity checks, differential testing, and explicit testing of boundary extrema to reduce wrong answers, public-test failures, and TLEs; validation passed. A trial still failed on a boundary case, so gains are uncertain.",
+ "predicted_delta": 1.0,
+ "final": "CHANGES: Strengthened solver.md\u2019s verification gate with complexity checks, differential testing, and explicit testing of boundary extrema to reduce wrong answers, public-test failures, and TLEs; validation passed. A trial still failed on a boundary case, so gains are uncertain.\nPREDICTED_DELTA: +1.0 percentage point",
+ "trials": [
+  {
+   "problem": "lcb-abc392-f",
+   "passed": false,
+   "cost": 0.001307
+  }
+ ],
+ "validations": 2,
+ "calls": 11,
+ "tin": 142045,
+ "tout": 3029,
+ "cached": 0,
+ "cost": 0.017026,
+ "secs": 283.3,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

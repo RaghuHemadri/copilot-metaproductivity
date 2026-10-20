@@ -1,0 +1,36 @@
+{
+ "id": "seed-6-4",
+ "parent": "seed-6",
+ "depth": 2,
+ "k": 4,
+ "tag": "e1",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-20 02:35:50",
+ "errors": [],
+ "changes": "Strengthened solver verification with small-case brute-force checks and a hard rule against submitting uncertain or publicly failing solutions; validation passed, and a trial on lcb-abc391-d passed.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Strengthened solver verification with small-case brute-force checks and a hard rule against submitting uncertain or publicly failing solutions; validation passed, and a trial on lcb-abc391-d passed.\nPREDICTED_DELTA: +2 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-abc391-d",
+   "passed": true,
+   "cost": 0.001561
+  }
+ ],
+ "validations": 1,
+ "calls": 8,
+ "tin": 109425,
+ "tout": 2338,
+ "cached": 0,
+ "cost": 0.013673,
+ "secs": 379.8,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

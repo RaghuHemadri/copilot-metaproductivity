@@ -1,0 +1,34 @@
+{
+ "id": "seed-ss1",
+ "parent": "seed",
+ "depth": 1,
+ "k": 1,
+ "tag": "S:claude-sonnet-5.5",
+ "suffix": "ss",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-sonnet-5.5",
+ "created": "2026-10-19 23:08:03",
+ "errors": [],
+ "changes": "I rewrote `/agent/solver.md`. The agent used only about 3 of its 16 model calls on average, and 19 of the 34 failures submitted code that failed the public examples. The new prompt tells it to run the public examples before submitting and to debug with `run_python` when they fail. It also asks for brute-force random testing and a timing run on max-size input, aimed at the 6 time-limit failures and 8 hidden wrong answers. It must also check edge cases. It may submit early only when the budget is nearly out. `validate()` passed; I did not run any `trial` calls, so the effect is untested.",
+ "predicted_delta": 5.0,
+ "final": "CHANGES: I rewrote `/agent/solver.md`. The agent used only about 3 of its 16 model calls on average, and 19 of the 34 failures submitted code that failed the public examples. The new prompt tells it to run the public examples before submitting and to debug with `run_python` when they fail. It also asks for brute-force random testing and a timing run on max-size input, aimed at the 6 time-limit failures and 8 hidden wrong answers. It must also check edge cases. It may submit early only when the budget is nearly out. `validate()` passed; I did not run any `trial` calls, so the effect is untested.\nPREDICTED_DELTA: +5",
+ "trials": [],
+ "validations": 1,
+ "calls": 6,
+ "tin": 16622,
+ "tout": 1057,
+ "cached": 0,
+ "cost": 0.043814,
+ "secs": 22.1,
+ "stop_reason": null,
+ "error": null,
+ "warnings": [
+  "model.call_failure: \"429 Too Many Requests\"",
+  "model.call_failure: \"429 Too Many Requests\"",
+  "model.call_failure: \"429 Too Many Requests\""
+ ]
+}

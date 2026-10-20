@@ -1,0 +1,34 @@
+{
+ "id": "seed-ss6",
+ "parent": "seed",
+ "depth": 1,
+ "k": 6,
+ "tag": "S:claude-sonnet-5.5",
+ "suffix": "ss",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-sonnet-5.5",
+ "created": "2026-10-19 23:08:02",
+ "errors": [],
+ "changes": "Rewrote solver.md so the agent never submits while a public example fails. It now has to derive and hand-check the algorithm before coding, compare against a brute force on small random inputs, and time a max-size input. The last evaluation used only about 3 of the 16 calls, and 19 of the 34 failures failed the public examples. I did not run any trials, so this is untested.",
+ "predicted_delta": 5.0,
+ "final": "CHANGES: Rewrote solver.md so the agent never submits while a public example fails. It now has to derive and hand-check the algorithm before coding, compare against a brute force on small random inputs, and time a max-size input. The last evaluation used only about 3 of the 16 calls, and 19 of the 34 failures failed the public examples. I did not run any trials, so this is untested.\nPREDICTED_DELTA: +5",
+ "trials": [],
+ "validations": 0,
+ "calls": 6,
+ "tin": 16524,
+ "tout": 933,
+ "cached": 0,
+ "cost": 0.042378,
+ "secs": 20.4,
+ "stop_reason": null,
+ "error": null,
+ "warnings": [
+  "model.call_failure: \"429 Too Many Requests\"",
+  "model.call_failure: \"429 Too Many Requests\"",
+  "model.call_failure: \"429 Too Many Requests\""
+ ]
+}

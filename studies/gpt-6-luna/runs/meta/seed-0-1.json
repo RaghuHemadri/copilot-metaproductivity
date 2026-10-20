@@ -1,0 +1,30 @@
+{
+ "id": "seed-0-1",
+ "parent": "seed-0",
+ "depth": 2,
+ "k": 1,
+ "tag": "e1",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-19 20:45:58",
+ "errors": [],
+ "changes": "Strengthened the solver\u2019s submission gate to prevent submitting speculative or known-incomplete solutions and require a justified, tested candidate.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Strengthened the solver\u2019s submission gate to prevent submitting speculative or known-incomplete solutions and require a justified, tested candidate.\nPREDICTED_DELTA: +2 percentage points",
+ "trials": [],
+ "validations": 1,
+ "calls": 7,
+ "tin": 75368,
+ "tout": 1484,
+ "cached": 0,
+ "cost": 0.008279,
+ "secs": 31.2,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

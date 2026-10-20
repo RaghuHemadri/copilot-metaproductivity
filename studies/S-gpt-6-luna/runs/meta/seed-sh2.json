@@ -1,0 +1,36 @@
+{
+ "id": "seed-sh2",
+ "parent": "seed",
+ "depth": 1,
+ "k": 2,
+ "tag": "S:gpt-6.1-sol",
+ "suffix": "sh",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6.1-sol",
+ "created": "2026-10-19 23:12:33",
+ "errors": [],
+ "changes": "Added mandatory testing of the exact submitted code, failure diagnosis, and retesting after edits. Validation passed; one previously failing problem passed a trial.",
+ "predicted_delta": 5.0,
+ "final": "CHANGES: Added mandatory testing of the exact submitted code, failure diagnosis, and retesting after edits. Validation passed; one previously failing problem passed a trial.\nPREDICTED_DELTA: +5 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-3733",
+   "passed": true,
+   "cost": 0.002052
+  }
+ ],
+ "validations": 1,
+ "calls": 8,
+ "tin": 84064,
+ "tout": 1095,
+ "cached": 0,
+ "cost": 0.18113,
+ "secs": 292.6,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

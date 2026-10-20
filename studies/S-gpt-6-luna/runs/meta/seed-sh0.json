@@ -1,0 +1,39 @@
+{
+ "id": "seed-sh0",
+ "parent": "seed",
+ "depth": 1,
+ "k": 0,
+ "tag": "S:gpt-6.1-sol",
+ "suffix": "sh",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6.1-sol",
+ "created": "2026-10-19 23:14:43",
+ "errors": [],
+ "changes": "Added an exact-source test gate and failure-debugging loop to prevent skipped tests and untested rewrites. Validation passed; one previously failing development problem passed its trial.",
+ "predicted_delta": 5.0,
+ "final": "CHANGES: Added an exact-source test gate and failure-debugging loop to prevent skipped tests and untested rewrites. Validation passed; one previously failing development problem passed its trial.\nPREDICTED_DELTA: +5 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-3733",
+   "passed": true,
+   "cost": 0.002065
+  }
+ ],
+ "validations": 1,
+ "calls": 10,
+ "tin": 69416,
+ "tout": 1031,
+ "cached": 0,
+ "cost": 0.151207,
+ "secs": 422.7,
+ "stop_reason": null,
+ "error": null,
+ "warnings": [
+  "model.call_failure: \"429 Too Many Requests\"",
+  "model.call_failure: \"429 Too Many Requests\""
+ ]
+}

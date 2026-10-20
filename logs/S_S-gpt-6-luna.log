@@ -1,0 +1,87 @@
+22:29:47 [S-gpt-6-luna] === S start
+22:50:05 [S-gpt-6-luna] eval seed v2_dev r0: 82 tasks in 1218s $0.101
+22:57:56 [S-gpt-6-luna] eval seed v2_dev r1: 96 tasks in 1689s $0.118
+23:00:12 [S-gpt-6-luna] eval seed v2_dev2 r0: 88 tasks in 1825s $0.110
+23:01:23 [S-gpt-6-luna] eval seed v2_dev r2: 80 tasks in 1896s $0.089
+23:07:02 [S-gpt-6-luna] eval seed v2_dev r3: 96 tasks in 2235s $0.118
+23:07:38 [S-gpt-6-luna] eval seed v2_dev2 r1: 93 tasks in 2270s $0.107
+23:07:59 [S-gpt-6-luna] child seed-ss3: valid=True changed=True files=['solver.md'] pred=4.0 calls=5 trials=0 $0.043 18s err=None problems=[]
+23:08:00 [S-gpt-6-luna] child seed-ss5: valid=True changed=True files=['solver.md'] pred=4.0 calls=5 trials=0 $0.043 19s err=None problems=[]
+23:08:00 [S-gpt-6-luna] child seed-ss0: valid=True changed=True files=['solver.md'] pred=4.0 calls=5 trials=0 $0.042 19s err=None problems=[]
+23:08:00 [S-gpt-6-luna] child seed-ss7: valid=True changed=True files=['solver.md'] pred=4.0 calls=5 trials=0 $0.044 19s err=None problems=[]
+23:08:00 [S-gpt-6-luna] child seed-ss9: valid=True changed=True files=['solver.md'] pred=4.0 calls=5 trials=0 $0.043 19s err=None problems=[]
+23:08:02 [S-gpt-6-luna] child seed-ss6: valid=True changed=True files=['solver.md'] pred=5.0 calls=6 trials=0 $0.042 20s err=None problems=[]
+23:08:02 [S-gpt-6-luna] child seed-sg2: valid=True changed=True files=['solver.md'] pred=5.0 calls=6 trials=0 $0.140 21s err=None problems=[]
+23:08:03 [S-gpt-6-luna] child seed-ss2: valid=True changed=True files=['solver.md'] pred=4.0 calls=6 trials=0 $0.043 22s err=None problems=[]
+23:08:03 [S-gpt-6-luna] child seed-ss1: valid=True changed=True files=['solver.md'] pred=5.0 calls=6 trials=0 $0.044 22s err=None problems=[]
+23:08:03 [S-gpt-6-luna] child seed-ss8: valid=True changed=True files=['solver.md'] pred=5.0 calls=7 trials=0 $0.057 22s err=None problems=[]
+23:08:03 [S-gpt-6-luna] child seed-sg8: valid=True changed=True files=['solver.md'] pred=5.0 calls=6 trials=0 $0.142 22s err=None problems=[]
+23:08:05 [S-gpt-6-luna] child seed-sg9: valid=True changed=True files=['solver.md'] pred=5.0 calls=6 trials=0 $0.170 23s err=None problems=[]
+23:08:05 [S-gpt-6-luna] child seed-ss4: valid=True changed=True files=['solver.md'] pred=5.0 calls=7 trials=0 $0.042 24s err=None problems=[]
+23:08:06 [S-gpt-6-luna] child seed-sg7: valid=True changed=True files=['solver.md'] pred=5.0 calls=6 trials=0 $0.151 25s err=None problems=[]
+23:08:08 [S-gpt-6-luna] child seed-sg0: valid=True changed=True files=['solver.md'] pred=5.0 calls=7 trials=0 $0.177 27s err=None problems=[]
+23:08:08 [S-gpt-6-luna] child seed-sg5: valid=True changed=True files=['solver.md'] pred=5.0 calls=8 trials=0 $0.133 27s err=None problems=[]
+23:08:12 [S-gpt-6-luna] child seed-sg6: valid=True changed=True files=['solver.md'] pred=5.0 calls=8 trials=0 $0.143 30s err=None problems=[]
+23:08:15 [S-gpt-6-luna] child seed-sg3: valid=True changed=True files=['solver.md'] pred=5.0 calls=8 trials=0 $0.251 34s err=None problems=[]
+23:08:20 [S-gpt-6-luna] child seed-sl1: valid=True changed=True files=['solver.md'] pred=3.0 calls=7 trials=0 $0.008 38s err=None problems=[]
+23:08:23 [S-gpt-6-luna] child seed-sl2: valid=True changed=True files=['solver.md'] pred=2.0 calls=7 trials=0 $0.008 42s err=None problems=[]
+23:08:24 [S-gpt-6-luna] child seed-sg4: valid=True changed=True files=['solver.md'] pred=4.0 calls=11 trials=0 $0.168 43s err=None problems=[]
+23:08:25 [S-gpt-6-luna] child seed-sl4: valid=True changed=True files=['solver.md'] pred=4.0 calls=8 trials=0 $0.008 43s err=None problems=[]
+23:08:25 [S-gpt-6-luna] child seed-sa4: valid=True changed=True files=['solver.md'] pred=4.0 calls=7 trials=0 $0.656 44s err=None problems=[]
+23:08:26 [S-gpt-6-luna] child seed-sg1: valid=True changed=True files=['solver.md'] pred=4.0 calls=10 trials=0 $0.165 45s err=None problems=[]
+23:08:36 [S-gpt-6-luna] child seed-sl7: valid=True changed=True files=['solver.md'] pred=3.0 calls=9 trials=0 $0.009 54s err=None problems=[]
+23:08:39 [S-gpt-6-luna] child seed-sl5: valid=True changed=True files=['solver.md'] pred=3.0 calls=10 trials=0 $0.010 57s err=None problems=[]
+23:08:39 [S-gpt-6-luna] child seed-sl6: valid=True changed=True files=['solver.md'] pred=2.0 calls=10 trials=0 $0.008 57s err=None problems=[]
+23:08:44 [S-gpt-6-luna] child seed-sl0: valid=True changed=True files=['solver.md'] pred=3.0 calls=11 trials=0 $0.009 62s err=None problems=[]
+23:12:21 [S-gpt-6-luna] child seed-sh8: valid=True changed=True files=['solver.md'] pred=6.0 calls=8 trials=1 $0.157 280s err=None problems=[]
+23:12:21 [S-gpt-6-luna] child seed-sa0: valid=True changed=True files=['solver.md'] pred=5.0 calls=8 trials=1 $0.864 281s err=None problems=[]
+23:12:33 [S-gpt-6-luna] child seed-sh2: valid=True changed=True files=['solver.md'] pred=5.0 calls=8 trials=1 $0.181 293s err=None problems=[]
+23:12:52 [S-gpt-6-luna] child seed-sa8: valid=True changed=True files=['solver.md'] pred=5.0 calls=8 trials=1 $0.866 311s err=None problems=[]
+23:12:52 [S-gpt-6-luna] child seed-sl9: valid=True changed=True files=['solver.md'] pred=2.0 calls=8 trials=1 $0.012 311s err=None problems=[]
+23:13:16 [S-gpt-6-luna] child seed-sh6: valid=True changed=True files=['solver.md'] pred=6.0 calls=7 trials=1 $0.164 336s err=None problems=[]
+23:13:39 [S-gpt-6-luna] child seed-sl3: valid=True changed=True files=['solver.md'] pred=3.0 calls=11 trials=1 $0.021 358s err=None problems=[]
+23:14:43 [S-gpt-6-luna] child seed-sh0: valid=True changed=True files=['solver.md'] pred=5.0 calls=10 trials=1 $0.151 423s err=None problems=[]
+23:14:59 [S-gpt-6-luna] child seed-sa5: valid=True changed=True files=['solver.md'] pred=6.0 calls=8 trials=1 $1.017 435s err=None problems=[]
+23:15:01 [S-gpt-6-luna] child seed-sh1: valid=True changed=True files=['solver.md'] pred=5.0 calls=11 trials=1 $0.154 440s err=None problems=[]
+23:15:46 [S-gpt-6-luna] child seed-sl8: valid=True changed=True files=['solver.md'] pred=4.0 calls=10 trials=1 $0.010 484s err=None problems=[]
+CopilotSession.send_and_wait failed
+CopilotSession.send_and_wait failed
+CopilotSession.send_and_wait failed
+CopilotSession.send_and_wait failed
+23:16:24 [S-gpt-6-luna] child seed-sa7: valid=True changed=True files=['solver.md'] pred=6.0 calls=8 trials=1 $0.933 523s err=None problems=[]
+23:16:25 [S-gpt-6-luna] child seed-sa1: valid=True changed=True files=['solver.md'] pred=6.0 calls=8 trials=1 $0.912 524s err=None problems=[]
+23:16:48 [S-gpt-6-luna] child seed-sa3: valid=True changed=True files=['solver.md'] pred=6.0 calls=9 trials=1 $0.828 547s err=None problems=[]
+23:17:43 [S-gpt-6-luna] child seed-sh4: valid=True changed=True files=['solver.md'] pred=4.0 calls=10 trials=2 $0.258 602s err=None problems=[]
+23:18:30 [S-gpt-6-luna] child seed-so2: valid=True changed=True files=['solver.md'] pred=4.0 calls=12 trials=3 $0.758 650s err=None problems=[]
+23:19:07 [S-gpt-6-luna] child seed-sh7: valid=True changed=True files=['solver.md'] pred=5.0 calls=8 trials=2 $0.179 686s err=None problems=[]
+23:19:08 [S-gpt-6-luna] child seed-sh3: valid=True changed=True files=['solver.md'] pred=4.0 calls=8 trials=2 $0.196 687s err=None problems=[]
+23:19:32 [S-gpt-6-luna] child seed-so8: valid=True changed=True files=['solver.md'] pred=8.0 calls=12 trials=2 $0.524 711s err=None problems=[]
+23:29:54 [S-gpt-6-luna] === S start
+23:30:46 [S-gpt-6-luna] child seed-sa2: valid=True changed=True files=['solver.md'] pred=5.0 calls=9 trials=0 $0.695 50s err=None problems=[]
+23:31:41 [S-gpt-6-luna] child seed-sa6: valid=True changed=True files=['solver.md'] pred=6.0 calls=10 trials=1 $0.871 105s err=None problems=[]
+23:32:16 [S-gpt-6-luna] child seed-sh9: valid=True changed=True files=['solver.md'] pred=4.0 calls=8 trials=1 $0.148 140s err=None problems=[]
+23:32:41 [S-gpt-6-luna] child seed-so5: valid=True changed=True files=['solver.md'] pred=10.0 calls=12 trials=2 $0.452 165s err=None problems=[]
+23:33:01 [S-gpt-6-luna] child seed-so1: valid=True changed=True files=['solver.md'] pred=7.0 calls=13 trials=2 $0.668 185s err=None problems=[]
+23:34:03 [S-gpt-6-luna] child seed-sa9: valid=True changed=True files=['solver.md'] pred=6.0 calls=11 trials=2 $1.220 247s err=None problems=[]
+23:34:12 [S-gpt-6-luna] child seed-so3: valid=True changed=True files=['solver.md'] pred=7.0 calls=15 trials=3 $0.797 256s err=None problems=[]
+23:34:25 [S-gpt-6-luna] child seed-so6: valid=True changed=True files=['solver.md'] pred=8.0 calls=14 trials=2 $0.730 269s err=None problems=[]
+23:34:30 [S-gpt-6-luna] child seed-sh5: valid=True changed=True files=['solver.md'] pred=4.0 calls=12 trials=3 $0.301 274s err=None problems=[]
+23:34:30 [S-gpt-6-luna] child seed-so9: valid=True changed=True files=['skills/stress-test/SKILL.md', 'solver.md'] pred=3.0 calls=15 trials=3 $0.799 274s err=None problems=[]
+23:35:04 [S-gpt-6-luna] child seed-so7: valid=True changed=True files=['solver.md'] pred=10.0 calls=17 trials=3 $1.096 308s err=None problems=[]
+23:35:31 [S-gpt-6-luna] child seed-so4: valid=True changed=True files=['solver.md'] pred=10.0 calls=13 trials=3 $0.738 334s err=None problems=[]
+23:35:37 [S-gpt-6-luna] child seed-so0: valid=True changed=True files=['solver.md'] pred=8.0 calls=16 trials=3 $0.826 341s err=None problems=[]
+CopilotSession.send_and_wait failed
+02:16:14 [S-gpt-6-luna] eval seed-sl6 v2_dev r0: 96 tasks in 9979s $0.140
+02:21:54 [S-gpt-6-luna] eval seed-sg8 v2_dev r0: 96 tasks in 10318s $0.146
+03:00:00 [S-gpt-6-luna] eval seed-sg7 v2_dev r0: 96 tasks in 12604s $0.169
+CopilotSession.send_and_wait failed
+CopilotSession.send_and_wait failed
+CopilotSession.send_and_wait failed
+JsonRpcClient.request JSON-RPC request finished
+Traceback (most recent call last):
+  File "/root/copilot-metaproductivity/.venv/lib/python3.12/site-packages/copilot/_jsonrpc.py", line 241, in request
+    result = await future
+             ^^^^^^^^^^^^
+copilot._jsonrpc.JsonRpcError: JSON-RPC Error -32603: Request session.tools.handlePendingToolCall failed with message: Session not found for sessionId: 8d267815-a567-402d-96f0-5eb6bb03408a
+03:48:46 [S-gpt-6-luna] eval seed-sa5 v2_dev r0: 96 tasks in 15531s $0.175
+CopilotSession.send_and_wait failed

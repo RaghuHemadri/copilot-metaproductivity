@@ -1,0 +1,30 @@
+{
+ "id": "seed-7-0",
+ "parent": "seed-7",
+ "depth": 2,
+ "k": 0,
+ "tag": "e1",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-20 03:21:01",
+ "errors": [],
+ "changes": "Strengthened the solver\u2019s submission gate to forbid unverified guesses and require tests on the exact final code, targeting premature submissions and public-example failures.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Strengthened the solver\u2019s submission gate to forbid unverified guesses and require tests on the exact final code, targeting premature submissions and public-example failures.\nPREDICTED_DELTA: +2 percentage points",
+ "trials": [],
+ "validations": 1,
+ "calls": 7,
+ "tin": 88181,
+ "tout": 1501,
+ "cached": 0,
+ "cost": 0.009569,
+ "secs": 45.3,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

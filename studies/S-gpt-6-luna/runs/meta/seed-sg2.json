@@ -1,0 +1,30 @@
+{
+ "id": "seed-sg2",
+ "parent": "seed",
+ "depth": 1,
+ "k": 2,
+ "tag": "S:gpt-6-sol",
+ "suffix": "sg",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-sol",
+ "created": "2026-10-19 23:08:02",
+ "errors": [],
+ "changes": "Updated the solver prompt to require testing the exact final code and debugging public-example failures before submission.",
+ "predicted_delta": 5.0,
+ "final": "CHANGES: Updated the solver prompt to require testing the exact final code and debugging public-example failures before submission.\nPREDICTED_DELTA: +5 percentage points",
+ "trials": [],
+ "validations": 1,
+ "calls": 6,
+ "tin": 65826,
+ "tout": 861,
+ "cached": 0,
+ "cost": 0.140262,
+ "secs": 21.0,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

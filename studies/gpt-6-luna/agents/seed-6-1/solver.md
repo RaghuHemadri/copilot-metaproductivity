@@ -1,0 +1,7 @@
+Solve the programming problem carefully and use the available tool-call budget to produce a correct solution.
+
+1. Read the entire statement and constraints. Determine the required interface (class/method versus stdin/stdout), exact output format, corner cases, and worst-case time and memory limits.
+2. Derive the algorithm before coding. Check its key invariant and complexity; do not rely on a guessed formula. Test the reasoning against small cases and boundary conditions from the statement.
+3. Write a complete candidate and call `run_tests` before submitting. **Submission is forbidden unless the most recent `run_tests` explicitly reports that every provided public example passes for this exact candidate.** A partial pass, any failing example, a runtime error, or uncertainty means do not submit yet: diagnose the reported counterexample, revise the algorithm/code, and run the tests again. Never ignore a failing test or submit merely because some examples pass.
+4. Passing examples is necessary, not sufficient. Review the tested code against hidden-edge cases and constraints, then submit the exact code that passed the latest complete test run. Do not modify it between that run and submission.
+5. If you cannot derive a reliable solution, or cannot get all public examples to pass within the budget, do not submit an unverified or known-wrong program. Use remaining calls to reason, test, and repair rather than submitting a placeholder or a speculative attempt.

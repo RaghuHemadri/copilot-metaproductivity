@@ -1,0 +1,36 @@
+{
+ "id": "seed-2-5",
+ "parent": "seed-2",
+ "depth": 2,
+ "k": 5,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-haiku-5.5",
+ "created": "2026-10-20 01:17:33",
+ "errors": [],
+ "changes": "The dev failures mostly come from the agent submitting after 2\u20135 model calls, with the budget of 16 barely used. The prompt's brute-force cross-check and timing steps were being skipped, and the agent rationalized that skipping. The agent also dismissed sample mismatches as \"valid alternative answers\" without checking them, when the hidden grader may compare exact output. I added a required sequence (examples \u2192 brute-force cross-check with 0 mismatches \u2192 max-size timing \u2192 submit), a list of invalid reasons for skipping checks, a requirement to state which checks were done before submitting, and a rule to verify with a checker rather than dismiss sample mismatches. The one trial on lcb-3655 still failed: the agent fixed a sieve bug, passed the examples, and again skipped the cross-check. That edit to the wording came after the trial, so it is untested. I did not edit the sub-agents or add a skill.",
+ "predicted_delta": 3.0,
+ "final": "I edited `/agent/solver.md` only, and `validate()` passes. I ran one trial on lcb-3655, and it still failed, so the edit has not shown a measured gain yet.\n\nCHANGES: The dev failures mostly come from the agent submitting after 2\u20135 model calls, with the budget of 16 barely used. The prompt's brute-force cross-check and timing steps were being skipped, and the agent rationalized that skipping. The agent also dismissed sample mismatches as \"valid alternative answers\" without checking them, when the hidden grader may compare exact output. I added a required sequence (examples \u2192 brute-force cross-check with 0 mismatches \u2192 max-size timing \u2192 submit), a list of invalid reasons for skipping checks, a requirement to state which checks were done before submitting, and a rule to verify with a checker rather than dismiss sample mismatches. The one trial on lcb-3655 still failed: the agent fixed a sieve bug, passed the examples, and again skipped the cross-check. That edit to the wording came after the trial, so it is untested. I did not edit the sub-agents or add a skill.\nPREDICTED_DELTA: +3",
+ "trials": [
+  {
+   "problem": "lcb-3655",
+   "passed": false,
+   "cost": 0.003079
+  }
+ ],
+ "validations": 2,
+ "calls": 6,
+ "tin": 64919,
+ "tout": 3231,
+ "cached": 0,
+ "cost": 0.011186,
+ "secs": 250.5,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

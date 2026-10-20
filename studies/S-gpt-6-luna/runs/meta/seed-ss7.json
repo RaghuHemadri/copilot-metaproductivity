@@ -1,0 +1,33 @@
+{
+ "id": "seed-ss7",
+ "parent": "seed",
+ "depth": 1,
+ "k": 7,
+ "tag": "S:claude-sonnet-5.5",
+ "suffix": "ss",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-sonnet-5.5",
+ "created": "2026-10-19 23:08:00",
+ "errors": [],
+ "changes": "I rewrote `/agent/solver.md`. The agent was submitting after only about 3 of its 16 calls, and 19 of the 34 failures didn't even pass the public examples. The new prompt requires:\n- a short algorithm plan and hand check before coding;\n- a `run_tests` pass on the public examples before any submit;\n- a brute-force comparison on random small inputs;\n- a timing run on a max-size input;\n- submitting only after all of those pass.\n\nI ran `validate()` and it passed. I did not run any trials, so the effect is untested.",
+ "predicted_delta": 4.0,
+ "final": "CHANGES: I rewrote `/agent/solver.md`. The agent was submitting after only about 3 of its 16 calls, and 19 of the 34 failures didn't even pass the public examples. The new prompt requires:\n- a short algorithm plan and hand check before coding;\n- a `run_tests` pass on the public examples before any submit;\n- a brute-force comparison on random small inputs;\n- a timing run on a max-size input;\n- submitting only after all of those pass.\n\nI ran `validate()` and it passed. I did not run any trials, so the effect is untested.\n\nPREDICTED_DELTA: +4",
+ "trials": [],
+ "validations": 1,
+ "calls": 5,
+ "tin": 16682,
+ "tout": 1101,
+ "cached": 0,
+ "cost": 0.044374,
+ "secs": 18.8,
+ "stop_reason": null,
+ "error": null,
+ "warnings": [
+  "model.call_failure: \"429 Too Many Requests\"",
+  "model.call_failure: \"429 Too Many Requests\""
+ ]
+}

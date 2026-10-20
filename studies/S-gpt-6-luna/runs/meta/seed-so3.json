@@ -1,0 +1,49 @@
+{
+ "id": "seed-so3",
+ "parent": "seed",
+ "depth": 1,
+ "k": 3,
+ "tag": "S:claude-opus-5.5",
+ "suffix": "so",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-opus-5.5",
+ "created": "2026-10-19 23:34:12",
+ "errors": [],
+ "changes": "Rewrote /agent/solver.md with hard rules (always call submit; submit only the exact code that just passed all public examples; never submit failing code while more than 2 calls remain; never give up, derive patterns from a brute force instead). Added mandatory checks after the examples pass: brute-force random comparison, worst-case timing with Python performance pitfalls, and edge cases. Reason: the agent used only ~3 of 16 calls and often submitted untested or failing code (19 of 34 failures) or code that was wrong or too slow on the hidden tests.",
+ "predicted_delta": 7.0,
+ "final": "I rewrote the solver prompt (`/agent/solver.md`) and it passes validate(). Of three trials, two problems that failed before now pass and one still fails.\n\n**Why problems were failing:** the agent stopped too early. It used a mean of only 3.3 of its 16 model calls. The largest group was 19 of the 34 failures: programs that fail the public examples, submitted anyway. In the traces I read, the agent:\n- submitted without running the tests;\n- edited code after it passed the tests and submitted the untested edit;\n- submitted with examples still failing;\n- once wrote the answer in text and never called submit.\n\nThe other 15 failures passed the public examples but then got wrong answers, timeouts or a runtime error on the hidden tests.\n\n**What the new prompt does:**\n- **Hard rules:** it must call submit. It must submit exactly the code that just passed all public examples. It must not submit failing code while it has more than 2 calls left.\n- **Checks after the examples pass:** a random small-input test against a brute-force solver, a timing test on a maximum-size input (with common Python slowdowns listed, such as huge-integer arithmetic), and edge cases.\n- **No giving up:** I added this after the third trial. If it can't find the algorithm, it should write a brute force, look for a pattern in its outputs, and check the guess against it. This rule has not been trialled.\n\n**Trials:**\n- `lcb-abc394-e` passed (it had failed the public examples before). Its brute-force check crashed and the agent submitted anyway without fixing it, so the stress-test step isn't reliable yet.\n- `lcb-abc379-e` passed (it had timed out before). This time it ran the stress and timing tests.\n- `lcb-arc184-d` failed (time limit exceeded): the agent said it couldn't solve it and submitted a slow program after 3 calls.\n\nCHANGES: Rewrote /agent/solver.md with hard rules (always call submit; submit only the exact code that just passed all public examples; never submit failing code while more than 2 calls remain; never give up, derive patterns from a brute force instead). Added mandatory checks after the examples pass: brute-force random comparison, worst-case timing with Python performance pitfalls, and edge cases. Reason: the agent used only ~3 of 16 calls and often submitted untested or failing code (19 of 34 failures) or code that was wrong or too slow on the hidden tests.\nPREDICTED_DELTA: +7",
+ "trials": [
+  {
+   "problem": "lcb-abc394-e",
+   "passed": true,
+   "cost": 0.002576
+  },
+  {
+   "problem": "lcb-abc379-e",
+   "passed": true,
+   "cost": 0.001898
+  },
+  {
+   "problem": "lcb-arc184-d",
+   "passed": false,
+   "cost": 0.002156
+  }
+ ],
+ "validations": 2,
+ "calls": 15,
+ "tin": 178199,
+ "tout": 3860,
+ "cached": 0,
+ "cost": 0.796626,
+ "secs": 255.6,
+ "stop_reason": null,
+ "error": null,
+ "warnings": [
+  "model.call_failure: \"429 Too Many Requests\"",
+  "model.call_failure: \"429 Too Many Requests\""
+ ]
+}

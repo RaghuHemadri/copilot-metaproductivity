@@ -1,0 +1,19 @@
+{
+ "model": "gpt-5.3-codex",
+ "pass_rate": 0.792,
+ "by_difficulty": {
+  "hard": 0.719,
+  "medium": 0.938
+ },
+ "cost": 8.921,
+ "mean_calls": 4.56,
+ "submitted": 0.99,
+ "infra_errors": 0,
+ "tasks_with_warnings": 6,
+ "budget_stops": 0,
+ "mean_secs": 70.5,
+ "wall_s": 0,
+ "tin": 1963150,
+ "tout": 391822,
+ "cached": 0
+}

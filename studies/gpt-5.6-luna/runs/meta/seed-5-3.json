@@ -1,0 +1,30 @@
+{
+ "id": "seed-5-3",
+ "parent": "seed-5",
+ "depth": 2,
+ "k": 3,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-5.6-luna",
+ "created": "2026-10-20 02:30:19",
+ "errors": [],
+ "changes": "Strengthened the solver\u2019s submission gate and validation workflow, requiring 100% passing public tests before submission and adding explicit audits for boundary cases, brute-force checks, complexity, and modular/indexing errors.",
+ "predicted_delta": 4.0,
+ "final": "CHANGES: Strengthened the solver\u2019s submission gate and validation workflow, requiring 100% passing public tests before submission and adding explicit audits for boundary cases, brute-force checks, complexity, and modular/indexing errors.\n\nPREDICTED_DELTA: +4 percentage points",
+ "trials": [],
+ "validations": 1,
+ "calls": 6,
+ "tin": 89931,
+ "tout": 1259,
+ "cached": 0,
+ "cost": 0.019497,
+ "secs": 19.8,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

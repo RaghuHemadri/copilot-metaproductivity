@@ -1,0 +1,19 @@
+{
+ "model": "gpt-6-astra",
+ "pass_rate": 0.917,
+ "by_difficulty": {
+  "hard": 0.875,
+  "medium": 1.0
+ },
+ "cost": 12.21,
+ "mean_calls": 3.55,
+ "submitted": 1.0,
+ "infra_errors": 0,
+ "tasks_with_warnings": 6,
+ "budget_stops": 0,
+ "mean_secs": 38.6,
+ "wall_s": 0,
+ "tin": 632582,
+ "tout": 117683,
+ "cached": 0
+}

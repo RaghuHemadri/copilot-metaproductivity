@@ -1,0 +1,36 @@
+{
+ "id": "seed-0",
+ "parent": "seed",
+ "depth": 1,
+ "k": 0,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6.1-sol",
+ "created": "2026-10-19 23:19:23",
+ "errors": [],
+ "changes": "Added a pre-submission performance check using maximum-size adversarial inputs and measured runtime. Validation passed; the previously timing-out development problem passed its trial.",
+ "predicted_delta": 1.0,
+ "final": "CHANGES: Added a pre-submission performance check using maximum-size adversarial inputs and measured runtime. Validation passed; the previously timing-out development problem passed its trial.\nPREDICTED_DELTA: +1.0 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-3686",
+   "passed": true,
+   "cost": 0.065608
+  }
+ ],
+ "validations": 1,
+ "calls": 8,
+ "tin": 78056,
+ "tout": 1032,
+ "cached": 0,
+ "cost": 0.23204,
+ "secs": 228.6,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

@@ -1,0 +1,36 @@
+{
+ "id": "seed-0-0",
+ "parent": "seed-0",
+ "depth": 2,
+ "k": 0,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-5.6-luna",
+ "created": "2026-10-19 23:39:14",
+ "errors": [],
+ "changes": "Strengthened the solver workflow with an absolute final-test submission gate, exhaustive tiny-case validation guidance, independent algorithm review, and realistic worst-case performance checks.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Strengthened the solver workflow with an absolute final-test submission gate, exhaustive tiny-case validation guidance, independent algorithm review, and realistic worst-case performance checks.\nPREDICTED_DELTA: +2 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-abc372-c",
+   "passed": true,
+   "cost": 0.003558
+  }
+ ],
+ "validations": 1,
+ "calls": 9,
+ "tin": 137770,
+ "tout": 1796,
+ "cached": 0,
+ "cost": 0.033267,
+ "secs": 186.8,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

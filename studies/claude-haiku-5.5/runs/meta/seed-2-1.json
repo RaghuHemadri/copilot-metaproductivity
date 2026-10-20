@@ -1,0 +1,41 @@
+{
+ "id": "seed-2-1",
+ "parent": "seed-2",
+ "depth": 2,
+ "k": 1,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-haiku-5.5",
+ "created": "2026-10-20 01:18:15",
+ "errors": [],
+ "changes": "In /agent/solver.md I added a hard gate at the top: no submit until a brute-force-vs-fast random cross-check shows zero mismatches and a max-size timing run has been done. I also added budget guidance on how to spend the calls (put brute, fast, and the random loop in one run_python script), and rules for \"any valid answer\" problems (write a constraint checker instead of comparing to sample text, and don't dismiss failing public examples). The failure report showed most failures came from submitting after 2\u20135 calls without cross-checking, and from rationalizing away failing examples. Validate passes. Trial lcb-abc366-g still failed on the same public-example rationalization, but the trial lcb-abc396-e run did follow the cross-check and timing steps before submitting. The one remaining failure there is an exact-text comparison on a problem with multiple valid minimal answers, which I could not address from the solver side.",
+ "predicted_delta": 2.0,
+ "final": "I'm stopping here. Both trials ran the new prompt, and the last one shows the gate working: the agent cross-checked and timed its code before submitting.\n\nThe remaining failure on lcb-abc396-e is not a process problem. The output `0 0 23 22` and the expected `22 23 0 0` both satisfy every constraint with the same sum (45), so the hidden verdict is an exact-text mismatch on a problem that accepts any minimal answer. The solver prompt can't fix that, so I'm not claiming a gain from it.\n\nCHANGES: In /agent/solver.md I added a hard gate at the top: no submit until a brute-force-vs-fast random cross-check shows zero mismatches and a max-size timing run has been done. I also added budget guidance on how to spend the calls (put brute, fast, and the random loop in one run_python script), and rules for \"any valid answer\" problems (write a constraint checker instead of comparing to sample text, and don't dismiss failing public examples). The failure report showed most failures came from submitting after 2\u20135 calls without cross-checking, and from rationalizing away failing examples. Validate passes. Trial lcb-abc366-g still failed on the same public-example rationalization, but the trial lcb-abc396-e run did follow the cross-check and timing steps before submitting. The one remaining failure there is an exact-text comparison on a problem with multiple valid minimal answers, which I could not address from the solver side.\nPREDICTED_DELTA: +2",
+ "trials": [
+  {
+   "problem": "lcb-abc366-g",
+   "passed": false,
+   "cost": 0.002845
+  },
+  {
+   "problem": "lcb-abc396-e",
+   "passed": false,
+   "cost": 0.00355
+  }
+ ],
+ "validations": 2,
+ "calls": 7,
+ "tin": 84870,
+ "tout": 3242,
+ "cached": 0,
+ "cost": 0.016503,
+ "secs": 293.3,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

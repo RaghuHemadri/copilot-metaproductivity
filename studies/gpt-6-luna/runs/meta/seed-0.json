@@ -1,0 +1,30 @@
+{
+ "id": "seed-0",
+ "parent": "seed",
+ "depth": 1,
+ "k": 0,
+ "tag": "e1",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-19 19:33:29",
+ "errors": [],
+ "changes": "Strengthened the solver prompt with a mandatory run_tests-before-submit gate and explicit instructions to fix failures and review edge cases and complexity.",
+ "predicted_delta": 3.0,
+ "final": "CHANGES: Strengthened the solver prompt with a mandatory run_tests-before-submit gate and explicit instructions to fix failures and review edge cases and complexity.\nPREDICTED_DELTA: +3 percentage points",
+ "trials": [],
+ "validations": 1,
+ "calls": 7,
+ "tin": 83879,
+ "tout": 1480,
+ "cached": 0,
+ "cost": 0.009128,
+ "secs": 24.6,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

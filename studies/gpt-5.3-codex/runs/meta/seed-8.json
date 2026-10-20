@@ -1,0 +1,30 @@
+{
+ "id": "seed-8",
+ "parent": "seed",
+ "depth": 1,
+ "k": 8,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-5.3-codex",
+ "created": "2026-10-19 21:06:58",
+ "errors": [],
+ "changes": "Updated /agent/solver.md with a focused \u201cperformance gate\u201d workflow: explicit complexity rejection rules, mandatory worst-case fit check, optional run_python micro-benchmark for borderline plans, and a hard rule not to submit sample-only or knowingly heuristic solutions. This targets the dominant failure mode (hidden-test TLE) while also reducing incorrect fallback submissions.",
+ "predicted_delta": 4.0,
+ "final": "CHANGES: Updated /agent/solver.md with a focused \u201cperformance gate\u201d workflow: explicit complexity rejection rules, mandatory worst-case fit check, optional run_python micro-benchmark for borderline plans, and a hard rule not to submit sample-only or knowingly heuristic solutions. This targets the dominant failure mode (hidden-test TLE) while also reducing incorrect fallback submissions.\nPREDICTED_DELTA: +4",
+ "trials": [],
+ "validations": 1,
+ "calls": 8,
+ "tin": 123711,
+ "tout": 1370,
+ "cached": 0,
+ "cost": 0.235674,
+ "secs": 23.1,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

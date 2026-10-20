@@ -1,0 +1,33 @@
+{
+ "id": "seed-ss9",
+ "parent": "seed",
+ "depth": 1,
+ "k": 9,
+ "tag": "S:claude-sonnet-5.5",
+ "suffix": "ss",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-sonnet-5.5",
+ "created": "2026-10-19 23:08:00",
+ "errors": [],
+ "changes": "I rewrote solver.md. The agent now has to run the public examples and get them all passing before it submits. It also has to stress-test against a brute force and time a worst-case input, and it is told to use more of its 16 calls. The old prompt let it submit after only 2\u20133 calls, and in 19 of 34 failures the submitted program didn't pass the public examples. I only edited the prompt and validate() passed. I did not run any trials.",
+ "predicted_delta": 4.0,
+ "final": "CHANGES: I rewrote solver.md. The agent now has to run the public examples and get them all passing before it submits. It also has to stress-test against a brute force and time a worst-case input, and it is told to use more of its 16 calls. The old prompt let it submit after only 2\u20133 calls, and in 19 of 34 failures the submitted program didn't pass the public examples. I only edited the prompt and validate() passed. I did not run any trials.\nPREDICTED_DELTA: +4",
+ "trials": [],
+ "validations": 1,
+ "calls": 5,
+ "tin": 16622,
+ "tout": 999,
+ "cached": 0,
+ "cost": 0.043234,
+ "secs": 18.9,
+ "stop_reason": null,
+ "error": null,
+ "warnings": [
+  "model.call_failure: \"429 Too Many Requests\"",
+  "model.call_failure: \"429 Too Many Requests\""
+ ]
+}

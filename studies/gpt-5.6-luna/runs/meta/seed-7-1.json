@@ -1,0 +1,41 @@
+{
+ "id": "seed-7-1",
+ "parent": "seed-7",
+ "depth": 2,
+ "k": 1,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-5.6-luna",
+ "created": "2026-10-20 02:55:02",
+ "errors": [],
+ "changes": "Strengthened solver workflow with authoritative test gates, mandatory correction after failures, independent brute-force checks, and explicit worst-case performance stress testing.",
+ "predicted_delta": 3.0,
+ "final": "CHANGES: Strengthened solver workflow with authoritative test gates, mandatory correction after failures, independent brute-force checks, and explicit worst-case performance stress testing.\nPREDICTED_DELTA: +3 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-arc186-c",
+   "passed": false,
+   "cost": 0.007953
+  },
+  {
+   "problem": "lcb-3686",
+   "passed": false,
+   "cost": 0.009111
+  }
+ ],
+ "validations": 2,
+ "calls": 13,
+ "tin": 182896,
+ "tout": 2609,
+ "cached": 0,
+ "cost": 0.056774,
+ "secs": 272.6,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

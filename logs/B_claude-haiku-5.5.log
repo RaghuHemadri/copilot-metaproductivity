@@ -1,0 +1,79 @@
+22:35:48 [claude-haiku-5.5] === B start
+CopilotSession.send_and_wait failed
+22:51:15 [claude-haiku-5.5] eval seed v2_dev r2: 96 tasks in 927s $0.577
+23:04:36 [claude-haiku-5.5] eval seed v2_dev r3: 96 tasks in 1728s $0.608
+23:07:20 [claude-haiku-5.5] eval seed v2_dev r1: 96 tasks in 1892s $0.571
+23:08:05 [claude-haiku-5.5] child seed-9: valid=True changed=True files=['solver.md'] pred=3.0 calls=5 trials=1 $0.008 44s err=None problems=[]
+23:08:06 [claude-haiku-5.5] child seed-5: valid=True changed=True files=['solver.md'] pred=3.0 calls=7 trials=1 $0.009 45s err=None problems=[]
+23:08:07 [claude-haiku-5.5] child seed-2: valid=True changed=True files=['solver.md'] pred=2.0 calls=5 trials=1 $0.008 46s err=None problems=[]
+23:08:19 [claude-haiku-5.5] child seed-3: valid=True changed=True files=['solver.md'] pred=3.0 calls=7 trials=1 $0.013 58s err=None problems=[]
+23:09:12 [claude-haiku-5.5] child seed-1: valid=True changed=True files=['skills/stress-testing/SKILL.md', 'solver.md'] pred=4.0 calls=6 trials=1 $0.012 112s err=None problems=[]
+23:09:31 [claude-haiku-5.5] child seed-8: valid=True changed=True files=['solver.md'] pred=3.0 calls=5 trials=1 $0.011 130s err=None problems=[]
+23:13:05 [claude-haiku-5.5] child seed-7: valid=True changed=True files=['solver.md'] pred=3.0 calls=4 trials=1 $0.065 341s err=None problems=[]
+23:15:36 [claude-haiku-5.5] child seed-0: valid=True changed=True files=['solver.md'] pred=3.0 calls=8 trials=2 $0.070 495s err=None problems=[]
+23:16:36 [claude-haiku-5.5] child seed-6: valid=True changed=True files=['skills/verify-before-submit/SKILL.md', 'solver.md'] pred=4.0 calls=6 trials=1 $0.092 555s err=None problems=[]
+23:35:55 [claude-haiku-5.5] === B start
+23:38:56 [claude-haiku-5.5] child seed-4: valid=True changed=True files=['solver.md'] pred=3.0 calls=7 trials=1 $0.018 181s err=None problems=[]
+00:15:49 [claude-haiku-5.5] eval seed-3 v2_dev r0: 96 tasks in 2394s $0.590
+00:25:45 [claude-haiku-5.5] eval seed-9 v2_dev r0: 41 tasks in 2990s $0.195
+00:32:03 [claude-haiku-5.5] eval seed-0 v2_dev r0: 96 tasks in 3367s $0.643
+00:51:02 [claude-haiku-5.5] eval seed-2 v2_dev r0: 96 tasks in 4507s $0.664
+00:52:06 [claude-haiku-5.5] eval seed-8 v2_dev r0: 96 tasks in 4571s $0.724
+00:59:19 [claude-haiku-5.5] eval seed-1 v2_dev r0: 96 tasks in 5003s $0.771
+01:00:23 [claude-haiku-5.5] eval seed-5 v2_dev r0: 96 tasks in 5068s $0.633
+01:01:43 [claude-haiku-5.5] eval seed-6 v2_dev r0: 96 tasks in 5147s $0.464
+01:02:56 [claude-haiku-5.5] eval seed-7 v2_dev r0: 96 tasks in 5221s $0.458
+01:13:21 [claude-haiku-5.5] eval seed-4 v2_dev r0: 96 tasks in 5665s $0.684
+01:13:21 [claude-haiku-5.5] measure seed: s0=0.854 s1=0.865 children=[0.896, 0.906, 0.896, 0.875, 0.906, 0.906, 0.865, 0.833, 0.906, 0.896]
+01:15:31 [claude-haiku-5.5] child seed-0-0: valid=True changed=True files=['solver.md'] pred=2.0 calls=7 trials=1 $0.011 130s err=None problems=[]
+01:15:40 [claude-haiku-5.5] child seed-2-4: valid=True changed=True files=['solver.md'] pred=2.0 calls=6 trials=1 $0.010 138s err=None problems=[]
+01:15:42 [claude-haiku-5.5] child seed-0-3: valid=True changed=True files=['solver.md'] pred=2.0 calls=8 trials=1 $0.011 140s err=None problems=[]
+01:15:53 [claude-haiku-5.5] child seed-0-1: valid=True changed=True files=['solver.md'] pred=2.0 calls=5 trials=1 $0.011 152s err=None problems=[]
+01:16:06 [claude-haiku-5.5] child seed-0-5: valid=True changed=True files=['solver.md'] pred=2.0 calls=8 trials=1 $0.015 164s err=None problems=[]
+01:16:10 [claude-haiku-5.5] child seed-5-5: valid=True changed=True files=['solver.md'] pred=2.0 calls=6 trials=1 $0.011 168s err=None problems=[]
+01:16:15 [claude-haiku-5.5] child seed-2-3: valid=True changed=True files=['solver.md'] pred=3.0 calls=8 trials=1 $0.015 173s err=None problems=[]
+01:16:34 [claude-haiku-5.5] child seed-5-3: valid=True changed=True files=['solver.md'] pred=2.0 calls=9 trials=2 $0.016 192s err=None problems=[]
+01:17:08 [claude-haiku-5.5] child seed-2-2: valid=True changed=True files=['solver.md'] pred=2.0 calls=6 trials=1 $0.010 226s err=None problems=[]
+01:17:15 [claude-haiku-5.5] child seed-0-4: valid=True changed=True files=['solver.md'] pred=2.0 calls=6 trials=1 $0.010 233s err=None problems=[]
+01:17:25 [claude-haiku-5.5] child seed-0-2: valid=True changed=True files=['solver.md'] pred=3.0 calls=5 trials=1 $0.008 244s err=None problems=[]
+01:17:33 [claude-haiku-5.5] child seed-2-5: valid=True changed=True files=['solver.md'] pred=3.0 calls=6 trials=1 $0.011 250s err=None problems=[]
+01:17:44 [claude-haiku-5.5] child seed-2-0: valid=True changed=True files=['solver.md'] pred=3.0 calls=6 trials=1 $0.011 261s err=None problems=[]
+01:18:11 [claude-haiku-5.5] child seed-5-1: valid=True changed=True files=['skills/stress-testing/SKILL.md', 'solver.md'] pred=3.0 calls=9 trials=1 $0.018 289s err=None problems=[]
+01:18:15 [claude-haiku-5.5] child seed-5-2: valid=True changed=True files=['solver.md'] pred=3.0 calls=5 trials=1 $0.043 293s err=None problems=[]
+01:18:15 [claude-haiku-5.5] child seed-2-1: valid=True changed=True files=['solver.md'] pred=2.0 calls=7 trials=2 $0.017 293s err=None problems=[]
+01:19:17 [claude-haiku-5.5] child seed-5-0: valid=True changed=True files=['solver.md'] pred=3.0 calls=8 trials=2 $0.024 354s err=None problems=[]
+01:20:21 [claude-haiku-5.5] child seed-5-4: valid=True changed=True files=['solver.md'] pred=1.0 calls=5 trials=1 $0.048 419s err=None problems=[]
+CopilotSession.send_and_wait failed
+01:34:37 [claude-haiku-5.5] eval seed-0 v2_dev r1: 96 tasks in 1276s $0.542
+01:43:08 [claude-haiku-5.5] eval seed-2 v2_dev r1: 96 tasks in 1786s $0.562
+01:46:18 [claude-haiku-5.5] eval seed-5 v2_dev r1: 96 tasks in 1977s $0.630
+01:56:52 [claude-haiku-5.5] eval seed-0-0 v2_dev r0: 96 tasks in 2480s $0.759
+CopilotSession.send_and_wait failed
+02:08:26 [claude-haiku-5.5] eval seed-2-4 v2_dev r0: 96 tasks in 3167s $0.739
+02:17:04 [claude-haiku-5.5] eval seed-0-3 v2_dev r0: 96 tasks in 3682s $0.665
+02:27:49 [claude-haiku-5.5] eval seed-0-1 v2_dev r0: 96 tasks in 4316s $0.774
+CopilotSession.send_and_wait failed
+02:39:52 [claude-haiku-5.5] eval seed-0-5 v2_dev r0: 96 tasks in 5025s $0.758
+02:54:54 [claude-haiku-5.5] eval seed-5-5 v2_dev r0: 96 tasks in 5924s $0.728
+03:03:02 [claude-haiku-5.5] eval seed-2-3 v2_dev r0: 96 tasks in 6407s $0.684
+CopilotSession.send_and_wait failed
+CopilotSession.send_and_wait failed
+CopilotSession.send_and_wait failed
+CopilotSession.send_and_wait failed
+CopilotSession.send_and_wait failed
+CopilotSession.send_and_wait failed
+CopilotSession.send_and_wait failed
+CopilotSession.send_and_wait failed
+03:37:21 [claude-haiku-5.5] eval seed-5-3 v2_dev r0: 96 tasks in 8447s $0.837
+CopilotSession.send_and_wait failed
+CopilotSession.send_and_wait failed
+CopilotSession.send_and_wait failed
+CopilotSession.send_and_wait failed
+CopilotSession.send_and_wait failed
+CopilotSession.send_and_wait failed
+CopilotSession.send_and_wait failed
+CopilotSession.send_and_wait failed
+CopilotSession.send_and_wait failed
+CopilotSession.send_and_wait failed
+CopilotSession.send_and_wait failed
+CopilotSession.send_and_wait failed

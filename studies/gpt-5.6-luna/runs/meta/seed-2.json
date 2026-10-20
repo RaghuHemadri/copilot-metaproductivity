@@ -1,0 +1,30 @@
+{
+ "id": "seed-2",
+ "parent": "seed",
+ "depth": 1,
+ "k": 2,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-5.6-luna",
+ "created": "2026-10-19 20:52:28",
+ "errors": [],
+ "changes": "Reworked `solver.md` to require complete public-test passing before submission, adversarial/brute-force validation, worst-case performance checks, and a final interface/edge-case review.",
+ "predicted_delta": 5.0,
+ "final": "CHANGES: Reworked `solver.md` to require complete public-test passing before submission, adversarial/brute-force validation, worst-case performance checks, and a final interface/edge-case review.\nPREDICTED_DELTA: +5 percentage points",
+ "trials": [],
+ "validations": 1,
+ "calls": 5,
+ "tin": 41445,
+ "tout": 1205,
+ "cached": 0,
+ "cost": 0.009735,
+ "secs": 18.8,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

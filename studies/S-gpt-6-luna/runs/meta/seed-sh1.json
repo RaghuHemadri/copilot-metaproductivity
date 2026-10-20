@@ -1,0 +1,40 @@
+{
+ "id": "seed-sh1",
+ "parent": "seed",
+ "depth": 1,
+ "k": 1,
+ "tag": "S:gpt-6.1-sol",
+ "suffix": "sh",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6.1-sol",
+ "created": "2026-10-19 23:15:01",
+ "errors": [],
+ "changes": "Added an exact-source verification gate, failure-driven debugging, and retesting after edits. Validation passed; one previously failing development problem passed its trial.",
+ "predicted_delta": 5.0,
+ "final": "CHANGES: Added an exact-source verification gate, failure-driven debugging, and retesting after edits. Validation passed; one previously failing development problem passed its trial.\nPREDICTED_DELTA: +5 percentage points",
+ "trials": [
+  {
+   "problem": "lcb-abc394-e",
+   "passed": true,
+   "cost": 0.003695
+  }
+ ],
+ "validations": 1,
+ "calls": 11,
+ "tin": 69506,
+ "tout": 1130,
+ "cached": 0,
+ "cost": 0.154007,
+ "secs": 439.9,
+ "stop_reason": null,
+ "error": null,
+ "warnings": [
+  "model.call_failure: \"429 Too Many Requests\"",
+  "model.call_failure: \"429 Too Many Requests\"",
+  "model.call_failure: \"429 Too Many Requests\""
+ ]
+}

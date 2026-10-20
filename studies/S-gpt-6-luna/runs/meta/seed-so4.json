@@ -1,0 +1,49 @@
+{
+ "id": "seed-so4",
+ "parent": "seed",
+ "depth": 1,
+ "k": 4,
+ "tag": "S:claude-opus-5.5",
+ "suffix": "so",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-opus-5.5",
+ "created": "2026-10-19 23:35:31",
+ "errors": [],
+ "changes": "Rewrote solver.md with hard rules (always run_tests on the exact final code, never submit failing code while budget remains, always use submit) and a workflow that uses the spare budget: hand-check the samples, estimate running time from the constraints, compare against a brute force on random inputs and time a worst-case input in run_python. Also added Python speed and input tips. This targets the main failure cause: early submission without testing (19 of 34 failures fail the public examples; mean 3.3 of 16 calls used).",
+ "predicted_delta": 10.0,
+ "final": "I rewrote `/agent/solver.md`, and all 3 trial problems that had failed before now pass (lcb-arc194-a, lcb-abc380-f, lcb-3594). `validate()` reports OK.\n\n**What was going wrong:** most failures were process failures, not hard algorithms.\n- 19 of the 34 failures submitted a program that fails the public examples.\n- Several submitted without ever running the tests. One (lcb-arc194-a) just printed the code as text and never called submit.\n- The agent averaged 3.3 of its 16 model calls, so it had plenty of budget left to check its work.\n- Another 15 failures passed the examples but failed hidden tests: 8 wrong answers, 6 time-limit failures, 1 runtime error. Nothing checked correctness or speed beyond the examples.\n\n**What the new prompt does:**\n- **Hard rules:** never submit code that hasn't been run through `run_tests` in its final form. Never submit code that fails an example while budget remains. Always deliver through submit, by about call 14 at the latest.\n- **Workflow:** work through a sample by hand, then estimate the running time from the constraints (Python does roughly 1e7 operations per second). After the examples pass, compare against a brute force on random small inputs and time a maximum-size input in `run_python`.\n- **Python tips:** fast input and output, avoiding deep recursion, modular inverses, and the exact LeetCode-style class signature.\n- **Sandbox workaround:** one trace crashed because the test script read `/dev/stdin`, which the sandbox blocks. The prompt now says to call the functions directly instead.\n\nThe trials needed 4 to 6 model calls each. In the lcb-arc194-a trial the agent submitted code slightly different from what it had tested, which breaks the first rule. It still passed, but the rule isn't always followed.\n\nThe prediction below is a guess, not a measurement: the 3 trials were all problems that had failed before and were picked as likely fixes, so they don't measure the overall pass rate.\n\nCHANGES: Rewrote solver.md with hard rules (always run_tests on the exact final code, never submit failing code while budget remains, always use submit) and a workflow that uses the spare budget: hand-check the samples, estimate running time from the constraints, compare against a brute force on random inputs and time a worst-case input in run_python. Also added Python speed and input tips. This targets the main failure cause: early submission without testing (19 of 34 failures fail the public examples; mean 3.3 of 16 calls used).\nPREDICTED_DELTA: +10",
+ "trials": [
+  {
+   "problem": "lcb-arc194-a",
+   "passed": true,
+   "cost": 0.002391
+  },
+  {
+   "problem": "lcb-abc380-f",
+   "passed": true,
+   "cost": 0.003447
+  },
+  {
+   "problem": "lcb-3594",
+   "passed": true,
+   "cost": 0.001612
+  }
+ ],
+ "validations": 1,
+ "calls": 13,
+ "tin": 165072,
+ "tout": 3494,
+ "cached": 0,
+ "cost": 0.737618,
+ "secs": 334.3,
+ "stop_reason": null,
+ "error": null,
+ "warnings": [
+  "model.call_failure: \"429 Too Many Requests\"",
+  "model.call_failure: \"429 Too Many Requests\""
+ ]
+}

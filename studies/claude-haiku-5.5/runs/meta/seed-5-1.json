@@ -1,0 +1,39 @@
+{
+ "id": "seed-5-1",
+ "parent": "seed-5",
+ "depth": 2,
+ "k": 1,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "skills/stress-testing/SKILL.md",
+  "solver.md"
+ ],
+ "researcher_model": "claude-haiku-5.5",
+ "created": "2026-10-20 01:18:11",
+ "errors": [],
+ "changes": "The dev failures were mostly hard problems where the solver submitted after the public samples passed, skipping brute-force comparison, timing, and impossibility checks (one arc182-d failure printed a number where -1 was expected). I rewrote the solver.md checklist to require listing every impossibility condition, watching parity/cycle invariants and special small parameters, and running brute-force plus timing in a single combined run_python call before submitting. I also added a `stress-testing` skill with a reusable template for brute-force comparison, output checking, edge-case generation, and timeout-guarded timing. I fixed an unquoted-colon YAML error in the skill frontmatter, and validate() now passes. A trial on lcb-arc182-d, which failed before, now passes, though that is one sample and not a measure of the rate.",
+ "predicted_delta": 3.0,
+ "final": "CHANGES: The dev failures were mostly hard problems where the solver submitted after the public samples passed, skipping brute-force comparison, timing, and impossibility checks (one arc182-d failure printed a number where -1 was expected). I rewrote the solver.md checklist to require listing every impossibility condition, watching parity/cycle invariants and special small parameters, and running brute-force plus timing in a single combined run_python call before submitting. I also added a `stress-testing` skill with a reusable template for brute-force comparison, output checking, edge-case generation, and timeout-guarded timing. I fixed an unquoted-colon YAML error in the skill frontmatter, and validate() now passes. A trial on lcb-arc182-d, which failed before, now passes, though that is one sample and not a measure of the rate.\nPREDICTED_DELTA: +3",
+ "trials": [
+  {
+   "problem": "lcb-arc182-d",
+   "passed": true,
+   "cost": 0.005461
+  }
+ ],
+ "validations": 2,
+ "calls": 9,
+ "tin": 106575,
+ "tout": 4420,
+ "cached": 0,
+ "cost": 0.018329,
+ "secs": 288.9,
+ "stop_reason": null,
+ "error": null,
+ "warnings": [
+  "model.call_failure: \"429 Too Many Requests\""
+ ]
+}

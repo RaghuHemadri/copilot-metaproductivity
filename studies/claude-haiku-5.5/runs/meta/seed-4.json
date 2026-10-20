@@ -1,0 +1,36 @@
+{
+ "id": "seed-4",
+ "parent": "seed",
+ "depth": 1,
+ "k": 4,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "claude-haiku-5.5",
+ "created": "2026-10-19 23:38:56",
+ "errors": [],
+ "changes": "Rewrote `/agent/solver.md` to address the main failure modes in the report: submissions without running the public examples (49 of 96 problems ran them at all), wrong answers on hidden tests that the examples missed, and time limits from brute-force or dict-heavy code. The new prompt requires running the public examples before submitting, checking the objective definition against the sample outputs, and comparing the solution against a brute force on random small cases. It also asks for a timing check on maximum-size inputs, and tells the solver to keep debugging rather than submit a known-wrong program. I also added a note to follow a given class/method signature when one is specified. A trial on lcb-arc191-d failed (wrong answer on a small case), and the solver submitted a partial solution after 4 model calls, which suggests the \"keep debugging\" instruction is not yet strong enough to prevent early give-up.",
+ "predicted_delta": 3.0,
+ "final": "I made one set of changes to the solver prompt, validated it, and used one of my three trials on a hard development problem. That trial failed, so the change is not yet shown to help.\n\nCHANGES: Rewrote `/agent/solver.md` to address the main failure modes in the report: submissions without running the public examples (49 of 96 problems ran them at all), wrong answers on hidden tests that the examples missed, and time limits from brute-force or dict-heavy code. The new prompt requires running the public examples before submitting, checking the objective definition against the sample outputs, and comparing the solution against a brute force on random small cases. It also asks for a timing check on maximum-size inputs, and tells the solver to keep debugging rather than submit a known-wrong program. I also added a note to follow a given class/method signature when one is specified. A trial on lcb-arc191-d failed (wrong answer on a small case), and the solver submitted a partial solution after 4 model calls, which suggests the \"keep debugging\" instruction is not yet strong enough to prevent early give-up.\n\nPREDICTED_DELTA: +3",
+ "trials": [
+  {
+   "problem": "lcb-arc191-d",
+   "passed": false,
+   "cost": 0.009371
+  }
+ ],
+ "validations": 2,
+ "calls": 7,
+ "tin": 73944,
+ "tout": 3038,
+ "cached": 0,
+ "cost": 0.018284,
+ "secs": 180.6,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

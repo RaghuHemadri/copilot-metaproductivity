@@ -1,0 +1,30 @@
+{
+ "id": "seed-6-1",
+ "parent": "seed-6",
+ "depth": 2,
+ "k": 1,
+ "tag": "e1",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-6-luna",
+ "created": "2026-10-20 02:29:57",
+ "errors": [],
+ "changes": "Strengthened the solver\u2019s test gate: it must fix failing examples and cannot submit unverified or known-wrong code.",
+ "predicted_delta": 2.0,
+ "final": "CHANGES: Strengthened the solver\u2019s test gate: it must fix failing examples and cannot submit unverified or known-wrong code.\nPREDICTED_DELTA: +2 percentage points",
+ "trials": [],
+ "validations": 1,
+ "calls": 7,
+ "tin": 77159,
+ "tout": 1502,
+ "cached": 0,
+ "cost": 0.008467,
+ "secs": 27.2,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}

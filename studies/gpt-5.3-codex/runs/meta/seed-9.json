@@ -1,0 +1,30 @@
+{
+ "id": "seed-9",
+ "parent": "seed",
+ "depth": 1,
+ "k": 9,
+ "tag": "core",
+ "suffix": "",
+ "valid": true,
+ "changed": true,
+ "diff_files": [
+  "solver.md"
+ ],
+ "researcher_model": "gpt-5.3-codex",
+ "created": "2026-10-19 21:06:59",
+ "errors": [],
+ "changes": "Updated /agent/solver.md with a focused \u201chidden-TLE prevention\u201d workflow: mandatory pre-code complexity gate, Python-specific feasibility guardrails, explicit performance-risk scan before submit, and guidance to use quick run_python stress/bruteforce checks when risk is high. This targets the most common failure mode (hidden-test TLEs).",
+ "predicted_delta": 4.0,
+ "final": "CHANGES: Updated /agent/solver.md with a focused \u201chidden-TLE prevention\u201d workflow: mandatory pre-code complexity gate, Python-specific feasibility guardrails, explicit performance-risk scan before submit, and guidance to use quick run_python stress/bruteforce checks when risk is high. This targets the most common failure mode (hidden-test TLEs).\nPREDICTED_DELTA: +4",
+ "trials": [],
+ "validations": 1,
+ "calls": 8,
+ "tin": 74184,
+ "tout": 1369,
+ "cached": 0,
+ "cost": 0.148988,
+ "secs": 23.8,
+ "stop_reason": null,
+ "error": null,
+ "warnings": []
+}
