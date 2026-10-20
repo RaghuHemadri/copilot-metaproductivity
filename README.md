@@ -49,6 +49,7 @@ sha256sum data/raw/lcb_test*.jsonl
 .venv/bin/python -m pytest -q tests/                       # offline tests
 for p in A,C B Blite S; do .venv/bin/python tests/dryrun_programs.py $p; done   # orchestration, no spend
 .venv/bin/python tests/smoke_live.py                       # live, about $0.01
+RSI_MODEL=gpt-6-luna .venv/bin/python tests/smoke_steps.py # live: meta-step, mini-evaluation, judge; about $0.04
 ```
 
 ## Run
@@ -59,6 +60,8 @@ nohup ./run_all.sh > logs/run_all.out 2>&1 &   # everything; spend cap RSI_COPIL
 ```
 - One process runs one study: `RSI_MODEL=<model> [RSI_STUDY=<study>] .venv/bin/python experiments.py <program|step>`.
 - Every step is resumable from disk; `run_all.sh` restarts crashed jobs until their `DONE_<program>` marker exists.
+  After a stop, relaunch the same way; nothing finished is redone.
+- New genomes appear under `studies/<study>/agents/` while the study runs; commit them with the results.
 - Stop: kill the `run_all.sh` processes first (so nothing restarts), then `experiments.py`, then leftover
   `copilot` CLI processes.
 - Spend is estimated from token counts at the list prices of `list_models` (`studies/ledger.json`); the SDK reports

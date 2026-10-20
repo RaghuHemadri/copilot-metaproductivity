@@ -240,3 +240,11 @@ Found by dry runs of every program with stubbed evaluations and model calls (`te
   $2.71 per evaluation.
 - **Restart (23:30):** all jobs were stopped and relaunched with the fixes; every step resumes from disk. In-flight
   solves and researcher attempts at the stop are redone.
+
+## Relaunch check (2026-10-19 23:50)
+- Relaunched at 23:26:53 (amendment 4 said 23:30). All five jobs run; Program C starts when A1 is done.
+- Live smoke test of the researcher paths that Program A reaches later (`tests/smoke_steps.py`, $0.04): the A4
+  meta-step (no trial tool), the A7 mini-evaluation tool at the A8 high effort, and the A12 judge (valid JSON). All ran
+  without errors.
+- 429 responses: 28 of the first 450 solves after the relaunch, all in the start bursts of Programs A and S (which
+  overlapped the smoke test); 1 in the next 600. Throughput 30-40 solves per minute with the CPU saturated.
