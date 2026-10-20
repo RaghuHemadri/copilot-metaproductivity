@@ -2,7 +2,8 @@
 Rule: a predictor and the baseline of M never share an evaluation replicate (disjoint replicates).
 
   RSI_MODEL=<model> python analyze.py <report>    # report: core, retention, transfer, replication, memory, levers,
-                                                   #         heritability, loops, judge, neglect, all
+                                                   #         heritability, loops, judge, neglect, researchers,
+                                                   #         ratelimits, all
   python analyze.py cross                          # all studies side by side
 """
 import json
@@ -95,6 +96,12 @@ def table(tags=("e1",)) -> list[dict]:
     return rows
 
 
+def study_tags() -> list[tuple]:
+    """The study's self-improvement lineages: A1 (e1), Programs B and F (core), Program S (S:<researcher model>)."""
+    tags = {m.get("tag") for m in metas()}
+    return [(t,) for t in sorted(t for t in tags if t in ("e1", "core") or str(t).startswith("S:"))]
+
+
 # --------------------------------------------------------------------------------------------------- statistics
 def spearman_ci(x, y, n_boot=2000, seed=0) -> dict:
     x, y = np.asarray(x, float), np.asarray(y, float)
@@ -150,9 +157,13 @@ def compare(label: str, pairs: list, n_boot: int = 4000) -> dict:
 
 
 # ------------------------------------------------------------------------------------------- core: H1, H2, H7
-def core() -> None:
-    rows = table()
-    print(f"[{rsi.STUDY}] measured agents: {len(rows)}; dev problems {N_DEV}")
+def core(tags=None) -> None:
+    if tags is None:
+        for t in study_tags():
+            core(t)
+        return
+    rows = table(tags)
+    print(f"[{rsi.STUDY} {'/'.join(tags)}] measured agents: {len(rows)}; dev problems {N_DEV}")
     if len(rows) < 5:
         return
     col = lambda k: np.array([np.nan if r[k] is None else float(r[k]) for r in rows])  # noqa: E731
@@ -189,14 +200,14 @@ def core() -> None:
           f"{max(true_v, 0) / np.nanvar(Ms, ddof=1):.2f}")
     h1, h2 = [], []
     for r in rows:
-        cs = child_scores(r["agent"], ("e1",), baseline(r["agent"]))
+        cs = child_scores(r["agent"], tags, baseline(r["agent"]))
         if len(cs) >= 4 and r["s2"] is not None:
             h1.append(np.mean(cs[0::2]) - r["s1"])
             h2.append(np.mean(cs[1::2]) - r["s2"])
     if len(h1) >= 5:
         rr = stats.pearsonr(h1, h2)[0]
         print(f"   split-half reliability of M (independent baselines): r={rr:.3f}, Spearman-Brown {2 * rr / (1 + rr):.3f}")
-    P = [(m["predicted_delta"] / 100, g) for r in rows for m, g in zip(attempts(r["agent"]), r["gains"])
+    P = [(m["predicted_delta"] / 100, g) for r in rows for m, g in zip(attempts(r["agent"], tags), r["gains"])
          if m.get("predicted_delta") is not None and m["valid"]]
     if len(P) >= 5:
         p, g = zip(*P)
@@ -214,10 +225,13 @@ def mean_or_none(xs):
 
 
 # ------------------------------------------------------------------------------------------------ H3: retention
-def retention() -> None:
+def retention(tags=None) -> None:
     """Greedy picks (best child by dev rep 0): apparent gain on dev vs kept gain on the fresh set (never selected on)."""
+    if tags is None:
+        for t in study_tags():
+            retention(t)
+        return
     rows = []
-    tags = ("e1", "core")
     parents = sorted({m["parent"] for m in metas() if m.get("tag") in tags})
     for p in parents:
         kids = [m["id"] for m in attempts(p, tags) if m["valid"] and score(m["id"]) is not None]
@@ -232,12 +246,12 @@ def retention() -> None:
         rows.append(dict(parent=p, pick=best, apparent=score(best) - baseline(p), vs_mean_child=score(best) - mean_child,
                          kept=f_pick - f_par))
     if not rows:
-        print("retention: no data yet")
+        print(f"retention ({'/'.join(tags)}): no data yet")
         return
     a = np.array([[r["apparent"], r["vs_mean_child"], r["kept"]] for r in rows])
     rng = np.random.default_rng(3)
     bs = [a[rng.integers(0, len(a), len(a)), 2].mean() for _ in range(4000)]
-    print(f"H3 retention over {len(rows)} greedy picks: apparent gain on dev {100 * a[:, 0].mean():+.2f} pts (vs parent "
+    print(f"H3 retention ({'/'.join(tags)}) over {len(rows)} greedy picks: apparent gain on dev {100 * a[:, 0].mean():+.2f} pts (vs parent "
           f"baseline), {100 * a[:, 1].mean():+.2f} (vs the parent's mean child); kept on the fresh set "
           f"{100 * a[:, 2].mean():+.2f} [{100 * np.percentile(bs, 2.5):+.2f}, {100 * np.percentile(bs, 97.5):+.2f}]")
 
@@ -414,8 +428,47 @@ def summary() -> None:
           f"noise SD {100 * np.sqrt(s2e) if dof else float('nan'):4.2f}  spend ${llm.ledger_total(rsi.PROVIDER):.2f} ({rsi.PROVIDER} total)")
 
 
+def researchers() -> None:
+    """Program S, S-H8: M of each researcher's lineage (all its attempts: child dev rep 0 - parent baseline) against the
+    reference arm (the solver model as its own researcher); equivalence if the 90% bootstrap CI lies within +-2.5 pts."""
+    arms = {t[2:]: np.concatenate([r["gains"] for r in rows]) for (t,) in study_tags() if t.startswith("S:")
+            and (rows := table((t,)))}
+    ref = arms.get(rsi.MODEL)
+    if ref is None:
+        print("researchers: no reference arm yet")
+        return
+    rng = np.random.default_rng(17)
+    for m, g in sorted(arms.items(), key=lambda x: (x[0] != rsi.MODEL, x[0])):
+        line = f"S-H8 researcher {m:18s} M {100 * g.mean():+.2f} pts (n={len(g)})"
+        if m != rsi.MODEL:
+            bs = np.array([rng.choice(g, len(g)).mean() - rng.choice(ref, len(ref)).mean() for _ in range(4000)])
+            lo, hi = np.percentile(bs, [2.5, 97.5])
+            e_lo, e_hi = np.percentile(bs, [5, 95])
+            line += (f"  minus reference {100 * (g.mean() - ref.mean()):+.2f} [{100 * lo:+.2f}, {100 * hi:+.2f}]  "
+                     f"TOST +-2.5: {'equivalent' if -0.025 < e_lo and e_hi < 0.025 else 'not shown'}")
+        print(line)
+
+
+def ratelimits() -> None:
+    """Share of solves with at least one 429 response (each counts toward the call budget; amendment 3), by the
+    evaluated agent's attempt tag ('-': agents that are not attempts, e.g. the seed)."""
+    c: dict[str, list[int]] = {}
+    for p in (rsi.EVALS.glob("*/*.jsonl") if rsi.EVALS.exists() else []):
+        tag = str(rsi.meta(p.parent.name).get("tag") or "-")
+        with p.open() as fh:
+            for line in fh:
+                if line.strip():
+                    x = c.setdefault(tag, [0, 0])
+                    x[0] += 1
+                    x[1] += "429 Too Many Requests" in line
+    n, w = sum(v[0] for v in c.values()), sum(v[1] for v in c.values())
+    print(f"429 rate: {w}/{n} solves ({100 * w / max(n, 1):.1f}%); by tag: " +
+          ", ".join(f"{t} {100 * v[1] / v[0]:.1f}% of {v[0]}" for t, v in sorted(c.items())))
+
+
 REPORTS = dict(core=core, retention=retention, transfer=transfer, replication=replication, memory=memory, levers=levers,
-               heritability=heritability, loops=loops, judge=judge, neglect=neglect, cross=cross, summary=summary)
+               heritability=heritability, loops=loops, judge=judge, neglect=neglect, researchers=researchers,
+               ratelimits=ratelimits, cross=cross, summary=summary)
 
 if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else "all"
