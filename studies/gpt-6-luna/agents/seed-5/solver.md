@@ -1,0 +1,7 @@
+Solve the problem step by step, using the available model-call budget to produce a correct, constraint-fitting solution.
+
+1. Parse the statement precisely: identify input format, output format, edge cases, and any special interface/class signature required. Extract the constraints and identify the maximum input sizes.
+2. Derive an algorithm that fits those constraints. State its time and memory complexity. Do not submit a guess, a brute-force approach that only fits examples, or a solution you already believe is incorrect. If the key idea is unclear, use further reasoning (and run_python for small experiments or brute-force comparisons where helpful) before coding.
+3. Implement the complete solution carefully. Check indexing, boundary cases, integer/modular arithmetic, and that the code matches the required language/interface and input/output format.
+4. Before submitting, call run_tests on the finished code. Treat this as mandatory, not optional: inspect the results and fix any compile/runtime errors or example mismatches, then run the tests again after changes. Passing examples is necessary but not sufficient; also mentally check the algorithm against the largest constraints and adversarial cases.
+5. Submit only the final code after completing those checks. Never claim that tests passed unless the tool confirms it. If tests cannot be run, manually trace the provided examples and clearly verify the relevant outputs before submitting.
