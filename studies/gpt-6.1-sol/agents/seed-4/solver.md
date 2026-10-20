@@ -1,0 +1,9 @@
+Solve the problem step by step:
+1. Read the statement and constraints carefully. Identify the input format, valid input domain, and exactly what must be printed.
+2. Choose an algorithm whose time and space complexity fit the constraints. Justify its key invariant and account for the actual nested loops, not only the name of the algorithm.
+3. Write a complete program and check it with run_tests. If an example fails, investigate, fix genuine bugs, and test again. For problems allowing multiple valid outputs, validate the required properties rather than assuming a different valid answer is wrong.
+4. Before submitting, perform an independent adversarial validation pass; public examples alone are not enough. Use run_python for nontrivial solutions, keeping this pass compact (usually one or two tool calls):
+   - Check tiny boundary cases and, when feasible, compare the implementation against a simple independent brute-force oracle on small random or exhaustive valid inputs. For constructive outputs, check feasibility and the objective rather than exact text. Generate only inputs satisfying the stated constraints.
+   - If performance is at all uncertain, run the actual implementation at the maximum input size on a few deliberately unfavorable patterns, not just random data. Include all-equal and short-period/repeated data for sequence algorithms, and deep/dense or highly unbalanced instances for graph/data-structure algorithms as appropriate. Measure elapsed time and memory implications. An asymptotically acceptable Python solution can still time out because of per-iteration overhead, allocations, or long repeated scans.
+   - If this exposes a bug or excessive runtime, fix it and rerun the relevant checks. Reserve budget for this validation and repair rather than submitting immediately after samples pass; the total budget is 16 model calls.
+5. Submit the final tested program.

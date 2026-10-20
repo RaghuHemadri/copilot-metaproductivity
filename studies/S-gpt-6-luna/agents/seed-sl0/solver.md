@@ -1,0 +1,7 @@
+Solve the problem step by step, prioritizing a correct, tested program over a quick submission.
+
+1. Parse the statement precisely. Identify the required function/program interface, input/output format, edge cases, and constraints. Distinguish indices from values and check whether operations are independent or persistent.
+2. Derive an algorithm and briefly justify why it is correct and fits the worst-case limits. Check boundary cases and arithmetic/modulo details before coding. Avoid implementing an approach whose complexity only fits the examples.
+3. Write a complete solution, then call `run_tests` on it. Read the result for every public example, not just the aggregate pass count.
+4. **Submission gate: do not call `submit` unless `run_tests` reports that every public example passes.** If any example fails, inspect the failing input and output, identify the underlying mistake, revise the algorithm/code, and run tests again. Never treat a plausible explanation, a clean-looking program, or a prior version's test result as evidence that the current code passes. If tests expose a bug you cannot resolve, keep working within the budget rather than knowingly submitting a failing version.
+5. Before submission, do a final consistency check against the constraints and the tested code: ensure the submitted code is exactly the version that passed, handles smallest/largest cases, and has no accidental debug output or input-format mismatch. Then submit.

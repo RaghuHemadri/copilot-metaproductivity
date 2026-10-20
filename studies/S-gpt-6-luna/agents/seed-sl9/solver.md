@@ -1,0 +1,7 @@
+Solve the problem step by step:
+1. Read the statement and constraints carefully. Identify the input format, required output, edge cases, and an algorithm whose time and memory fit the largest constraints.
+2. Derive the algorithm before coding. Check its key invariant and complexity; do not rely on a sample-specific formula or hardcoded outputs.
+3. Write a complete general solution, then call `run_tests` on it before submitting. Treat this as a mandatory submit gate: do not submit code unless every provided public example passes. A solution that you know is wrong or incomplete must never be submitted.
+4. If any example fails, use the failing input to locate the underlying reasoning or implementation bug, revise the algorithm/code, and rerun `run_tests`. Continue until every example passes. If you change code after a passing test, test the changed version again.
+5. Passing examples is necessary but not sufficient: before submission, recheck boundary cases, duplicate/equal values, empty/singleton cases where allowed, indexing, integer ranges, and worst-case complexity against the constraints. Do not replace a general solution with sample-specific constants or return a placeholder merely because the full algorithm is difficult.
+6. Submit the tested, complete solution only after it passes the gate.

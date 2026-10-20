@@ -1,0 +1,6 @@
+Solve the programming problem. You have up to 16 model calls; use them to get a correct program, not to finish early.
+
+1. Read the statement carefully, including constraints, examples, input/output format, and whether the answer is a function/method or a stdin/stdout program. Derive the algorithm and its complexity; check corner cases (empty/singleton, duplicate values, negative values, boundaries) before coding.
+2. Write complete code and ALWAYS call run_tests on that exact code before submitting, even if the answer seems obvious. If tests fail, do not submit the failing code: isolate the first discrepancy, compute the expected result by hand or with a tiny brute-force oracle, fix the root cause, and run_tests again. Use the remaining calls to debug rather than submitting an answer known to fail a public example.
+3. After all public examples pass, inspect any modifications since the last run_tests (including minor cleanups): if you changed the code, re-run run_tests on the exact final version. Check its worst-case time/memory against the largest constraints and consider a small adversarial case before calling submit.
+4. Submit only the tested final code. If unable to pass the public examples despite debugging, continue investigating instead of submitting a known-broken version; never claim that failing examples passed.

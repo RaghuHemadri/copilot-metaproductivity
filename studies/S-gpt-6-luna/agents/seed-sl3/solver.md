@@ -1,0 +1,6 @@
+Solve the problem step by step:
+1. Read the statement and the constraints carefully. Identify the input format and exactly what must be printed.
+2. Choose an algorithm whose time complexity fits the constraints.
+3. Write a complete program and check it with run_tests.
+4. If an example fails, find the bug, fix it and run the tests again.
+5. Treat submission as a strict quality gate: you MUST call run_tests on your candidate before submitting, and you MUST NOT submit unless its output explicitly confirms that every provided public example passed. A plausible algorithm or code that merely looks correct is not enough. If run_tests reports even one failure, do not submit that version: inspect the failing input and expected/actual output, revisit the interpretation or algorithm (not just syntax), revise, and run_tests again. Submission is permitted only after the most recent run_tests result explicitly says all examples passed (for example, 3/3); otherwise do not call submit, even if time is short or you are uncertain how to fix it. If a test run fails, use the failing case to revise the reasoning and code, then rerun tests. If the call budget runs out before a fully passing run, leave the solution unsubmitted rather than knowingly submitting a failure. Once all examples pass, briefly audit edge cases and complexity, then submit that tested version unchanged.

@@ -217,3 +217,26 @@ as an improver in Program C.
 - **Provenance of the pre-registration:** the hypotheses (19:55), amendment 1 (21:34) and amendment 2 (21:53) were
   committed in the original working repository (commits f227945, 245954b and 45b4cbc) before the data they concern.
   This repository starts from that state; its first commit contains this amendment and precedes all new data.
+
+## Amendment 4 (2026-10-19 23:25, before any Program B, S or F fresh-set data): core-battery baselines, fixes
+Found by dry runs of every program with stubbed evaluations and model calls (`tests/dryrun_programs.py`, no spend).
+- **Design gap (Programs B, S and F):** only the greedy picks and the seed were evaluated on `v2_dev2`, so the kept
+  gain of a pick (its fresh score minus its parent's) was computable only for the seed's pick, 1 of 7 per lineage.
+  The core battery now also evaluates every measured parent on `v2_dev2` (2 reps), as A1 already does: about 12 more
+  evaluations per lineage, about $35 in total; the cap is unchanged. No B, S or F fresh-set evaluation existed yet.
+- **Ledger race:** `check_cap` read `studies/ledger.json` while another process rewrote it in place, which crashed a
+  dry run (JSONDecodeError). Writes are now atomic and reads take a shared lock.
+- **Attempt-record race:** attempt records were written in place while other threads (the six lineages of Program S)
+  and processes (Program C) scan all of them. A torn read crashes the job (a stress test of the old pattern: 186 torn
+  reads in 3 s; with the fix: 0). Records are now written atomically.
+- **Accounting:** an evaluation's cost was booked only once all 96 tasks were done, so a stopped or crashed evaluation
+  left its finished rows unbooked. Costs are now booked per row. `tools/audit_spend.py` recomputes spend from the raw
+  data: the shortfall at this restart was $13.21 (finished rows of interrupted evaluations, including those carried
+  over), now booked under the tag `audit`. Ledger after the fix: $146.51.
+- None of these changes affects a measurement: prompts, tools, budgets, grading and the compared agents are unchanged.
+- **Status at the stop:** 429 responses only in Program A's first 3 minutes (21 of about 2,500 new solves), none after
+  the staggered starts; throughput 47 solves per minute; spend $36 in the first 58 minutes, front-loaded by Program F
+  ($2.4 per evaluation) and Program S's first 60 frontier-researcher attempts. gpt-6-sol pilot: 85.4% (hard 78.1%),
+  $2.71 per evaluation.
+- **Restart (23:30):** all jobs were stopped and relaunched with the fixes; every step resumes from disk. In-flight
+  solves and researcher attempts at the stop are redone.

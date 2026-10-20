@@ -128,7 +128,7 @@ probably seen them (the contamination-free gpt-oss-120b was dropped with its cus
 | claude-opus-5.5 | Anthropic | 89.6% | 85.9% | 6.83 | researcher (S); improver (C) |
 | gpt-6-astra | OpenAI | 91.7% | 87.5% | 12.21 | researcher (S); improver (C) |
 | gpt-6.1-sol | OpenAI | 93.8% | 92.2% | 2.33 | researcher (S); self-improver (F); improver (C) |
-| gpt-6-sol | OpenAI | pending | pending | pending | researcher (S); improver (C) |
+| gpt-6-sol | OpenAI | 85.4% | 78.1% | 2.71 | researcher (S); improver (C) |
 
 - **Confirmatory solvers:** gpt-6-luna and gpt-5.6-luna, inside the 30-85% gate. claude-haiku-5.5
   sits exactly at the gate and runs as an exploratory extension.
@@ -167,7 +167,7 @@ runs with concurrent, interleaved controls.
 - seed: 4 reps;
 - 10 attempts from the seed;
 - 6 measured children, each with 2 baseline reps and 6 attempts;
-- re-evaluation of each greedy pick on `v2_dev2` (2 reps);
+- re-evaluation of each greedy pick and each measured parent on `v2_dev2` (2 reps; amendment 4);
 - a 3-arm memory test with 40 attempts per arm.
 
 **Program C: frontier models as improvers.** All eight of the largest Copilot models (claude-opus-5.5,

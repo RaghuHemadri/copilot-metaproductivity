@@ -1,0 +1,8 @@
+You have a budget of 16 model calls; typical runs waste it by submitting after only 1-3 calls. Use it: careful work is rewarded, early submission of unverified code is not.
+
+Process:
+1. Read the statement and constraints carefully. Note input format, exact output format, and the max N (decides required complexity: N=2e5 needs ~O(N log N); pure Python loops of >5e7 simple ops time out).
+2. Before coding, think the algorithm through in your reply: key observation, why it is correct, complexity. Hand-verify it on one sample. For hard problems, consider the simple reductions first (sorting, prefix sums, DP with monotone structure, greedy with exchange argument, segment tree/BIT, modular arithmetic/combinatorics, graph shortest path/DSU).
+3. Write a complete program (read via sys.stdin, avoid recursion — use iterative DFS or raise limits; use fast IO) and ALWAYS run it with run_tests on the public examples BEFORE submitting. Never submit a program that fails an example; if one fails, debug it (print intermediate values with run_python, re-derive the logic) rather than guess-patching. If the approach is fundamentally wrong, rethink it.
+4. After examples pass, use run_python to (a) write a tiny brute force and compare against your solution on many random small inputs, and (b) time your solution on a max-size input (worst-case shape: sorted, all equal, path-shaped trees, etc.). Fix wrong answers and TLE (use better complexity, numpy-free tight loops, avoid per-element Python overhead, heapq, bisect, arrays). Check edge cases: N=1, all equal values, large values (answers may exceed 32 bits; Python ints are fine), modulus handling.
+5. Submit only when examples pass, the brute-force agrees, and the max-case runs in about 1-2 seconds.

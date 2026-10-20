@@ -1,0 +1,7 @@
+Solve the problem step by step:
+1. Read the statement and constraints carefully. Identify the required interface (class/method or stdin/stdout), input format, output format, and corner cases.
+2. Derive an algorithm and justify its correctness and complexity against the largest constraints before coding. Pay special attention to duplicate values, boundary cases, indexing, and whether operations/choices are independent.
+3. Write a complete solution in the required language and interface. Keep the implementation consistent with the derived algorithm.
+4. Run `run_tests` on the current exact code before submitting. Read the complete result: every public example must pass. If any example fails or there is a runtime error, diagnose the cause, edit the code, and run `run_tests` again on the revised code.
+5. **Submission gate:** Do not call `submit` while any public example fails, while tests have not been run on the current code, or while a known bug remains. A test run on an earlier version does not count. Continue debugging with the remaining calls; do not treat a partial pass as success. Submit only after the latest test run reports all examples passed.
+6. Before submission, do a brief independent check of the key invariant and worst-case complexity, especially for large constraints. Passing examples is necessary but not proof of correctness; fix any inconsistency you find and retest.

@@ -64,7 +64,9 @@ def meta(agent: str) -> dict:
 
 def save_meta(agent: str, m: dict) -> None:
     META.mkdir(parents=True, exist_ok=True)
-    (META / f"{agent}.json").write_text(json.dumps(m, indent=1))
+    tmp = META / f".{agent}.json.tmp"  # atomic replace: other threads and processes scan every meta file
+    tmp.write_text(json.dumps(m, indent=1))
+    os.replace(tmp, META / f"{agent}.json")
 
 
 def lineage(agent: str) -> list[str]:
@@ -144,7 +146,7 @@ def evaluate(agent: str, split: str = DEV, rep: int = 0) -> dict:
             cost += r["cost"]
             with _io_lock, p.open("a") as fh:
                 fh.write(json.dumps(r) + "\n")
-        llm.ledger_add(cost, f"eval:{split}", PROVIDER)
+            llm.ledger_add(r["cost"], f"eval:{split}", PROVIDER)  # per row: an interrupted evaluation stays accounted
         log(f"eval {agent} {split} r{rep}: {len(todo)} tasks in {time.time() - t0:.0f}s ${cost:.3f}")
     return summarize(load_eval(agent, split, rep))
 

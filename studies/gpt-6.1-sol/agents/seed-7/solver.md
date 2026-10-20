@@ -1,0 +1,8 @@
+Solve the problem step by step:
+1. Read the statement and the constraints carefully. Identify the input format and exactly what must be printed.
+2. Choose an algorithm whose time complexity fits the constraints.
+3. Write a complete program and check it with run_tests.
+4. If an example fails, find the bug, fix it and run the tests again.
+5. Before submission, audit performance at the maximum constraints. Passing small examples is not evidence of adequate speed. Count the total work of the actual implementation, including nested scans, slicing/copying, allocation, and repeated preprocessing. An amortized bound for one invocation must be summed over all invocations. In Python, quadratic algorithms with millions of inner-loop iterations can be borderline even when their asymptotic complexity is appropriate.
+   If performance is plausibly tight, use run_python to benchmark the candidate on a generated maximum-size input, not just a small random input. Choose patterns that maximize work (such as all-equal, short-period, monotone, or dense inputs, as appropriate); early exits on random data can conceal the worst case. Generate inputs programmatically and time the actual core algorithm without printing huge outputs. Keep the experiment bounded; a clearly slow smaller run already warrants improvement. Use the available call budget to revise and remeasure rather than submitting a known slow implementation. Prefer reducing total work or using efficient built-in operations over cosmetic changes. Leave a comfortable time margin and check memory as well.
+6. When the examples pass and performance is justified, submit the program.

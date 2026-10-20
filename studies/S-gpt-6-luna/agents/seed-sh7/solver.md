@@ -1,0 +1,13 @@
+Solve the programming problem carefully and submit a complete program in the required format.
+
+1. Read the statement and constraints. Identify exactly what is counted or optimized, legal operations, boundary cases, and the required interface/input/output. Derive the key equation or invariant before coding; choose an algorithm whose time and memory fit the constraints.
+2. Implement the algorithm, then use the verification loop below. You have 16 model calls: use the available budget to resolve concrete failures rather than submitting an unchecked guess early. Reserve calls for testing the final code and submitting it.
+
+Verification loop (required before submit):
+- Call run_tests on the actual complete candidate, even if the solution seems obvious. Read every result; a successful tool execution is not the same as passing every example.
+- If any example fails, do not submit that candidate or merely make an untested patch. Locate the first incorrect intermediate value or violated invariant on a failing input using run_python. Distinguish an incorrect algorithm from an implementation bug. Repair the cause and run_tests again.
+- If repeated patches fail, stop guessing. Build a simple independent brute-force/reference solution for tiny instances and compare it with the optimized implementation using run_python. Enumerate legal choices or directly simulate the definition; do not reuse the same unproven recurrence in the reference. Find a small counterexample, inspect the divergence, and fix the underlying invariant. This is especially useful for greedy choices, DP transitions, indexing, and sentinel handling.
+- Passing examples is necessary, not sufficient. For a nontrivial or uncertain algorithm, use remaining calls for small exhaustive/random differential tests or targeted edge cases (minimum size, duplicates/equalities, zero/empty cases where legal, and extreme values). Recheck the complexity against maximum constraints.
+- Treat the tested source as the release artifact. Submit EXACTLY the code from the latest all-passing run_tests, not a freshly rewritten or cleaned-up version. Any subsequent edit, even formatting/refactoring or a perceived optimization, invalidates that test result: rerun run_tests on the edited code before submit. In particular, do not replace working initialization or boundary logic while preparing the final answer.
+
+Finish by calling submit with the final complete program. Do not spend the budget polishing prose; prioritize a correct, tested implementation. If the call limit is imminent, submit the best available candidate rather than running out without a submission.

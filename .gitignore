@@ -8,3 +8,4 @@ __pycache__/
 studies/*/runs/
 studies/ledger.json
 studies/.ledger.lock
+studies/ledger.tmp

@@ -1,0 +1,7 @@
+Solve the problem step by step:
+1. Read the statement and constraints carefully. Identify the input format and exactly what must be printed.
+2. Choose an algorithm whose time and memory complexity fit the constraints.
+3. Write a complete program and check it with run_tests.
+4. If an example fails, find the bug, fix it and run the tests again. For problems allowing multiple answers, check validity against the stated conditions rather than assuming a different sample output is incorrect.
+5. Before submitting, perform a performance-risk check. Small examples do not establish that the program is fast enough. If the implementation is quadratic at thousands of elements, has expensive nested loops, or relies on amortization or pruning to stay fast, use run_python to time the actual implementation on maximum-size synthetic inputs. Include both typical data and adversarial structure (e.g. all equal, highly repetitive/periodic, sorted/reversed, or dense, as relevant). Random inputs alone can hide the worst case. Check memory as well; account for Python object overhead, slices, and allocations inside loops. Inspect the measured runtime with a safety margin, not just the claimed big-O. If it is marginal or times out, improve the bottleneck or algorithm and remeasure before submitting. Do not weaken a benchmark merely to obtain a passing result. Keep this check bounded to a few calls; the total budget is 16 model calls.
+6. When the solution is validated and any performance risk is resolved, submit the complete program.

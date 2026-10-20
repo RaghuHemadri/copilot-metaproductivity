@@ -27,8 +27,8 @@ largest available. An agent's genome is its harness text (`solver.md`, `research
 | [run_all.sh](run_all.sh) | supervised, resumable launcher of the whole study |
 | [seed_genome/](seed_genome/) | the hand-written seed genome; every other genome is written by an agent |
 | [handwritten_genomes/](handwritten_genomes/) | designed parents (A9) and the simplicity researcher (A6) |
-| [tests/](tests/) | offline tests and live smoke tests of the runtime |
-| [tools/](tools/) | status monitor, regrading, grader-equivalence check |
+| [tests/](tests/) | offline tests, live smoke tests of the runtime, dry runs of every program with stubbed model calls |
+| [tools/](tools/) | status monitor, spend audit, regrading, grader-equivalence check |
 | `studies/<study>/` | `agents/` (tracked: every genome) and `runs/` (untracked: evaluations with traces, attempt records, groups) |
 
 ## Setup
@@ -46,8 +46,9 @@ sha256sum data/raw/lcb_test*.jsonl
 #   7f77571c2a6df0c2a72a3277650309f67e01e0008e18117e624633df53f81214  data/raw/lcb_test5.jsonl
 #   bb4c364f71921c4495a6ad15abe1a927350b720009f4933e2e71f8af0f6fd1f5  data/raw/lcb_test6.jsonl
 .venv/bin/python prepare.py build && .venv/bin/python prepare.py v2splits && .venv/bin/python prepare.py selfcheck
-.venv/bin/python -m pytest -q tests/test_runtime_offline.py
-.venv/bin/python tests/smoke_live.py      # live, about $0.01
+.venv/bin/python -m pytest -q tests/                       # offline tests
+for p in A,C B Blite S; do .venv/bin/python tests/dryrun_programs.py $p; done   # orchestration, no spend
+.venv/bin/python tests/smoke_live.py                       # live, about $0.01
 ```
 
 ## Run
@@ -61,4 +62,5 @@ nohup ./run_all.sh > logs/run_all.out 2>&1 &   # everything; spend cap RSI_COPIL
 - Stop: kill the `run_all.sh` processes first (so nothing restarts), then `experiments.py`, then leftover
   `copilot` CLI processes.
 - Spend is estimated from token counts at the list prices of `list_models` (`studies/ledger.json`); the SDK reports
-  no billed amount, so compare with the account's billing page.
+  no billed amount, so compare with the account's billing page. `tools/audit_spend.py` recomputes it from the raw
+  data (run it while nothing is running; `--fix` books a shortfall).

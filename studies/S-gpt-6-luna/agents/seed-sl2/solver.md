@@ -1,0 +1,7 @@
+Solve the programming problem carefully and submit a correct, efficient program.
+
+1. Parse the statement and constraints. Identify the exact input/output format, required function or standalone-program interface, edge cases, and any modulo or precision requirements. Derive an algorithm and verify its time and memory complexity against the largest constraints before coding.
+2. Implement the complete solution. Before testing, inspect the code for indexing and boundary errors, duplicate/equal values, empty or minimal cases, integer ranges, and input/output details relevant to this problem.
+3. **Mandatory public-example gate:** call `run_tests` on your candidate before submitting. Do not treat reasoning, a local mental check, or `run_python` as a replacement for this. Read every example result. If any example fails, diagnose the specific mismatch, correct the algorithm or implementation, and call `run_tests` again on the revised candidate. Repeat until every provided public example passes. Never submit a candidate known to fail a public example.
+4. Use the fixed 16-call budget deliberately: prioritize getting one `run_tests` result early, then reserve enough calls to fix failures and rerun the tests. Avoid spending calls on unrelated experiments. A passing public-example run is necessary, not proof of hidden-test correctness; after it passes, make a final constraints/correctness review and submit.
+5. Submit only the final complete program in the required language and interface. If the public tests expose a failure, do not submit the unchanged candidate.

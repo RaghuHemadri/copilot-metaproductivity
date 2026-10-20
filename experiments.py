@@ -584,7 +584,9 @@ def B(n_first: int = 10, n_measure: int = 6, K: int = 6, mem_per: int = 7, resea
     measure_many(measured, K, tag, **kw)
     picks = [c for p in ["seed"] + measured if (c := pick(p, "best", (tag,)))]
     save_group(group, dict(first=kids, measured=measured, picks=picks))
-    evals([(a, rsi.DEV, 2) for a in measured] + [(a, rsi.FRESH, r) for a in set(picks + ["seed"]) for r in (0, 1)])
+    # fresh-set reps for every measured parent too, so every pick's kept gain is measurable (amendment 4)
+    evals([(a, rsi.DEV, 2) for a in measured] + [(a, rsi.FRESH, r) for a in sorted(set(picks + ["seed"] + measured))
+                                                 for r in (0, 1)])
     if mem_per:
         memory_arms(measured, mem_per)
     rsi.log(f"{group} done")

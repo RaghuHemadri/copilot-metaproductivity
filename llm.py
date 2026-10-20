@@ -60,8 +60,15 @@ class SpendCapExceeded(RuntimeError):
     pass
 
 
-def _read() -> dict:
+def _read_unlocked() -> dict:
     return json.loads(LEDGER.read_text()) if LEDGER.exists() else {"total": {}, "by_tag": {}}
+
+
+def _read() -> dict:
+    STUDIES.mkdir(exist_ok=True)
+    with open(STUDIES / ".ledger.lock", "a") as lk:  # shared lock: never read a ledger that a writer is replacing
+        fcntl.flock(lk, fcntl.LOCK_SH)
+        return _read_unlocked()
 
 
 def ledger_add(cost: float, tag: str, provider: str) -> float:
@@ -69,12 +76,14 @@ def ledger_add(cost: float, tag: str, provider: str) -> float:
     STUDIES.mkdir(exist_ok=True)
     with open(STUDIES / ".ledger.lock", "w") as lk:
         fcntl.flock(lk, fcntl.LOCK_EX)
-        d = _read()
+        d = _read_unlocked()
         d["total"][provider] = round(d["total"].get(provider, 0.0) + cost, 6)
         key = f"{provider}:{tag}"
         d["by_tag"][key] = round(d["by_tag"].get(key, 0.0) + cost, 6)
         d["updated"] = time.strftime("%Y-%m-%d %H:%M:%S")
-        LEDGER.write_text(json.dumps(d, indent=1))
+        tmp = LEDGER.with_suffix(".tmp")  # atomic replace: lock-free readers (e.g. tools/status.py) see whole files
+        tmp.write_text(json.dumps(d, indent=1))
+        os.replace(tmp, LEDGER)
         return d["total"][provider]
 
 
